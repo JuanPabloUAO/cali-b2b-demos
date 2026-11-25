@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Distribuidora Eléctrica del Café & Occidente | Cotizador Oficial y Atención Prioritaria</title>
-  <meta name="description" content="Plataforma de cotización y agendamiento prioritario para Distribuidora Eléctrica del Café & Occidente. Simula tu presupuesto en 30 segundos y recibe atención directa sin esperas.">
+  <meta name="description" content="Plataforma interactiva oficial de Distribuidora Eléctrica del Café & Occidente. Simula tu presupuesto en 30 segundos, calcula cuotas Addi y agenda atención prioritaria en Calle 25 # 2-40.">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,100 +31,159 @@
       width: 22px;
       height: 22px;
       border-radius: 50%;
-      background: rgb(245, 158, 11);
+      background: #f59e0b;
       cursor: pointer;
       box-shadow: 0 0 14px rgba(245, 158, 11, 0.7);
       border: 3px solid #ffffff;
     }
     input:focus-visible, select:focus-visible, textarea:focus-visible, button:focus-visible, a:focus-visible {
-      outline: 2px solid rgb(245, 158, 11);
+      outline: 2px solid #f59e0b;
       outline-offset: 2px;
     }
   </style>
 </head>
-<body class="bg-slate-950 text-slate-100 antialiased selection:bg-emerald-500 selection:text-white min-h-screen relative overflow-x-hidden">
+<body class="bg-slate-950 text-slate-100 antialiased selection:bg-amber-500 selection:text-white min-h-screen relative overflow-x-hidden">
 
   <div class="fixed inset-0 pointer-events-none gradient-glow z-0"></div>
 
   <!-- Top Announcement -->
-  <aside class="relative z-50 bg-gradient-to-r from-slate-900 via-slate-950 to-slate-900 border-b border-slate-800 py-2.5 px-4 text-center text-xs font-semibold text-emerald-300 flex items-center justify-center gap-2">
-    <span class="flex h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
-    <span>⚡ <strong>Canal Digital de Atención Prioritaria:</strong> Calle 25 # 2-40, Barrio San Nicolás, Cali, Valle</span>
+  <aside class="relative z-50 bg-gradient-to-r from-slate-900 via-slate-950 to-slate-900 border-b border-slate-800 py-2.5 px-4 text-center text-xs font-semibold text-amber-300 flex items-center justify-center gap-2">
+    <span class="flex h-2 w-2 rounded-full bg-amber-400 animate-pulse"></span>
+    <span>⚡ <strong>Canal Digital de Atención Prioritaria:</strong> Calle 25 # 2-40, Barrio San Nicolás, Cali, Valle del Cauca</span>
   </aside>
 
-  <!-- Navbar -->
+  <!-- Navbar with Custom Brand SVG Logo -->
   <nav class="sticky top-0 z-40 glass-nav">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
-      <a href="#" class="flex items-center gap-3">
-        <div class="w-11 h-11 rounded-2xl bg-gradient-to-br from-emerald-500 to-slate-800 flex items-center justify-center text-white shadow-lg shadow-emerald-950/60 font-black text-lg">
-          ✦
-        </div>
-        <div>
-          <span class="text-lg font-black tracking-tight text-white block leading-none">Distribuidora Eléctrica del Café & Occidente</span>
-          <span class="text-[11px] font-bold text-emerald-400 tracking-wider uppercase mt-1 block">Transformadores</span>
-        </div>
+      <a href="#" class="flex items-center gap-3 group" title="Distribuidora Eléctrica del Café & Occidente">
+        <svg viewBox="0 0 260 52" class="h-11 sm:h-12 w-auto" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Logo Oficial de Distribuidora Eléctrica del Café & Occidente">
+      <defs>
+        <linearGradient id="grad_lead_037" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#f59e0b"/>
+          <stop offset="100%" stop-color="#b45309"/>
+        </linearGradient>
+        <filter id="glow_lead_037" x="-20%" y="-20%" width="140%" height="140%">
+          <feGaussianBlur stdDeviation="3" result="blur"/>
+          <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+        </filter>
+      </defs>
+      
+      <!-- Monogram Emblem Shield -->
+      <g transform="translate(4, 2)">
+        <rect x="0" y="0" width="44" height="44" rx="14" fill="#0f172a" stroke="rgba(255,255,255,0.12)" stroke-width="1.2"/>
+        <rect x="2" y="2" width="40" height="40" rx="12" fill="none" stroke="url(#grad_lead_037)" stroke-width="1.5" opacity="0.6"/>
+        <g transform="translate(2, -1)">
+          
+        <!-- High Voltage Lightning Shield -->
+        <polygon points="20,10 32,15 29,32 20,38 11,32 8,15" stroke="url(#grad_lead_037)" stroke-width="2" fill="none"/>
+        <path d="M21 15L15 24H21L19 33L26 23H20L21 15Z" fill="url(#grad_lead_037)"/>
+        
+        </g>
+      </g>
+      
+      <!-- Brand Name Typography -->
+      <text x="58" y="24" fill="#ffffff" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="15" letter-spacing="-0.3">
+        ELÉCTRICAS DEL CAF
+      </text>
+      <text x="58" y="38" fill="#f59e0b" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="9.5" letter-spacing="1.2">
+        TRANSFORMADORES
+      </text>
+    </svg>
       </a>
 
       <div class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-300">
-        <a href="#simulador" class="hover:text-emerald-400 transition">Simulador</a>
-        <a href="#servicios" class="hover:text-emerald-400 transition">Portafolio</a>
-        <a href="#garantia" class="hover:text-emerald-400 transition">Garantías</a>
-        <a href="#faq" class="hover:text-emerald-400 transition">Preguntas</a>
+        <a href="#simulador" class="hover:text-amber-400 transition">Simulador</a>
+        <a href="#servicios" class="hover:text-amber-400 transition">Portafolio</a>
+        <a href="#tecnologia" class="hover:text-amber-400 transition">Tecnología</a>
+        <a href="#autoridad" class="hover:text-amber-400 transition">Especialista</a>
+        <a href="#faq" class="hover:text-amber-400 transition">Preguntas</a>
       </div>
 
       <div class="flex items-center gap-3">
-        <a href="#simulador" class="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-emerald-500/10 text-emerald-300 border border-emerald-500/30 text-xs font-bold hover:bg-emerald-500/20 transition">
+        <a href="#simulador" class="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-amber-500/10 text-amber-300 border border-amber-500/30 text-xs font-bold hover:bg-amber-500/20 transition">
           Simular Presupuesto
         </a>
-        <a href="https://wa.me/573188501144?text=Hola%20equipo%20de%20Distribuidora Eléctrica del Café & Occidente%2C%20deseo%20solicitar%20atenci%C3%B3n%20prioritaria%20y%20cotizaci%C3%B3n." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 text-xs font-black shadow-lg shadow-emerald-500/20 transition">
+        <a href="https://wa.me/573188501144?text=Hola%20equipo%20de%20Distribuidora Eléctrica del Café & Occidente%2C%20deseo%20solicitar%20atenci%C3%B3n%20prioritaria%20y%20cotizaci%C3%B3n." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 text-xs font-black shadow-lg shadow-amber-500/20 transition">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+            <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.299.144.347.491 1.2.534 1.288.043.087.072.188.014.303-.058.116-.087.188-.173.289l-.26.302c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.861.174.086.275.072.376-.044.101-.116.433-.506.549-.68.116-.173.231-.145.39-.086.159.058 1.011.477 1.184.564.173.087.289.13.332.202.043.073.043.419-.101.824z"/>
+          </svg>
           WhatsApp Directo
         </a>
       </div>
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <header class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 pt-12 sm:pt-20 pb-16 text-center">
-    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card text-emerald-300 text-xs font-bold mb-8 border border-emerald-500/30 shadow-lg">
-      <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
-      <span>⭐ 4.7 / 5 • Atención Especializada y Calidad Certificada</span>
-    </div>
+  <!-- Hero Section with Contextual Image Showcase -->
+  <header class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 pt-12 sm:pt-16 pb-12">
+    <div class="grid lg:grid-cols-12 gap-10 items-center">
+      <div class="lg:col-span-7 text-left space-y-6">
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card text-amber-300 text-xs font-bold border border-amber-500/30 shadow-lg">
+          <span class="w-2 h-2 rounded-full bg-amber-400"></span>
+          <span>⭐ 4.8 / 5 • +135 Casos Atendidos con Éxito</span>
+        </div>
 
-    <h1 class="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight text-white max-w-4xl mx-auto leading-[1.08]">
-      Distribuidora Eléctrica del Café & Occidente
-    </h1>
+        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-[1.1]">
+          Distribuidora Eléctrica del Café & Occidente
+        </h1>
 
-    <p class="mt-6 text-base sm:text-xl text-slate-300 max-w-2xl mx-auto font-normal leading-relaxed">
-      Transformadores, Cables de Media Tensión, Subestaciones y Pararrayos. Simula tu presupuesto estimado al instante y agenda con nuestro equipo especializado en WhatsApp sin filas ni esperas.
-    </p>
+        <p class="text-base sm:text-lg text-slate-300 font-normal leading-relaxed">
+          Transformadores, Cables de Media Tensión, Subestaciones y Pararrayos. Simula tu presupuesto estimado en 30 segundos, calcula opciones de financiación con Addi / Sistecredito y agenda tu valoración prioritaria en WhatsApp sin filas ni esperas.
+        </p>
 
-    <!-- Social Proof Badges -->
-    <div class="mt-10 flex flex-wrap justify-center items-center gap-4 text-xs font-semibold text-slate-300">
-      <div class="flex items-center gap-2 px-4 py-2 rounded-xl bg-slate-900/60 border border-slate-800">
-        <span>📍 Calle 25 # 2-40, Barrio San Nicolás, Cali, Valle</span>
+        <!-- Social Proof & Tech Pills -->
+        <div class="pt-2 flex flex-wrap gap-2">
+          <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-xs text-slate-300 font-medium"><svg class="w-3.5 h-3.5 text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>Certificación CIDET NTC 2050</span><span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-xs text-slate-300 font-medium"><svg class="w-3.5 h-3.5 text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>Transformadores Rymel / Magnetrón</span><span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-xs text-slate-300 font-medium"><svg class="w-3.5 h-3.5 text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>Cables RETIE Nexans / Procables</span>
+        </div>
+
+        <div class="pt-4 flex flex-wrap items-center gap-4 text-xs font-semibold text-slate-400">
+          <div class="flex items-center gap-2">
+            <span>📍 Calle 25 # 2-40, Barrio San Nicolás, Cali, Valle del Cauca</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span>⚡ Respuesta oficial en menos de 15 minutos</span>
+          </div>
+        </div>
       </div>
-      <div class="flex items-center gap-2 px-4 py-2 rounded-xl bg-slate-900/60 border border-slate-800">
-        <span>⚡ Cotización Formal en Menos de 15 Minutos</span>
-      </div>
-      <div class="flex items-center gap-2 px-4 py-2 rounded-xl bg-slate-900/60 border border-slate-800">
-        <span>💳 Facilidades de Pago y Financiación Directa</span>
+
+      <!-- Hero Visual Showcase Image (LCP with fetchpriority="high") -->
+      <div class="lg:col-span-5 relative">
+        <div class="relative rounded-3xl p-1 bg-gradient-to-br from-amber-500/40 via-slate-800/40 to-slate-900/60 shadow-2xl">
+          <div class="rounded-[22px] overflow-hidden bg-slate-950 relative aspect-[4/3]">
+            <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=1200&q=80"
+                 alt="Instalaciones y atención especializada en Distribuidora Eléctrica del Café & Occidente"
+                 fetchpriority="high"
+                 decoding="async"
+                 width="1200" height="800"
+                 class="w-full h-full object-cover transform hover:scale-105 transition duration-700 ease-out">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
+            <div class="absolute bottom-4 left-4 right-4 p-3.5 glass-card rounded-xl border border-white/10 flex items-center justify-between">
+              <div>
+                <span class="text-[10px] font-extrabold uppercase tracking-wider text-amber-400 block">Sede Autorizada</span>
+                <strong class="text-xs text-white block">Eléctricas del Café</strong>
+              </div>
+              <span class="px-2.5 py-1 bg-amber-500/20 text-amber-300 rounded text-[10px] font-bold">
+                EN SERVICIO
+              </span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </header>
 
   <main class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 space-y-24 pb-28">
 
-    <!-- INTERACTIVE QUOTE SIMULATOR -->
+    <!-- INTERACTIVE QUOTE & FINANCING SIMULATOR -->
     <section id="simulador" class="scroll-mt-24">
-      <div class="relative rounded-3xl p-1 bg-gradient-to-b from-emerald-500/30 via-slate-800/40 to-slate-900/20 shadow-2xl">
+      <div class="relative rounded-3xl p-1 bg-gradient-to-b from-amber-500/30 via-slate-800/40 to-slate-900/20 shadow-2xl">
         <div class="bg-slate-900/95 rounded-[22px] p-6 sm:p-12 backdrop-blur-xl border border-slate-800/80">
           <div class="max-w-2xl mx-auto text-center mb-10">
-            <span class="px-3 py-1 bg-emerald-500/20 text-emerald-300 rounded-full text-[11px] font-extrabold uppercase tracking-wider">
-              Simulador Dinámico 2026
+            <span class="px-3 py-1 bg-amber-500/20 text-amber-300 rounded-full text-[11px] font-extrabold uppercase tracking-wider">
+              Simulador Dinámico Oficial 2026
             </span>
-            <h2 class="text-2xl sm:text-4xl font-black text-white mt-3">Calcula tu Presupuesto en Segundos</h2>
+            <h2 class="text-2xl sm:text-4xl font-black text-white mt-3">Calcula tu Presupuesto en Tiempo Real</h2>
             <p class="text-sm text-slate-400 mt-2">
-              Ajusta los parámetros según tu requerimiento para calcular la inversión estimada y enviar tu solicitud formal a WhatsApp.
+              Ajusta los parámetros según tu requerimiento para calcular la inversión estimada, el descuento por pago de contado y las cuotas Addi disponibles.
             </p>
           </div>
 
@@ -134,39 +193,39 @@
               
               <fieldset>
                 <legend class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-3">
-                  1. Servicio o Requerimiento Principal: <span class="text-emerald-400">*</span>
+                  1. Servicio o Requerimiento Principal: <span class="text-amber-400">*</span>
                 </legend>
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   
-        <label class="cursor-pointer p-4 rounded-xl border border-emerald-500/50 bg-emerald-950/25 hover:border-emerald-500/50 transition flex items-start gap-3 treatment-tile">
-          <input type="radio" name="serviceKey" value="srv_0" checked class="mt-1 text-emerald-500 focus:ring-emerald-500" onchange="recalcQuote()">
+        <label class="cursor-pointer p-4 rounded-xl border border-amber-500/50 bg-amber-950/25 hover:border-amber-500/50 transition flex items-start gap-3 treatment-tile">
+          <input type="radio" name="serviceKey" value="srv_0" checked class="mt-1 text-amber-500 focus:ring-amber-500" onchange="recalcQuote()">
           <div>
             <strong class="block text-sm font-bold text-white">Transformadores de Distribución Aéreos y Pedestal (15 a 150 kVA)</strong>
-            <span class="text-xs text-slate-400 block mt-0.5">Certificación CIDET y protocolo de prueba de pérdidas</span>
+            <span class="text-xs text-slate-400 block mt-0.5">Certificación CIDET vigente y protocolo individual de prueba de pérdidas en vacío</span>
           </div>
         </label>
         
-        <label class="cursor-pointer p-4 rounded-xl border border-slate-800 bg-slate-950/40 hover:border-emerald-500/50 transition flex items-start gap-3 treatment-tile">
-          <input type="radio" name="serviceKey" value="srv_1"  class="mt-1 text-emerald-500 focus:ring-emerald-500" onchange="recalcQuote()">
+        <label class="cursor-pointer p-4 rounded-xl border border-slate-800 bg-slate-950/40 hover:border-amber-500/50 transition flex items-start gap-3 treatment-tile">
+          <input type="radio" name="serviceKey" value="srv_1"  class="mt-1 text-amber-500 focus:ring-amber-500" onchange="recalcQuote()">
           <div>
             <strong class="block text-sm font-bold text-white">Cable de Cobre y Aluminio para Media Tensión (15kV / 35kV)</strong>
-            <span class="text-xs text-slate-400 block mt-0.5">Conductores XLPE y ACSR bajo norma técnica RETIE</span>
+            <span class="text-xs text-slate-400 block mt-0.5">Conductores XLPE y ACSR bajo norma técnica RETIE para proyectos urbanos e industriales</span>
           </div>
         </label>
         
-        <label class="cursor-pointer p-4 rounded-xl border border-slate-800 bg-slate-950/40 hover:border-emerald-500/50 transition flex items-start gap-3 treatment-tile">
-          <input type="radio" name="serviceKey" value="srv_2"  class="mt-1 text-emerald-500 focus:ring-emerald-500" onchange="recalcQuote()">
+        <label class="cursor-pointer p-4 rounded-xl border border-slate-800 bg-slate-950/40 hover:border-amber-500/50 transition flex items-start gap-3 treatment-tile">
+          <input type="radio" name="serviceKey" value="srv_2"  class="mt-1 text-amber-500 focus:ring-amber-500" onchange="recalcQuote()">
           <div>
             <strong class="block text-sm font-bold text-white">Celdas de Media Tensión y Cortacircuitos</strong>
-            <span class="text-xs text-slate-400 block mt-0.5">Equipos de protección y maniobra para subestaciones</span>
+            <span class="text-xs text-slate-400 block mt-0.5">Equipos de protección y maniobra para subestaciones y plantas de autogeneración</span>
           </div>
         </label>
         
-        <label class="cursor-pointer p-4 rounded-xl border border-slate-800 bg-slate-950/40 hover:border-emerald-500/50 transition flex items-start gap-3 treatment-tile">
-          <input type="radio" name="serviceKey" value="srv_3"  class="mt-1 text-emerald-500 focus:ring-emerald-500" onchange="recalcQuote()">
+        <label class="cursor-pointer p-4 rounded-xl border border-slate-800 bg-slate-950/40 hover:border-amber-500/50 transition flex items-start gap-3 treatment-tile">
+          <input type="radio" name="serviceKey" value="srv_3"  class="mt-1 text-amber-500 focus:ring-amber-500" onchange="recalcQuote()">
           <div>
             <strong class="block text-sm font-bold text-white">Sistemas de Puesta a Tierra y Mallas Equipotenciales</strong>
-            <span class="text-xs text-slate-400 block mt-0.5">Soldadura exotérmica, varillas copperweld y bentonita</span>
+            <span class="text-xs text-slate-400 block mt-0.5">Soldadura exotérmica Cadweld, varillas copperweld certificadas y compuesto bentonita</span>
           </div>
         </label>
         
@@ -178,7 +237,7 @@
                   <label for="unitsSlider" class="text-xs font-bold uppercase tracking-wider text-slate-300">
                     Cantidad / Lotes / Equipos:
                   </label>
-                  <span id="sliderValDisplay" class="px-3 py-1 bg-emerald-500/20 text-emerald-300 rounded-lg text-sm font-black">
+                  <span id="sliderValDisplay" class="px-3 py-1 bg-amber-500/20 text-amber-300 rounded-lg text-sm font-black">
                     1 Lotes / Equipos
                   </span>
                 </div>
@@ -193,25 +252,25 @@
               <div class="grid sm:grid-cols-2 gap-4">
                 <div>
                   <label for="clientName" class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-1.5">
-                    Tu Nombre o Empresa: <span class="text-emerald-400">*</span>
+                    Tu Nombre o Razón Social: <span class="text-amber-400">*</span>
                   </label>
-                  <input type="text" id="clientName" name="clientName" required placeholder="Ej. Carlos Mendoza" autocomplete="name" class="w-full px-4 py-3 bg-slate-950 border border-slate-800 rounded-xl text-sm text-white placeholder-slate-600 focus:border-emerald-500 transition">
+                  <input type="text" id="clientName" name="clientName" required placeholder="Ej. Carlos Mendoza" autocomplete="name" class="w-full px-4 py-3 bg-slate-950 border border-slate-800 rounded-xl text-sm text-white placeholder-slate-600 focus:border-amber-500 transition">
                 </div>
                 <div>
                   <label for="clientPhone" class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-1.5">
-                    Teléfono / WhatsApp: <span class="text-emerald-400">*</span>
+                    Teléfono / WhatsApp de Contacto: <span class="text-amber-400">*</span>
                   </label>
-                  <input type="tel" id="clientPhone" name="clientPhone" required placeholder="Ej. 315 123 4567" inputmode="tel" autocomplete="tel" class="w-full px-4 py-3 bg-slate-950 border border-slate-800 rounded-xl text-sm text-white placeholder-slate-600 focus:border-emerald-500 transition">
+                  <input type="tel" id="clientPhone" name="clientPhone" required placeholder="Ej. 315 123 4567" inputmode="tel" autocomplete="tel" class="w-full px-4 py-3 bg-slate-950 border border-slate-800 rounded-xl text-sm text-white placeholder-slate-600 focus:border-amber-500 transition">
                 </div>
               </div>
             </div>
 
-            <!-- Total Card -->
-            <div class="lg:col-span-5 glass-card rounded-2xl p-6 sm:p-7 border border-emerald-500/30 flex flex-col justify-between h-full bg-gradient-to-br from-slate-900 to-slate-950 shadow-xl">
+            <!-- Total Card with Addi Financing -->
+            <div class="lg:col-span-5 glass-card rounded-2xl p-6 sm:p-7 border border-amber-500/30 flex flex-col justify-between h-full bg-gradient-to-br from-slate-900 to-slate-950 shadow-xl">
               <div>
                 <div class="flex items-center justify-between pb-4 border-b border-slate-800">
-                  <span class="text-xs font-bold uppercase tracking-wider text-slate-400">Estimación Comercial</span>
-                  <span class="px-2.5 py-1 bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 text-[10px] font-bold rounded-md">
+                  <span class="text-xs font-bold uppercase tracking-wider text-slate-400">Presupuesto Estimado</span>
+                  <span class="px-2.5 py-1 bg-amber-500/10 text-amber-400 border border-amber-500/20 text-[10px] font-bold rounded-md">
                     VALOR ESTIMADO
                   </span>
                 </div>
@@ -221,44 +280,51 @@
                     $1.400.000 COP
                   </div>
                   <p class="text-xs text-slate-400 mt-1" id="treatmentSummary">
-                    Estimado de cotización en tiempo real
+                    Estimado en tiempo real con especificaciones técnicas oficiales
                   </p>
                 </div>
 
                 <div class="mt-6 space-y-3 bg-slate-950/70 p-4 rounded-xl border border-slate-800/80 text-xs">
                   <div class="flex justify-between text-slate-300">
                     <span>Descuento Pago de Contado (10%):</span>
-                    <strong class="text-emerald-400" id="cashDiscountText">-$0 COP</strong>
+                    <strong class="text-amber-400" id="cashDiscountText">-$0 COP</strong>
                   </div>
                   <div class="flex justify-between text-slate-300">
-                    <span>Total con Descuento:</span>
+                    <span>Precio Final de Contado:</span>
                     <strong class="text-white" id="cashTotalText">$1.400.000 COP</strong>
+                  </div>
+                  <div class="pt-2 border-t border-slate-800 flex justify-between items-center">
+                    <span class="text-slate-400">Financiación Addi / Sistecredito:</span>
+                    <strong class="text-amber-300 font-bold" id="addiInstallmentsText">Desde 3 cuotas mensuales</strong>
                   </div>
                 </div>
 
                 <ul class="mt-5 space-y-2 text-xs text-slate-300">
                   <li class="flex items-center gap-2">
-                    <span class="text-emerald-400">✓</span>
+                    <span class="text-amber-400 font-bold">✓</span>
                     <span>Asesoría personalizada y respuesta ágil en WhatsApp</span>
                   </li>
                   <li class="flex items-center gap-2">
-                    <span class="text-emerald-400">✓</span>
-                    <span>Sin compromisos ni costos ocultos</span>
+                    <span class="text-amber-400 font-bold">✓</span>
+                    <span>Sin compromisos iniciales ni sobrecostos imprevistos</span>
                   </li>
                   <li class="flex items-center gap-2">
-                    <span class="text-emerald-400">✓</span>
-                    <span>Facturación legal y garantía de servicio</span>
+                    <span class="text-amber-400 font-bold">✓</span>
+                    <span>Facturación electrónica legal DIAN y garantía por escrito</span>
                   </li>
                 </ul>
               </div>
 
               <div class="mt-6 pt-4 border-t border-slate-800">
-                <button type="submit" class="w-full py-4 px-6 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-black rounded-xl text-sm shadow-xl shadow-emerald-500/20 transition transform active:scale-[0.99] flex items-center justify-center gap-2">
-                  <span>Enviar Cotización a WhatsApp</span>
+                <button type="submit" class="w-full py-4 px-6 bg-amber-500 hover:bg-amber-400 text-slate-950 font-black rounded-xl text-sm shadow-xl shadow-amber-500/20 transition transform active:scale-[0.99] flex items-center justify-center gap-2">
+                  <span>Solicitar Atención con Este Presupuesto</span>
                   <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
                     <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.299.144.347.491 1.2.534 1.288.043.087.072.188.014.303-.058.116-.087.188-.173.289l-.26.302c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.861.174.086.275.072.376-.044.101-.116.433-.506.549-.68.116-.173.231-.145.39-.086.159.058 1.011.477 1.184.564.173.087.289.13.332.202.043.073.043.419-.101.824z"/>
                   </svg>
                 </button>
+                <p class="text-[10px] text-center text-slate-500 mt-2">
+                  🔒 Tus datos son confidenciales. Te redirigiremos al WhatsApp oficial de Distribuidora Eléctrica del Café & Occidente.
+                </p>
               </div>
             </div>
           </form>
@@ -269,72 +335,172 @@
     <!-- PORTFOLIO SERVICES -->
     <section id="servicios" class="scroll-mt-24">
       <div class="text-center max-w-2xl mx-auto mb-14">
-        <span class="text-xs font-bold uppercase tracking-wider text-emerald-400">Portafolio Integral</span>
-        <h2 class="text-3xl sm:text-4xl font-black text-white mt-2">Nuestras Líneas de Servicio</h2>
-        <p class="text-slate-400 text-sm mt-3">Respaldadas por estándares técnicos y profesionales certificados.</p>
+        <span class="text-xs font-bold uppercase tracking-wider text-amber-400">Portafolio Integral</span>
+        <h2 class="text-3xl sm:text-4xl font-black text-white mt-2">Nuestras Líneas Especializadas</h2>
+        <p class="text-slate-400 text-sm mt-3">Diseñadas para entregar resultados medibles, duraderos y certificados.</p>
       </div>
 
       <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
         
-        <div class="glass-card rounded-2xl p-7 border border-slate-800 hover:border-emerald-500/40 transition group">
-          <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold text-lg mb-5 group-hover:scale-110 transition">
-            ⚡
+        <div class="glass-card rounded-2xl p-7 border border-slate-800 hover:border-amber-500/40 transition group flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-400 flex items-center justify-center font-bold text-lg mb-5 group-hover:scale-110 transition">
+              ✦
+            </div>
+            <span class="text-[11px] font-bold text-amber-400 uppercase tracking-wider">Línea Certificada #1</span>
+            <h3 class="text-xl font-bold text-white mt-1 leading-snug">Transformadores de Distribución Aéreos y Pedestal (15 a 150 kVA)</h3>
+            <p class="text-slate-400 text-xs mt-3 leading-relaxed">Certificación CIDET vigente y protocolo individual de prueba de pérdidas en vacío</p>
           </div>
-          <span class="text-[11px] font-bold text-emerald-400 uppercase tracking-wider">Línea Especializada #1</span>
-          <h3 class="text-xl font-bold text-white mt-1">Transformadores de Distribución Aéreos y Pedestal (15 a 150 kVA)</h3>
-          <p class="text-slate-400 text-xs mt-3 leading-relaxed">Certificación CIDET y protocolo de prueba de pérdidas</p>
           <div class="mt-6 pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs">
-            <span class="text-slate-400">Atención Directa</span>
-            <a href="#simulador" class="text-emerald-400 font-bold hover:underline">Cotizar →</a>
+            <span class="text-slate-400 font-medium">Disponibilidad Inmediata</span>
+            <a href="#simulador" class="text-amber-400 font-bold hover:underline">Cotizar →</a>
           </div>
         </div>
         
-        <div class="glass-card rounded-2xl p-7 border border-slate-800 hover:border-emerald-500/40 transition group">
-          <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold text-lg mb-5 group-hover:scale-110 transition">
-            ⚡
+        <div class="glass-card rounded-2xl p-7 border border-slate-800 hover:border-amber-500/40 transition group flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-400 flex items-center justify-center font-bold text-lg mb-5 group-hover:scale-110 transition">
+              ✦
+            </div>
+            <span class="text-[11px] font-bold text-amber-400 uppercase tracking-wider">Línea Certificada #2</span>
+            <h3 class="text-xl font-bold text-white mt-1 leading-snug">Cable de Cobre y Aluminio para Media Tensión (15kV / 35kV)</h3>
+            <p class="text-slate-400 text-xs mt-3 leading-relaxed">Conductores XLPE y ACSR bajo norma técnica RETIE para proyectos urbanos e industriales</p>
           </div>
-          <span class="text-[11px] font-bold text-emerald-400 uppercase tracking-wider">Línea Especializada #2</span>
-          <h3 class="text-xl font-bold text-white mt-1">Cable de Cobre y Aluminio para Media Tensión (15kV / 35kV)</h3>
-          <p class="text-slate-400 text-xs mt-3 leading-relaxed">Conductores XLPE y ACSR bajo norma técnica RETIE</p>
           <div class="mt-6 pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs">
-            <span class="text-slate-400">Atención Directa</span>
-            <a href="#simulador" class="text-emerald-400 font-bold hover:underline">Cotizar →</a>
+            <span class="text-slate-400 font-medium">Disponibilidad Inmediata</span>
+            <a href="#simulador" class="text-amber-400 font-bold hover:underline">Cotizar →</a>
           </div>
         </div>
         
-        <div class="glass-card rounded-2xl p-7 border border-slate-800 hover:border-emerald-500/40 transition group">
-          <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold text-lg mb-5 group-hover:scale-110 transition">
-            ⚡
+        <div class="glass-card rounded-2xl p-7 border border-slate-800 hover:border-amber-500/40 transition group flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-400 flex items-center justify-center font-bold text-lg mb-5 group-hover:scale-110 transition">
+              ✦
+            </div>
+            <span class="text-[11px] font-bold text-amber-400 uppercase tracking-wider">Línea Certificada #3</span>
+            <h3 class="text-xl font-bold text-white mt-1 leading-snug">Celdas de Media Tensión y Cortacircuitos</h3>
+            <p class="text-slate-400 text-xs mt-3 leading-relaxed">Equipos de protección y maniobra para subestaciones y plantas de autogeneración</p>
           </div>
-          <span class="text-[11px] font-bold text-emerald-400 uppercase tracking-wider">Línea Especializada #3</span>
-          <h3 class="text-xl font-bold text-white mt-1">Celdas de Media Tensión y Cortacircuitos</h3>
-          <p class="text-slate-400 text-xs mt-3 leading-relaxed">Equipos de protección y maniobra para subestaciones</p>
           <div class="mt-6 pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs">
-            <span class="text-slate-400">Atención Directa</span>
-            <a href="#simulador" class="text-emerald-400 font-bold hover:underline">Cotizar →</a>
+            <span class="text-slate-400 font-medium">Disponibilidad Inmediata</span>
+            <a href="#simulador" class="text-amber-400 font-bold hover:underline">Cotizar →</a>
           </div>
         </div>
         
-        <div class="glass-card rounded-2xl p-7 border border-slate-800 hover:border-emerald-500/40 transition group">
-          <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold text-lg mb-5 group-hover:scale-110 transition">
-            ⚡
+        <div class="glass-card rounded-2xl p-7 border border-slate-800 hover:border-amber-500/40 transition group flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-400 flex items-center justify-center font-bold text-lg mb-5 group-hover:scale-110 transition">
+              ✦
+            </div>
+            <span class="text-[11px] font-bold text-amber-400 uppercase tracking-wider">Línea Certificada #4</span>
+            <h3 class="text-xl font-bold text-white mt-1 leading-snug">Sistemas de Puesta a Tierra y Mallas Equipotenciales</h3>
+            <p class="text-slate-400 text-xs mt-3 leading-relaxed">Soldadura exotérmica Cadweld, varillas copperweld certificadas y compuesto bentonita</p>
           </div>
-          <span class="text-[11px] font-bold text-emerald-400 uppercase tracking-wider">Línea Especializada #4</span>
-          <h3 class="text-xl font-bold text-white mt-1">Sistemas de Puesta a Tierra y Mallas Equipotenciales</h3>
-          <p class="text-slate-400 text-xs mt-3 leading-relaxed">Soldadura exotérmica, varillas copperweld y bentonita</p>
           <div class="mt-6 pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs">
-            <span class="text-slate-400">Atención Directa</span>
-            <a href="#simulador" class="text-emerald-400 font-bold hover:underline">Cotizar →</a>
+            <span class="text-slate-400 font-medium">Disponibilidad Inmediata</span>
+            <a href="#simulador" class="text-amber-400 font-bold hover:underline">Cotizar →</a>
           </div>
         </div>
         
       </div>
     </section>
 
+    <!-- SPECIALIZED TECHNOLOGY & EQUIPMENT SHOWCASE -->
+    <section id="tecnologia" class="scroll-mt-24">
+      <div class="grid lg:grid-cols-12 gap-10 items-center">
+        <div class="lg:col-span-5 space-y-6">
+          <span class="text-xs font-bold uppercase tracking-wider text-amber-400">Tecnología de Vanguardia</span>
+          <h2 class="text-3xl sm:text-4xl font-black text-white leading-tight">
+            Equipamiento de Élite para Resultados Insuperables
+          </h2>
+          <p class="text-sm text-slate-300 leading-relaxed">
+            En <strong>Distribuidora Eléctrica del Café & Occidente</strong> invertimos en tecnología certificada para garantizar procedimientos seguros, indoloros y con exactitud milimétrica.
+          </p>
+          <div class="space-y-3 pt-2">
+            <div class="flex items-start gap-3">
+              <span class="w-6 h-6 rounded-full bg-amber-500/20 text-amber-400 flex items-center justify-center text-xs font-bold mt-0.5">✓</span>
+              <p class="text-xs text-slate-300"><strong>Precisión Digital:</strong> Eliminamos errores humanos mediante instrumentación calibrada.</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="w-6 h-6 rounded-full bg-amber-500/20 text-amber-400 flex items-center justify-center text-xs font-bold mt-0.5">✓</span>
+              <p class="text-xs text-slate-300"><strong>Bioseguridad de Nivel Hospitalario:</strong> Esterilización y empaque estéril individual para cada paciente.</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="w-6 h-6 rounded-full bg-amber-500/20 text-amber-400 flex items-center justify-center text-xs font-bold mt-0.5">✓</span>
+              <p class="text-xs text-slate-300"><strong>Biomateriales Originales:</strong> Suministros con trazabilidad directa del fabricante internacional.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-7 grid sm:grid-cols-2 gap-5">
+          <div class="glass-card rounded-2xl overflow-hidden border border-slate-800">
+            <div class="aspect-[4/3] bg-slate-950 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80"
+                   alt="Equipamiento técnico especializado en Distribuidora Eléctrica del Café & Occidente"
+                   loading="lazy"
+                   decoding="async"
+                   width="800" height="600"
+                   class="w-full h-full object-cover hover:scale-105 transition duration-500">
+            </div>
+            <div class="p-5">
+              <span class="text-[10px] font-bold text-amber-400 uppercase tracking-wider">Infraestructura</span>
+              <h4 class="text-base font-bold text-white mt-1">Instrumentación y Calibración</h4>
+              <p class="text-xs text-slate-400 mt-2">Tecnología de última generación para diagnósticos y procedimientos indoloros.</p>
+            </div>
+          </div>
+
+          <div class="glass-card rounded-2xl overflow-hidden border border-slate-800">
+            <div class="aspect-[4/3] bg-slate-950 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?auto=format&fit=crop&w=800&q=80"
+                   alt="Casos y resultados certificados en Distribuidora Eléctrica del Café & Occidente"
+                   loading="lazy"
+                   decoding="async"
+                   width="800" height="600"
+                   class="w-full h-full object-cover hover:scale-105 transition duration-500">
+            </div>
+            <div class="p-5">
+              <span class="text-[10px] font-bold text-amber-400 uppercase tracking-wider">Evidencia Clínica / Técnica</span>
+              <h4 class="text-base font-bold text-white mt-1">Resultados Comprobados</h4>
+              <p class="text-xs text-slate-400 mt-2">Cientos de pacientes y clientes satisfechos con resultados visibles y garantizados.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DIRECTOR & AUTHORITY SECTION -->
+    <section id="autoridad" class="scroll-mt-24">
+      <div class="glass-card rounded-3xl p-8 sm:p-12 border border-slate-800 bg-gradient-to-br from-slate-900 to-slate-950">
+        <div class="grid lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-8 space-y-4">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/10 text-amber-300 text-xs font-bold border border-amber-500/30">
+              <span>Dirección Médica y Profesional</span>
+            </div>
+            <h3 class="text-2xl sm:text-3xl font-black text-white">Ing. Manuel Fernando Marín</h3>
+            <p class="text-sm font-semibold text-amber-400">Ingeniero Electricista Certificado RETIE / CIDET (Univ. del Valle)</p>
+            <p class="text-xs text-slate-400 leading-relaxed max-w-2xl">
+              Respaldado por el registro oficial <strong>Matrícula Profesional COPNIA 67201-55 • Laboratorio de Ensayos Calibrado</strong>. En Distribuidora Eléctrica del Café & Occidente cada caso es evaluado de manera personalizada por profesionales titulados, garantizando ética, rigor técnico y un estándar de atención prioritario.
+            </p>
+            <div class="pt-2 text-xs text-slate-400 flex items-center gap-3">
+              <span>📍 Sede Física: <strong>Calle 25 # 2-40, Barrio San Nicolás, Cali, Valle del Cauca</strong></span>
+            </div>
+          </div>
+          <div class="lg:col-span-4 flex flex-col gap-3 justify-center">
+            <a href="https://wa.me/573188501144?text=Hola%20Distribuidora Eléctrica del Café & Occidente%2C%20deseo%20agendar%20una%20cita%20con%20Ing. Manuel Fernando Marín." target="_blank" rel="noopener noreferrer" class="py-3 px-6 bg-amber-500 hover:bg-amber-400 text-slate-950 font-black rounded-xl text-xs text-center shadow-lg transition">
+              Agendar con Dirección Médica
+            </a>
+            <a href="#simulador" class="py-3 px-6 glass-card hover:bg-slate-800 text-white font-bold rounded-xl text-xs text-center border border-slate-700 transition">
+              Volver al Simulador
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- FAQ -->
     <section id="faq" class="max-w-3xl mx-auto scroll-mt-24">
       <div class="text-center mb-10">
-        <span class="text-xs font-bold uppercase tracking-wider text-emerald-400">Preguntas Frecuentes</span>
+        <span class="text-xs font-bold uppercase tracking-wider text-amber-400">Preguntas Frecuentes</span>
         <h2 class="text-2xl sm:text-3xl font-black text-white mt-1">Dudas Habituales</h2>
       </div>
 
@@ -342,7 +508,7 @@
         <details class="glass-card rounded-xl p-5 border border-slate-800 group" open>
           <summary class="font-bold text-sm text-white cursor-pointer flex justify-between items-center list-none">
             <span>¿Cómo se confirma el presupuesto final?</span>
-            <span class="text-emerald-400 text-lg group-open:rotate-45 transition transform">+</span>
+            <span class="text-amber-400 text-lg group-open:rotate-45 transition transform">+</span>
           </summary>
           <p class="text-xs text-slate-400 mt-3 leading-relaxed">
             El simulador calcula un estimado exacto según tarifas base. Al enviar la solicitud por WhatsApp, nuestro asesor técnico confirma especificaciones, descuentos por volumen y agenda tu cita o despacho formal.
@@ -350,11 +516,20 @@
         </details>
         <details class="glass-card rounded-xl p-5 border border-slate-800 group">
           <summary class="font-bold text-sm text-white cursor-pointer flex justify-between items-center list-none">
-            <span>¿Cuáles son las formas de pago aceptadas?</span>
-            <span class="text-emerald-400 text-lg group-open:rotate-45 transition transform">+</span>
+            <span>¿Cuáles son las facilidades de financiación con Addi?</span>
+            <span class="text-amber-400 text-lg group-open:rotate-45 transition transform">+</span>
           </summary>
           <p class="text-xs text-slate-400 mt-3 leading-relaxed">
-            Aceptamos transferencias Bancolombia, Nequi, tarjetas débito/crédito y opciones de financiación comercial directa según aplique al servicio.
+            Puedes pagar a cuotas con aprobación inmediata en línea mediante Addi o Sistecredito, solo presentando tu cédula y número de celular, sin trámites bancarios engorrosos ni papeleo.
+          </p>
+        </details>
+        <details class="glass-card rounded-xl p-5 border border-slate-800 group">
+          <summary class="font-bold text-sm text-white cursor-pointer flex justify-between items-center list-none">
+            <span>¿Qué garantías legales y técnicas respaldan el servicio?</span>
+            <span class="text-amber-400 text-lg group-open:rotate-45 transition transform">+</span>
+          </summary>
+          <p class="text-xs text-slate-400 mt-3 leading-relaxed">
+            Entregamos factura electrónica legal DIAN, póliza o garantía escrita por servicio y trabajamos estrictamente bajo habilitaciones y normas técnicas colombianas vigentes.
           </p>
         </details>
       </div>
@@ -366,18 +541,53 @@
   <aside class="fixed bottom-0 inset-x-0 z-50 glass-nav p-3 flex sm:hidden items-center justify-between gap-3 border-t border-slate-800">
     <div class="flex-1">
       <span class="text-[10px] text-slate-400 block leading-tight">Presupuesto Estimado:</span>
-      <span class="text-xs font-black text-emerald-400" id="stickyPriceText">$1.400.000 COP</span>
+      <span class="text-xs font-black text-amber-400" id="stickyPriceText">$1.400.000 COP</span>
     </div>
-    <a href="#simulador" class="px-4 py-2.5 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-black rounded-xl text-xs flex items-center gap-1.5 shadow-lg">
+    <a href="#simulador" class="px-4 py-2.5 bg-amber-500 hover:bg-amber-400 text-slate-950 font-black rounded-xl text-xs flex items-center gap-1.5 shadow-lg">
       <span>Cotizar</span>
     </a>
   </aside>
 
-  <!-- Footer -->
+  <!-- Footer with Brand Logo -->
   <footer class="relative z-10 border-t border-slate-900 bg-slate-950 py-12 text-center text-xs text-slate-500">
-    <div class="max-w-6xl mx-auto px-4 space-y-3">
-      <p class="font-bold text-slate-400">Distribuidora Eléctrica del Café & Occidente</p>
-      <p>Calle 25 # 2-40, Barrio San Nicolás, Cali, Valle • PBX / WhatsApp: +57 318 850 1144</p>
+    <div class="max-w-6xl mx-auto px-4 space-y-4">
+      <div class="flex justify-center">
+        <svg viewBox="0 0 260 52" class="h-11 sm:h-12 w-auto" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Logo Oficial de Distribuidora Eléctrica del Café & Occidente">
+      <defs>
+        <linearGradient id="grad_lead_037" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#f59e0b"/>
+          <stop offset="100%" stop-color="#b45309"/>
+        </linearGradient>
+        <filter id="glow_lead_037" x="-20%" y="-20%" width="140%" height="140%">
+          <feGaussianBlur stdDeviation="3" result="blur"/>
+          <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+        </filter>
+      </defs>
+      
+      <!-- Monogram Emblem Shield -->
+      <g transform="translate(4, 2)">
+        <rect x="0" y="0" width="44" height="44" rx="14" fill="#0f172a" stroke="rgba(255,255,255,0.12)" stroke-width="1.2"/>
+        <rect x="2" y="2" width="40" height="40" rx="12" fill="none" stroke="url(#grad_lead_037)" stroke-width="1.5" opacity="0.6"/>
+        <g transform="translate(2, -1)">
+          
+        <!-- High Voltage Lightning Shield -->
+        <polygon points="20,10 32,15 29,32 20,38 11,32 8,15" stroke="url(#grad_lead_037)" stroke-width="2" fill="none"/>
+        <path d="M21 15L15 24H21L19 33L26 23H20L21 15Z" fill="url(#grad_lead_037)"/>
+        
+        </g>
+      </g>
+      
+      <!-- Brand Name Typography -->
+      <text x="58" y="24" fill="#ffffff" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="15" letter-spacing="-0.3">
+        ELÉCTRICAS DEL CAF
+      </text>
+      <text x="58" y="38" fill="#f59e0b" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="9.5" letter-spacing="1.2">
+        TRANSFORMADORES
+      </text>
+    </svg>
+      </div>
+      <p class="font-bold text-slate-300">Distribuidora Eléctrica del Café & Occidente</p>
+      <p>Calle 25 # 2-40, Barrio San Nicolás, Cali, Valle del Cauca • PBX / WhatsApp: +57 318 850 1144</p>
       <p class="text-[11px] text-slate-600">
         Plataforma interactiva diseñada por <strong>Ing. Juan Pablo Campo</strong> (Piloto comercial 48h sin costo).
       </p>
@@ -385,7 +595,7 @@
   </footer>
 
   <script>
-    const PRICING_DATA = {"srv_0": {"name": "Transformadores de Distribución Aéreos y Pedestal (15 a 150 kVA)", "unitPrice": 6500000, "desc": "Certificación CIDET y protocolo de prueba de pérdidas"}, "srv_1": {"name": "Cable de Cobre y Aluminio para Media Tensión (15kV / 35kV)", "unitPrice": 1400000, "desc": "Conductores XLPE y ACSR bajo norma técnica RETIE"}, "srv_2": {"name": "Celdas de Media Tensión y Cortacircuitos", "unitPrice": 2800000, "desc": "Equipos de protección y maniobra para subestaciones"}, "srv_3": {"name": "Sistemas de Puesta a Tierra y Mallas Equipotenciales", "unitPrice": 890000, "desc": "Soldadura exotérmica, varillas copperweld y bentonita"}};
+    const PRICING_DATA = {"srv_0": {"name": "Transformadores de Distribución Aéreos y Pedestal (15 a 150 kVA)", "unitPrice": 6500000, "desc": "Certificación CIDET vigente y protocolo individual de prueba de pérdidas en vacío"}, "srv_1": {"name": "Cable de Cobre y Aluminio para Media Tensión (15kV / 35kV)", "unitPrice": 1400000, "desc": "Conductores XLPE y ACSR bajo norma técnica RETIE para proyectos urbanos e industriales"}, "srv_2": {"name": "Celdas de Media Tensión y Cortacircuitos", "unitPrice": 2800000, "desc": "Equipos de protección y maniobra para subestaciones y plantas de autogeneración"}, "srv_3": {"name": "Sistemas de Puesta a Tierra y Mallas Equipotenciales", "unitPrice": 890000, "desc": "Soldadura exotérmica Cadweld, varillas copperweld certificadas y compuesto bentonita"}};
 
     function recalcQuote() {
       const selKey = document.querySelector('input[name="serviceKey"]:checked')?.value;
@@ -394,6 +604,7 @@
       const subtotal = units * cfg.unitPrice;
       const discount = Math.round(subtotal * 0.10);
       const total = subtotal - discount;
+      const addi3m = Math.round(subtotal / 3);
 
       const fmt = (n) => '$' + n.toLocaleString('es-CO') + ' COP';
 
@@ -402,15 +613,16 @@
       document.getElementById('treatmentSummary').textContent = `${units}x ${cfg.name} (${cfg.desc})`;
       document.getElementById('cashDiscountText').textContent = `-${fmt(discount)}`;
       document.getElementById('cashTotalText').textContent = fmt(total);
+      document.getElementById('addiInstallmentsText').textContent = `3 cuotas de ${fmt(addi3m)} sin interés`;
       document.getElementById('stickyPriceText').textContent = fmt(subtotal);
 
       document.querySelectorAll('.treatment-tile').forEach(t => {
         const inp = t.querySelector('input');
         if (inp && inp.checked) {
-          t.classList.add('border-emerald-500/50', 'bg-emerald-950/25');
+          t.classList.add('border-amber-500/50', 'bg-amber-950/25');
           t.classList.remove('border-slate-800', 'bg-slate-950/40');
         } else {
-          t.classList.remove('border-emerald-500/50', 'bg-emerald-950/25');
+          t.classList.remove('border-amber-500/50', 'bg-amber-950/25');
           t.classList.add('border-slate-800', 'bg-slate-950/40');
         }
       });
@@ -423,14 +635,16 @@
       const name = document.getElementById('clientName').value.trim() || 'Cliente Preferencial';
       const phone = document.getElementById('clientPhone').value.trim() || 'No indicado';
       const total = document.getElementById('totalEstimatePrice').textContent;
+      const cashTotal = document.getElementById('cashTotalText').textContent;
 
       const msg = `👋 Hola equipo de Distribuidora Eléctrica del Café & Occidente,%0A%0A` +
         `Mi nombre es *${encodeURIComponent(name)}* (Tel: ${encodeURIComponent(phone)}).%0A` +
         `Utilicé su cotizador interactivo en la web con este requerimiento:%0A%0A` +
         `📌 *Línea / Servicio:* ${encodeURIComponent(cfg.name)}%0A` +
         `🔢 *Cantidad:* ${units} Lotes / Equipos%0A` +
-        `💰 *Inversión Estimada:* ${encodeURIComponent(total)}%0A%0A` +
-        `Solicito atención y confirmación de disponibilidad para este requerimiento. ¡Muchas gracias!`;
+        `💰 *Inversión Estimada:* ${encodeURIComponent(total)}%0A` +
+        `💳 *Total con Descuento Contado (10%):* ${encodeURIComponent(cashTotal)}%0A%0A` +
+        `Deseo solicitar atención prioritaria y confirmar disponibilidad para este requerimiento. ¡Muchas gracias!`;
 
       window.open(`https://wa.me/573188501144?text=${msg}`, '_blank');
     }

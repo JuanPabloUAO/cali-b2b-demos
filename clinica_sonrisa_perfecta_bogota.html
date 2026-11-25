@@ -87,16 +87,29 @@
   <!-- Navigation Bar -->
   <nav class="sticky top-0 z-40 glass-nav transition-all">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
-      <a href="#" class="flex items-center gap-3 group">
-        <div class="w-11 h-11 rounded-2xl bg-gradient-to-br from-brand-500 to-emerald-800 flex items-center justify-center text-white shadow-lg shadow-emerald-900/40 group-hover:scale-105 transition">
-          <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-          </svg>
-        </div>
-        <div>
-          <span class="text-lg font-black tracking-tight text-white block leading-none">SONRISA PERFECTA</span>
-          <span class="text-[11px] font-bold text-emerald-400 tracking-wider uppercase mt-1 block">Clínica Odontológica • Bogotá</span>
-        </div>
+      <a href="#" class="flex items-center gap-3 group" title="Clínica Sonrisa Perfecta Bogotá">
+        <svg viewBox="0 0 260 52" class="h-11 sm:h-12 w-auto" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Logo Oficial de Clínica Sonrisa Perfecta">
+          <defs>
+            <linearGradient id="grad_sp_bogota" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#10b981"/>
+              <stop offset="100%" stop-color="#047857"/>
+            </linearGradient>
+          </defs>
+          <g transform="translate(4, 2)">
+            <rect x="0" y="0" width="44" height="44" rx="14" fill="#0f172a" stroke="rgba(255,255,255,0.12)" stroke-width="1.2"/>
+            <rect x="2" y="2" width="40" height="40" rx="12" fill="none" stroke="url(#grad_sp_bogota)" stroke-width="1.5" opacity="0.6"/>
+            <g transform="translate(2, -1)">
+              <path d="M26 13C23 13 21 14.5 20 16.5C19 14.5 17 13 14 13C8.5 13 6 18.5 6 23.5C6 31 11.5 38 20 45C28.5 38 34 31 34 23.5C34 18.5 31.5 13 26 13Z" fill="url(#grad_sp_bogota)" opacity="0.92"/>
+              <path d="M16 20C16 18 17.5 16.5 19.5 16.5" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round"/>
+            </g>
+          </g>
+          <text x="58" y="24" fill="#ffffff" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="15" letter-spacing="-0.3">
+            SONRISA PERFECTA
+          </text>
+          <text x="58" y="38" fill="#10b981" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="9.5" letter-spacing="1.2">
+            ODONTOLOGÍA ESTÉTICA • BOGOTÁ
+          </text>
+        </svg>
       </a>
 
       <div class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-300">
@@ -158,6 +171,28 @@
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
         </svg>
         <span>Financiación Addi / Sistecredito hasta 24 cuotas</span>
+      </div>
+    </div>
+
+    <!-- Hero Showcase Image (LCP Candidate with fetchpriority="high") -->
+    <div class="mt-12 max-w-4xl mx-auto rounded-3xl p-1 bg-gradient-to-br from-emerald-500/40 via-slate-800/40 to-slate-900/60 shadow-2xl">
+      <div class="rounded-[22px] overflow-hidden bg-slate-950 relative aspect-[16/9]">
+        <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1200&q=80"
+             alt="Instalaciones clínicas de alta gama en Clínica Sonrisa Perfecta Bogotá"
+             fetchpriority="high"
+             decoding="async"
+             width="1200" height="675"
+             class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
+        <div class="absolute bottom-5 left-6 right-6 flex items-center justify-between text-left">
+          <div>
+            <span class="text-[11px] font-extrabold text-emerald-400 uppercase tracking-wider block">Sede Chicó Calle 94</span>
+            <strong class="text-sm sm:text-base text-white">Quirófano y Suites de Odontología Digital 3D</strong>
+          </div>
+          <span class="px-3 py-1 bg-emerald-500/20 text-emerald-300 rounded-lg text-xs font-bold border border-emerald-500/30">
+            Habilitación Bogotá No. 11029
+          </span>
+        </div>
       </div>
     </div>
   </header>
@@ -534,7 +569,31 @@
 
   <!-- Footer -->
   <footer class="relative z-10 border-t border-slate-900 bg-slate-950 py-12 text-center text-xs text-slate-500">
-    <div class="max-w-6xl mx-auto px-4 space-y-3">
+    <div class="max-w-6xl mx-auto px-4 space-y-4">
+      <div class="flex justify-center">
+        <svg viewBox="0 0 260 52" class="h-11 sm:h-12 w-auto" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Logo Oficial de Clínica Sonrisa Perfecta">
+          <defs>
+            <linearGradient id="grad_sp_footer" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#10b981"/>
+              <stop offset="100%" stop-color="#047857"/>
+            </linearGradient>
+          </defs>
+          <g transform="translate(4, 2)">
+            <rect x="0" y="0" width="44" height="44" rx="14" fill="#0f172a" stroke="rgba(255,255,255,0.12)" stroke-width="1.2"/>
+            <rect x="2" y="2" width="40" height="40" rx="12" fill="none" stroke="url(#grad_sp_footer)" stroke-width="1.5" opacity="0.6"/>
+            <g transform="translate(2, -1)">
+              <path d="M26 13C23 13 21 14.5 20 16.5C19 14.5 17 13 14 13C8.5 13 6 18.5 6 23.5C6 31 11.5 38 20 45C28.5 38 34 31 34 23.5C34 18.5 31.5 13 26 13Z" fill="url(#grad_sp_footer)" opacity="0.92"/>
+              <path d="M16 20C16 18 17.5 16.5 19.5 16.5" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round"/>
+            </g>
+          </g>
+          <text x="58" y="24" fill="#ffffff" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="15" letter-spacing="-0.3">
+            SONRISA PERFECTA
+          </text>
+          <text x="58" y="38" fill="#10b981" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="9.5" letter-spacing="1.2">
+            ODONTOLOGÍA ESTÉTICA • BOGOTÁ
+          </text>
+        </svg>
+      </div>
       <p class="font-bold text-slate-400">Clínica Odontológica Sonrisa Perfecta Bogotá D.C.</p>
       <p>Sede Chicó: Calle 93 # 14-20 • Sede Chapinero: Cra 7 # 54-10 • PBX: (601) 642 3310</p>
       <p class="text-[11px] text-slate-600">
