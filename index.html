@@ -1,362 +1,334 @@
 <!DOCTYPE html>
-<html lang="es" class="scroll-smooth">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Juan Pablo Campo | Ingeniero Multimedia & Especialista en Desarrollo Web B2B</title>
-  <meta name="description" content="Portafolio profesional de Juan Pablo Campo. Ingeniero Multimedia de la UAO. Desarrollo de aplicaciones web de alta conversión, cotizadores interactivos y automatización digital en Cali, Colombia.">
-  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Portafolio Editorial B2B V3.0 — Ing. Juan Pablo Campo</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'] },
-          colors: {
-            brand: {
-              dark: '#090d16',
-              navy: '#0f172a',
-              blue: '#2563eb',
-              cyan: '#06b6d4',
-              emerald: '#10b981',
-              amber: '#f59e0b'
-            }
-          }
-        }
-      }
-    }
-  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: #FAF9F6; color: #0F172A; font-family: 'Plus Jakarta Sans', sans-serif; line-height: 1.55; }
+    .wrap { max-width: 1160px; margin: 0 auto; padding: 48px 24px 80px; }
+    header { margin-bottom: 44px; max-width: 720px; }
+    .pill { display:inline-block; font-size:12px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; color:#0D6E6E; background:rgba(13,110,110,.09); padding:6px 14px; border-radius:999px; margin-bottom:16px; }
+    h1 { font-family:'Fraunces', Georgia, serif; font-size:clamp(2.2rem,4vw,3.3rem); line-height:1.1; letter-spacing:-.02em; margin-bottom:14px; }
+    header p { color:#475569; font-size:1.05rem; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(310px, 1fr)); gap:18px; }
+    .demo-card { display:block; text-decoration:none; color:inherit; background:#FFFFFF; border:1px solid rgba(15,23,42,.08); border-radius:18px; padding:24px; transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease; }
+    .demo-card:hover { transform:translateY(-2px); box-shadow:0 16px 36px rgba(15,23,42,.07); border-color:rgba(15,23,42,.22); }
+    .demo-top { display:flex; justify-content:space-between; align-items:center; margin-bottom:14px; }
+    .tag { font-size:11.5px; font-weight:700; padding:4px 10px; border-radius:999px; }
+    .arrow { color:#94A3B8; font-weight:700; }
+    .demo-card h3 { font-size:1.08rem; margin-bottom:6px; }
+    .demo-card p { font-size:0.9rem; color:#64748B; }
+  </style>
 </head>
-<body class="bg-slate-950 text-slate-100 antialiased font-sans selection:bg-blue-600 selection:text-white">
-
-  <!-- TOPBAR DE ESTADO -->
-  <div class="bg-slate-900/80 backdrop-blur border-b border-slate-800 text-xs py-2 px-4 sticky top-0 z-50">
-    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
-      <div class="flex items-center gap-3">
-        <span class="inline-flex items-center gap-1.5 font-bold text-emerald-400">
-          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-          Disponible para Proyectos Web B2B & Consultoría
-        </span>
-        <span class="text-slate-600 hidden md:inline">|</span>
-        <span class="text-slate-400 hidden md:inline">Cali, Colombia • Cobertura Nacional e Internacional</span>
-      </div>
-      <div class="flex items-center gap-4 text-slate-300">
-        <a href="https://github.com/JuanPabloUAO" target="_blank" class="hover:text-cyan-400 transition flex items-center gap-1 font-mono">
-          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-          github.com/JuanPabloUAO
-        </a>
-        <a href="https://wa.me/573162508434" target="_blank" class="hover:text-emerald-400 transition font-bold text-white flex items-center gap-1">
-          WhatsApp Directo
-        </a>
-      </div>
-    </div>
+<body>
+  <div class="wrap">
+    <header>
+      <span class="pill">Estudio Digital B2B · Arquitectura V3.0</span>
+      <h1>Experiencias web editoriales diseñadas para convertir por WhatsApp.</h1>
+      <p>Catálogo de prototipos interactivos construidos a medida por el Ing. Juan Pablo Campo (UAO). Cuatro sistemas visuales de alta gama adaptados por industria.</p>
+    </header>
+    <div class="grid">
+            <a class="demo-card" href="ferreteria_universal_cali.html">
+              <div class="demo-top">
+                <span class="tag" style="color:#D95D1E;background:rgba(217, 93, 30, 0.10);">Ingeniería &amp; Suministro Industrial</span>
+                <span class="arrow">↗</span>
+              </div>
+              <h3>Ferretería Universal (Cali)</h3>
+              <p>Ferretería Industrial y Materiales de Construcción</p>
+            </a>
+            <a class="demo-card" href="tornilleria_la_grande_cali.html">
+              <div class="demo-top">
+                <span class="tag" style="color:#D95D1E;background:rgba(217, 93, 30, 0.10);">Ingeniería &amp; Suministro Industrial</span>
+                <span class="arrow">↗</span>
+              </div>
+              <h3>Tornillería La Grande (Cali)</h3>
+              <p>Tornillería Industrial, Pernos Estructurales, Fijaciones y Racores</p>
+            </a>
+            <a class="demo-card" href="multinacional_repuestos_cali.html">
+              <div class="demo-top">
+                <span class="tag" style="color:#1D4ED8;background:rgba(29, 78, 216, 0.09);">Automotriz &amp; Flotas</span>
+                <span class="arrow">↗</span>
+              </div>
+              <h3>Multinacional De Repuestos Cali</h3>
+              <p>Repuestos Automotrices Multimarca, Partes de Motor, Suspensión y Frenos</p>
+            </a>
+            <a class="demo-card" href="elementos_electricos_cali.html">
+              <div class="demo-top">
+                <span class="tag" style="color:#D95D1E;background:rgba(217, 93, 30, 0.10);">Ingeniería &amp; Suministro Industrial</span>
+                <span class="arrow">↗</span>
+              </div>
+              <h3>Elementos Eléctricos Ltda.</h3>
+              <p>Materiales Eléctricos Industriales, Conductores RETIE, Iluminación LED y Tableros</p>
+            </a>
+            <a class="demo-card" href="alumcali_arquitectonico_cali.html">
+              <div class="demo-top">
+                <span class="tag" style="color:#D95D1E;background:rgba(217, 93, 30, 0.10);">Ingeniería &amp; Suministro Industrial</span>
+                <span class="arrow">↗</span>
+              </div>
+              <h3>Alumcali S.A.S.</h3>
+              <p>Perfilería en Aluminio Arquitectónico, Sistemas de Ventanería, Vidrio Templado y Fachadas</p>
+            </a>
+            <a class="demo-card" href="clinica_sonrisa_perfecta_bogota.html">
+              <div class="demo-top">
+                <span class="tag" style="color:#0D6E6E;background:rgba(13, 110, 110, 0.09);">Salud &amp; Especialistas</span>
+                <span class="arrow">↗</span>
+              </div>
+              <h3>Clínica Odontológica Sonrisa Perfecta (Bogotá)</h3>
+              <p>Odontología Estética, Diseño de Sonrisa, Implantes y Ortodoncia</p>
+            </a>
+            <a class="demo-card" href="acero_suministros_medellin.html">
+              <div class="demo-top">
+                <span class="tag" style="color:#D95D1E;background:rgba(217, 93, 30, 0.10);">Ingeniería &amp; Suministro Industrial</span>
+                <span class="arrow">↗</span>
+              </div>
+              <h3>Acero &amp; Suministros Industriales Antioquia (Medellín)</h3>
+              <p>Aceros Especiales, Láminas HR/CR, Tubería Estructural y Corte CNC</p>
+            </a>
+            <a class="demo-card" href="estetica_renacer_cali.html">
+              <div class="demo-top">
+                <span class="tag" style="color:#0D6E6E;background:rgba(13, 110, 110, 0.09);">Salud &amp; Especialistas</span>
+                <span class="arrow">↗</span>
+              </div>
+              <h3>Centro Estético &amp; Spa Renacer (Cali)</h3>
+              <p>Medicina Estética, Rejuvenecimiento Facial, Depilación Láser y Moldeo Corporal</p>
+            </a>
+            <a class="demo-card" href="clinica_dental_elite_bogota_norte.html">
+              <div class="demo-top">
+                <span class="tag" style="color:#0D6E6E;background:rgba(13, 110, 110, 0.09);">Salud &amp; Especialistas</span>
+                <span class="arrow">↗</span>
+              </div>
+              <h3>Clínica Dental Élite &amp; Implantes (Bogotá Norte)</h3>
+              <p>Implantología Oral, Diseño de Sonrisa y Ortodoncia Invisible</p>
+            </a>
+            <a class="demo-card" href="suministros_metales_valle_yumbo.html">
+              <div class="demo-top">
+                <span class="tag" style="color:#D95D1E;background:rgba(217, 93, 30, 0.10);">Ingeniería &amp; Suministro Industrial</span>
+                <span class="arrow">↗</span>
+              </div>
+              <h3>Suministros &amp; Metales del Valle (Yumbo / Cali)</h3>
+              <p>Distribución Mayorista de Acero Estructural, Vigas y Tubería Pesada</p>
+            </a>
+            <a class="demo-card" href="clinica_dermatologica_el_poblado_medellin.html">
+              <div class="demo-top">
+                <span class="tag" style="color:#0D6E6E;background:rgba(13, 110, 110, 0.09);">Salud &amp; Especialistas</span>
+                <span class="arrow">↗</span>
+              </div>
+              <h3>Clínica Dermatológica &amp; Estética El Poblado (Medellín)</h3>
+              <p>Dermatología Clínica, Láser CO2 Fraccionado y Rejuvenecimiento</p>
+            </a>
+            <a class="demo-card" href="distribuidora_electrica_industrial_bogota.html">
+              <div class="demo-top">
+                <span class="tag" style="color:#D95D1E;background:rgba(217, 93, 30, 0.10);">Ingeniería &amp; Suministro Industrial</span>
+                <span class="arrow">↗</span>
+              </div>
+              <h3>Distribuidora Eléctrica &amp; Iluminación Industrial (Bogotá)</h3>
+              <p>Conductores Eléctricos Centelsa, Tableros Schneider y Luminarias LED</p>
+            </a>
+            <a class="demo-card" href="dentisalud_chico_bogota.html">
+              <div class="demo-top">
+                <span class="tag" style="color:#0D6E6E;background:rgba(13, 110, 110, 0.09);">Salud &amp; Especialistas</span>
+                <span class="arrow">↗</span>
+              </div>
+              <h3>DentiSalud Estética Dental Chicó</h3>
+              <p>Odontología Estética, Carillas Cerámicas y Ortodoncia Invisible</p>
+            </a>
+            <a class="demo-card" href="dental_elite_usaquen_bogota.html">
+              <div class="demo-top">
+                <span class="tag" style="color:#0D6E6E;background:rgba(13, 110, 110, 0.09);">Salud &amp; Especialistas</span>
+                <span class="arrow">↗</span>
+              </div>
+              <h3>Clínica Dental Élite Usaquén</h3>
+              <p>Implantología Oral Guiada y Rehabilitación sobre Implantes</p>
+            </a>
+            <a class="demo-card" href="odontologia_rosales_bogota.html">
+              <div class="demo-top">
+                <span class="tag" style="color:#0D6E6E;background:rgba(13, 110, 110, 0.09);">Salud &amp; Especialistas</span>
+                <span class="arrow">↗</span>
+              </div>
+              <h3>Clínica Odontológica Rosales Chapinero</h3>
+              <p>Odontología Integral, Endodoncia Microscópica y Diseño Digital</p>
+            </a>
+            <a class="demo-card" href="armonizacion_facial_chico_bogota.html">
+              <div class="demo-top">
+                <span class="tag" style="color:#0D6E6E;background:rgba(13, 110, 110, 0.09);">Salud &amp; Especialistas</span>
+                <span class="arrow">↗</span>
+              </div>
+              <h3>Centro de Armonización Facial &amp; Spa Chicó</h3>
+              <p>Medicina Estética, Botox, Ácido Hialurónico y Rejuvenecimiento</p>
+            </a>
+            <a class="demo-card" href="dermaclinic_usaquen_bogota.html">
+              <div class="demo-top">
+                <span class="tag" style="color:#0D6E6E;background:rgba(13, 110, 110, 0.09);">Salud &amp; Especialistas</span>
+                <span class="arrow">↗</span>
+              </div>
+              <h3>Dermaclinic Láser &amp; Piel Usaquén</h3>
+              <p>Dermatología Clínica, Láser CO2 Fraccionado y Manchas</p>
+            </a>
+            <a class="demo-card" href="clinica_capilar_dhi_bogota.html">
+              <div class="demo-top">
+                <span class="tag" style="color:#0D6E6E;background:rgba(13, 110, 110, 0.09);">Salud &amp; Especialistas</span>
+                <span class="arrow">↗</span>
+              </div>
+              <h3>Clínica Capilar DHI Bogotá</h3>
+              <p>Implante Capilar FUE Zafiro, Barba y Cejas</p>
+            </a>
+            <a class="demo-card" href="odontologia_cedritos_bogota.html">
+              <div class="demo-top">
+                <span class="tag" style="color:#0D6E6E;background:rgba(13, 110, 110, 0.09);">Salud &amp; Especialistas</span>
+                <span class="arrow">↗</span>
+              </div>
+              <h3>Clínica Odontológica Cedritos Norte</h3>
+              <p>Odontopediatría, Ortopedia Maxilar y Odontología Estética</p>
+            </a>
+            <a class="demo-card" href="smilestudio_poblado_medellin.html">
+              <div class="demo-top">
+                <span class="tag" style="color:#0D6E6E;background:rgba(13, 110, 110, 0.09);">Salud &amp; Especialistas</span>
+                <span class="arrow">↗</span>
+              </div>
+              <h3>Clínica Dental Poblado Smilestudio</h3>
+              <p>Diseño de Sonrisa en Lentes Cerámicos &amp; Turismo Dental</p>
+            </a>
+            <a class="demo-card" href="dermatologia_el_tesoro_medellin.html">
+              <div class="demo-top">
+                <span class="tag" style="color:#0D6E6E;background:rgba(13, 110, 110, 0.09);">Salud &amp; Especialistas</span>
+                <span class="arrow">↗</span>
+              </div>
+              <h3>Clínica Dermatológica El Tesoro</h3>
+              <p>Dermatología Estética, Rejuvenecimiento Facial y Láser Fotona</p>
+            </a>
+            <a class="demo-card" href="laureles_park_dental_medellin.html">
+              <div class="demo-top">
+                <span class="tag" style="color:#0D6E6E;background:rgba(13, 110, 110, 0.09);">Salud &amp; Especialistas</span>
+                <span class="arrow">↗</span>
+              </div>
+              <h3>Odontología Estética Laureles Park</h3>
+              <p>Rehabilitación Oral, Coronas Zirconio y Estética Dental</p>
+            </a>
+            <a class="demo-card" href="estetica_rio_sur_medellin.html">
+              <div class="demo-top">
+                <span class="tag" style="color:#0D6E6E;background:rgba(13, 110, 110, 0.09);">Salud &amp; Especialistas</span>
+                <span class="arrow">↗</span>
+              </div>
+              <h3>Medicina Estética &amp; Láser Río Sur</h3>
+              <p>Moldeo Corporal, Emsculpt, Criolipólisis y Flacidez</p>
+            </a>
+            <a class="demo-card" href="aceros_aburra_medellin.html">
+              <div class="demo-top">
+                <span class="tag" style="color:#D95D1E;background:rgba(217, 93, 30, 0.10);">Ingeniería &amp; Suministro Industrial</span>
+                <span class="arrow">↗</span>
+              </div>
+              <h3>Aceros Industriales del Valle de Aburrá</h3>
+              <p>Corte Láser CNC, Láminas de Acero, Tubería Estructural y Perfiles</p>
+            </a>
+            <a class="demo-card" href="metalmecanica_guayabal_medellin.html">
+              <div class="demo-top">
+                <span class="tag" style="color:#D95D1E;background:rgba(217, 93, 30, 0.10);">Ingeniería &amp; Suministro Industrial</span>
+                <span class="arrow">↗</span>
+              </div>
+              <h3>Metalmecánica &amp; Oxicorte Guayabal</h3>
+              <p>Mecanizado CNC, Ejes, Piñones Industriales y Soldadura TIG</p>
+            </a>
+            <a class="demo-card" href="dental_design_ciudad_jardin_cali.html">
+              <div class="demo-top">
+                <span class="tag" style="color:#166534;background:rgba(22, 101, 52, 0.09);">Servicios B2B &amp; Hospitalidad</span>
+                <span class="arrow">↗</span>
+              </div>
+              <h3>Dental Design Studio Ciudad Jardín</h3>
+              <p>Diseño de Sonrisa en Carillas 3D y Rehabilitación Oral</p>
+            </a>
+            <a class="demo-card" href="estetica_granada_cali.html">
+              <div class="demo-top">
+                <span class="tag" style="color:#0D6E6E;background:rgba(13, 110, 110, 0.09);">Salud &amp; Especialistas</span>
+                <span class="arrow">↗</span>
+              </div>
+              <h3>Centro Médico Estético Granada Cali</h3>
+              <p>Medicina Antiedad, Toxina Botulínica, Hilos Tensores y Peeling</p>
+            </a>
+            <a class="demo-card" href="granada_smile_cali.html">
+              <div class="demo-top">
+                <span class="tag" style="color:#0D6E6E;background:rgba(13, 110, 110, 0.09);">Salud &amp; Especialistas</span>
+                <span class="arrow">↗</span>
+              </div>
+              <h3>Clínica Odontológica Granada Smile</h3>
+              <p>Odontología Estética, Prótesis Fija y Blanqueamiento Clínico</p>
+            </a>
+            <a class="demo-card" href="dental_san_vicente_cali.html">
+              <div class="demo-top">
+                <span class="tag" style="color:#0D6E6E;background:rgba(13, 110, 110, 0.09);">Salud &amp; Especialistas</span>
+                <span class="arrow">↗</span>
+              </div>
+              <h3>Clínica Dental San Vicente del Valle</h3>
+              <p>Cirugía Oral, Cordales Sin Dolor e Implantes</p>
+            </a>
+            <a class="demo-card" href="aluminios_del_valle_cali.html">
+              <div class="demo-top">
+                <span class="tag" style="color:#D95D1E;background:rgba(217, 93, 30, 0.10);">Ingeniería &amp; Suministro Industrial</span>
+                <span class="arrow">↗</span>
+              </div>
+              <h3>Aluminios &amp; Fachadas del Valle Cali</h3>
+              <p>Fachadas en Vidrio Templado, Ventanería Antirruido y Aluminio</p>
+            </a>
+            <a class="demo-card" href="plasticos_envases_valle_cali.html">
+              <div class="demo-top">
+                <span class="tag" style="color:#D95D1E;background:rgba(217, 93, 30, 0.10);">Ingeniería &amp; Suministro Industrial</span>
+                <span class="arrow">↗</span>
+              </div>
+              <h3>Industrias Plásticas &amp; Envases del Valle</h3>
+              <p>Envases PET, Tapas Plásticas, Soplado e Inyección Industrial</p>
+            </a>
+            <a class="demo-card" href="hidraulicos_cali.html">
+              <div class="demo-top">
+                <span class="tag" style="color:#D95D1E;background:rgba(217, 93, 30, 0.10);">Ingeniería &amp; Suministro Industrial</span>
+                <span class="arrow">↗</span>
+              </div>
+              <h3>Suministros Hidráulicos &amp; Neumáticos Cali</h3>
+              <p>Mangueras Hidráulicas de Alta Presión, Racores y Válvulas</p>
+            </a>
+            <a class="demo-card" href="fisioterapia_avanzada_cali.html">
+              <div class="demo-top">
+                <span class="tag" style="color:#166534;background:rgba(22, 101, 52, 0.09);">Servicios B2B &amp; Hospitalidad</span>
+                <span class="arrow">↗</span>
+              </div>
+              <h3>Fisioterapia &amp; Rehabilitación Avanzada Cali</h3>
+              <p>Fisioterapia Deportiva, Ondas de Choque y Recuperación de Lesiones</p>
+            </a>
+            <a class="demo-card" href="veterinaria_vip_chico_bogota.html">
+              <div class="demo-top">
+                <span class="tag" style="color:#0D6E6E;background:rgba(13, 110, 110, 0.09);">Salud &amp; Especialistas</span>
+                <span class="arrow">↗</span>
+              </div>
+              <h3>Clínica Veterinaria VIP 24 Horas Chicó</h3>
+              <p>Medicina Veterinaria Especializada, Cirugía, Ecografía y Laboratorio</p>
+            </a>
+            <a class="demo-card" href="clinica_ojos_bogota.html">
+              <div class="demo-top">
+                <span class="tag" style="color:#0D6E6E;background:rgba(13, 110, 110, 0.09);">Salud &amp; Especialistas</span>
+                <span class="arrow">↗</span>
+              </div>
+              <h3>Clínica de Ojos &amp; Cirugía Refractiva Bogotá</h3>
+              <p>Oftalmología, Cirugía Láser Lasik, Catarata y Queratocono</p>
+            </a>
+            <a class="demo-card" href="dermatologia_poblado_medellin.html">
+              <div class="demo-top">
+                <span class="tag" style="color:#0D6E6E;background:rgba(13, 110, 110, 0.09);">Salud &amp; Especialistas</span>
+                <span class="arrow">↗</span>
+              </div>
+              <h3>Dermatología Pediátrica &amp; Adultos El Poblado</h3>
+              <p>Dermatología Clínica, Cáncer de Piel, Acné y Fototerapia</p>
+            </a>
+            <a class="demo-card" href="electricas_del_cafe_cali.html">
+              <div class="demo-top">
+                <span class="tag" style="color:#D95D1E;background:rgba(217, 93, 30, 0.10);">Ingeniería &amp; Suministro Industrial</span>
+                <span class="arrow">↗</span>
+              </div>
+              <h3>Distribuidora Eléctrica del Café &amp; Occidente</h3>
+              <p>Transformadores, Cables de Media Tensión, Subestaciones y Pararrayos</p>
+            </a></div>
   </div>
-
-  <!-- HEADER -->
-  <header class="border-b border-slate-900 bg-slate-950/90 backdrop-blur sticky top-8 z-40">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center h-20">
-        <div class="flex items-center gap-3">
-          <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-blue-600 to-cyan-500 flex items-center justify-center font-black text-white text-lg shadow-lg shadow-blue-500/20">
-            JP
-          </div>
-          <div>
-            <span class="text-xl font-black tracking-tight text-white block leading-tight">JUAN PABLO CAMPO</span>
-            <span class="text-xs font-bold tracking-wider uppercase text-cyan-400">Ingeniero Multimedia & Web Architect</span>
-          </div>
-        </div>
-
-        <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-300">
-          <a href="#sobre-mi" class="hover:text-cyan-400 transition">Perfil & Especialidad</a>
-          <a href="#casos-estudio" class="hover:text-cyan-400 transition">Casos de Éxito B2B</a>
-          <a href="#stack" class="hover:text-cyan-400 transition">Stack Tecnológico</a>
-          <a href="#metodologia" class="hover:text-cyan-400 transition">Metodología</a>
-        </nav>
-
-        <div>
-          <a href="#contacto" class="inline-flex items-center justify-center px-5 py-2.5 rounded-xl text-xs font-black uppercase tracking-wider bg-blue-600 hover:bg-blue-500 text-white transition shadow-lg shadow-blue-600/30">
-            Agendar Consulta
-          </a>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <main>
-    <!-- HERO SECTION -->
-    <section class="relative py-20 lg:py-28 overflow-hidden border-b border-slate-900">
-      <div class="absolute inset-0 bg-[radial-gradient(#1e293b_1px,transparent_1px)] [background-size:24px_24px] opacity-40"></div>
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div class="max-w-4xl space-y-6">
-          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-950/80 border border-blue-800 text-xs font-bold text-cyan-300">
-            🎓 Ingeniero Multimedia — Universidad Autónoma de Occidente (UAO)
-          </div>
-          <h1 class="text-4xl sm:text-6xl font-black tracking-tight leading-tight text-white">
-            Transformo Operaciones Comerciales con <span class="bg-gradient-to-r from-blue-400 via-cyan-400 to-emerald-400 bg-clip-text text-transparent">Ingeniería Web de Alto Rendimiento</span>.
-          </h1>
-          <p class="text-lg sm:text-xl text-slate-300 leading-relaxed">
-            Especializado en diseñar y programar plataformas web interactivas, cotizadores automáticos y herramientas digitales para el sector industrial y comercial. Elimino los cuellos de botella del mostrador físico para que las empresas vendan y coticen 24/7 sin paradas operativas.
-          </p>
-
-          <div class="flex flex-wrap gap-4 pt-4">
-            <a href="#casos-estudio" class="inline-flex items-center gap-2 px-7 py-4 rounded-xl font-bold bg-blue-600 hover:bg-blue-500 text-white transition shadow-xl shadow-blue-600/30 text-sm">
-              🚀 Ver Casos de Éxito en Vivo &rarr;
-            </a>
-            <a href="#contacto" class="inline-flex items-center gap-2 px-7 py-4 rounded-xl font-bold bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-800 transition text-sm">
-              💬 Contactar a Juan Pablo (o a Hugo)
-            </a>
-          </div>
-
-          <!-- MÉTRICAS DE IMPACTO -->
-          <div class="grid grid-cols-2 sm:grid-cols-4 gap-6 pt-10 border-t border-slate-900">
-            <div>
-              <span class="text-3xl font-black text-cyan-400 block">&lt; 1.5s</span>
-              <span class="text-xs text-slate-400">Tiempo de carga promedio (Core Web Vitals)</span>
-            </div>
-            <div>
-              <span class="text-3xl font-black text-emerald-400 block">100%</span>
-              <span class="text-xs text-slate-400">Optimizado para dispositivos móviles</span>
-            </div>
-            <div>
-              <span class="text-3xl font-black text-amber-400 block">0</span>
-              <span class="text-xs text-slate-400">Dependencias pesadas o costes mensuales ocultos</span>
-            </div>
-            <div>
-              <span class="text-3xl font-black text-blue-400 block">48h</span>
-              <span class="text-xs text-slate-400">Piloto funcional activo garantizado</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SOBRE MÍ & ENFOQUE -->
-    <section id="sobre-mi" class="py-20 bg-slate-900/40 border-b border-slate-900">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid lg:grid-cols-12 gap-12 items-center">
-          <div class="lg:col-span-5">
-            <div class="bg-gradient-to-br from-blue-900/30 to-slate-900 border border-slate-800 rounded-3xl p-8 shadow-2xl relative overflow-hidden">
-              <div class="w-20 h-20 rounded-2xl bg-blue-600/20 border border-blue-500/30 flex items-center justify-center text-4xl mb-6">
-                💡
-              </div>
-              <h3 class="text-2xl font-black text-white mb-2">Ing. Juan Pablo Campo</h3>
-              <p class="text-sm font-semibold text-cyan-400 mb-4">Ingeniero Multimedia | Cali, Valle del Cauca</p>
-              <p class="text-sm text-slate-300 leading-relaxed mb-6">
-                Mi formación en Ingeniería Multimedia me permite unir dos mundos indispensables: la <strong>rigurosidad técnica y algorítmica</strong> del software con el <strong>diseño persuasivo y la experiencia de usuario (UX)</strong> de clase mundial.
-              </p>
-              <div class="space-y-2 text-xs text-slate-400 font-mono">
-                <p>• Universidad Autónoma de Occidente (UAO)</p>
-                <p>• Especialidad: Automatización B2B, Full-Stack, UX/UI</p>
-                <p>• Asistente Ejecutivo Oficial: Hugo (IA Operativa)</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="lg:col-span-7 space-y-6">
-            <span class="px-3 py-1 bg-cyan-950 border border-cyan-800 text-cyan-400 text-xs font-black rounded-full uppercase tracking-wider">¿Por qué mi enfoque es diferente?</span>
-            <h2 class="text-3xl sm:text-4xl font-black text-white">
-              No diseño páginas estáticas de adorno. Construyo <span class="text-cyan-400">canales transaccionales</span> que facturan.
-            </h2>
-            <p class="text-slate-300 text-base leading-relaxed">
-              La mayoría de los negocios tradicionales cometen el error de gastar millones en sitios web lentos que nadie visita o que no resuelven la compra. Mi trabajo se enfoca en resolver los cuellos de botella específicos de cada sector:
-            </p>
-            <div class="grid sm:grid-cols-2 gap-4 pt-2">
-              <div class="bg-slate-900/80 p-5 rounded-2xl border border-slate-800">
-                <h4 class="font-bold text-white text-sm mb-1">⚡ Cotizadores Instantáneos</h4>
-                <p class="text-xs text-slate-400">Permiten al cliente empresarial cargar listas o despieces y recibir cotización directa sin esperar en mostrador.</p>
-              </div>
-              <div class="bg-slate-900/80 p-5 rounded-2xl border border-slate-800">
-                <h4 class="font-bold text-white text-sm mb-1">📱 Integración Directa a WhatsApp</h4>
-                <p class="text-xs text-slate-400">El canal #1 de cierre de negocios en Colombia. Cada interacción web termina en un chat de WhatsApp estructurado.</p>
-              </div>
-              <div class="bg-slate-900/80 p-5 rounded-2xl border border-slate-800">
-                <h4 class="font-bold text-white text-sm mb-1">📄 Catálogos Técnicos y Fichas</h4>
-                <p class="text-xs text-slate-400">Documentación lista para ingenieros, interventores y compras corporativas que exigen normas técnicas (RETIE, ASTM, ISO).</p>
-              </div>
-              <div class="bg-slate-900/80 p-5 rounded-2xl border border-slate-800">
-                <h4 class="font-bold text-white text-sm mb-1">🚀 Velocidad Extrema (Single-File)</h4>
-                <p class="text-xs text-slate-400">Arquitecturas limpias que cargan en 1 segundo en cualquier celular, incluso con conexiones 3G o 4G inestables.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CASOS DE ESTUDIO B2B -->
-    <section id="casos-estudio" class="py-20 border-b border-slate-900">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center max-w-3xl mx-auto mb-16">
-          <span class="px-3 py-1 bg-blue-950 border border-blue-800 text-blue-400 text-xs font-black rounded-full uppercase tracking-wider">Demostraciones y Casos de Estudio</span>
-          <h2 class="text-3xl sm:text-4xl font-black text-white mt-3">Plataformas Desarrolladas para el Sector Comercial de Cali</h2>
-          <p class="text-slate-400 text-sm mt-2">Explora en vivo los prototipos interactivos construidos a la medida de operaciones reales.</p>
-        </div>
-
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          
-          <!-- Caso 1 -->
-          <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 hover:border-slate-700 transition flex flex-col justify-between">
-            <div>
-              <div class="flex justify-between items-start mb-4">
-                <span class="px-2.5 py-1 bg-amber-500/10 text-amber-400 border border-amber-500/30 text-xs font-bold rounded-lg">Ferretería Industrial</span>
-                <span class="text-xs text-slate-500">San Nicolás, Cali</span>
-              </div>
-              <h3 class="text-xl font-black text-white mb-2">Ferretería Universal B2B</h3>
-              <p class="text-xs text-slate-400 leading-relaxed mb-4">
-                Mesa de cotización en línea para materiales de construcción y metalmecánica. Resuelve las filas de 45 minutos en San Nicolás permitiendo cotizar en 2 horas con despacho directo a obra.
-              </p>
-            </div>
-            <a href="ferreteria_universal_cali.html" target="_blank" class="inline-flex items-center justify-center gap-1.5 w-full py-3 px-4 rounded-xl font-bold bg-amber-500 hover:bg-amber-400 text-slate-950 transition text-xs">
-              👁️ Probar Demo Interactiva &rarr;
-            </a>
-          </div>
-
-          <!-- Caso 2 -->
-          <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 hover:border-slate-700 transition flex flex-col justify-between">
-            <div>
-              <div class="flex justify-between items-start mb-4">
-                <span class="px-2.5 py-1 bg-blue-500/10 text-blue-400 border border-blue-500/30 text-xs font-bold rounded-lg">Fijaciones Industriales</span>
-                <span class="text-xs text-slate-500">San Pascual, Cali</span>
-              </div>
-              <h3 class="text-xl font-black text-white mb-2">Tornillería La Grande B2B</h3>
-              <p class="text-xs text-slate-400 leading-relaxed mb-4">
-                Canal digital para despiece y cotización por volumen de pernos estructurales, racores y roscas especiales. Evita traslados de talleres al centro de Cali.
-              </p>
-            </div>
-            <a href="tornilleria_la_grande_cali.html" target="_blank" class="inline-flex items-center justify-center gap-1.5 w-full py-3 px-4 rounded-xl font-bold bg-blue-600 hover:bg-blue-500 text-white transition text-xs">
-              👁️ Probar Demo Interactiva &rarr;
-            </a>
-          </div>
-
-          <!-- Caso 3 -->
-          <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 hover:border-slate-700 transition flex flex-col justify-between">
-            <div>
-              <div class="flex justify-between items-start mb-4">
-                <span class="px-2.5 py-1 bg-red-500/10 text-red-400 border border-red-500/30 text-xs font-bold rounded-lg">Sector Automotriz</span>
-                <span class="text-xs text-slate-500">San Nicolás, Cali</span>
-              </div>
-              <h3 class="text-xl font-black text-white mb-2">Multinacional De Repuestos</h3>
-              <p class="text-xs text-slate-400 leading-relaxed mb-4">
-                Cotizador express de repuestos por placa y modelo para talleres mecánicos y flotas de transporte. Entrega motorizada directa sin detener mano de obra.
-              </p>
-            </div>
-            <a href="multinacional_repuestos_cali.html" target="_blank" class="inline-flex items-center justify-center gap-1.5 w-full py-3 px-4 rounded-xl font-bold bg-red-600 hover:bg-red-500 text-white transition text-xs">
-              👁️ Probar Demo Interactiva &rarr;
-            </a>
-          </div>
-
-          <!-- Caso 4 -->
-          <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 hover:border-slate-700 transition flex flex-col justify-between">
-            <div>
-              <div class="flex justify-between items-start mb-4">
-                <span class="px-2.5 py-1 bg-sky-500/10 text-sky-400 border border-sky-500/30 text-xs font-bold rounded-lg">Ingeniería Eléctrica</span>
-                <span class="text-xs text-slate-500">San Nicolás, Cali</span>
-              </div>
-              <h3 class="text-xl font-black text-white mb-2">Elementos Eléctricos Ltda.</h3>
-              <p class="text-xs text-slate-400 leading-relaxed mb-4">
-                Plataforma de radicación de cuadros de carga y listas de conductores certificados RETIE para ingenieros electricistas y plantas industriales de Yumbo y Cali.
-              </p>
-            </div>
-            <a href="elementos_electricos_cali.html" target="_blank" class="inline-flex items-center justify-center gap-1.5 w-full py-3 px-4 rounded-xl font-bold bg-sky-600 hover:bg-sky-500 text-white transition text-xs">
-              👁️ Probar Demo Interactiva &rarr;
-            </a>
-          </div>
-
-          <!-- Caso 5 -->
-          <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 hover:border-slate-700 transition flex flex-col justify-between">
-            <div>
-              <div class="flex justify-between items-start mb-4">
-                <span class="px-2.5 py-1 bg-cyan-500/10 text-cyan-400 border border-cyan-500/30 text-xs font-bold rounded-lg">Perfilería & Vidrio</span>
-                <span class="text-xs text-slate-500">Barrio Obrero, Cali</span>
-              </div>
-              <h3 class="text-xl font-black text-white mb-2">Alumcali S.A.S.</h3>
-              <p class="text-xs text-slate-400 leading-relaxed mb-4">
-                Mesa mayorista para cotización de sistemas arquitectónicos (5020, 744, 8025) y perfiles de 6m con despacho seguro para talleres de ornamentación.
-              </p>
-            </div>
-            <a href="alumcali_arquitectonico_cali.html" target="_blank" class="inline-flex items-center justify-center gap-1.5 w-full py-3 px-4 rounded-xl font-bold bg-cyan-600 hover:bg-cyan-500 text-white transition text-xs">
-              👁️ Probar Demo Interactiva &rarr;
-            </a>
-          </div>
-
-          <!-- Tarjeta de Tu Proyecto -->
-          <div class="bg-gradient-to-br from-blue-950/60 to-slate-900 border-2 border-dashed border-blue-600/50 rounded-2xl p-6 flex flex-col justify-between text-center items-center">
-            <div class="my-auto space-y-3">
-              <span class="text-3xl block">🚀</span>
-              <h3 class="text-lg font-black text-white">¿Tu Negocio es el Siguiente?</h3>
-              <p class="text-xs text-slate-400">Diseñamos tu plataforma a la medida y te activamos un <strong>Piloto Gratuito de 48 Horas</strong> para que veas los resultados antes de pagar.</p>
-            </div>
-            <a href="#contacto" class="inline-flex items-center justify-center gap-1.5 w-full py-3 px-4 rounded-xl font-black bg-white text-slate-950 hover:bg-slate-200 transition text-xs mt-4">
-              Solicitar Piloto 48h Gratuito
-            </a>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- METODOLOGÍA & PILOTO 48H -->
-    <section id="metodologia" class="py-20 bg-slate-900/40 border-b border-slate-900">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center max-w-3xl mx-auto mb-16">
-          <span class="px-3 py-1 bg-emerald-950 border border-emerald-800 text-emerald-400 text-xs font-black rounded-full uppercase tracking-wider">Cero Riesgo</span>
-          <h2 class="text-3xl sm:text-4xl font-black text-white mt-3">El Modelo de Piloto Activo de 48 Horas</h2>
-          <p class="text-slate-400 text-sm mt-2">La forma más transparente y honesta de contratar desarrollo web en Colombia.</p>
-        </div>
-
-        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div class="bg-slate-900 p-6 rounded-2xl border border-slate-800">
-            <span class="w-8 h-8 rounded-full bg-blue-600 text-white font-black text-sm flex items-center justify-center mb-4">1</span>
-            <h4 class="font-bold text-white text-base mb-2">Desarrollo Anticipado</h4>
-            <p class="text-xs text-slate-400 leading-relaxed">Juan Pablo analiza tu negocio y construye el prototipo interactivo con tu marca y productos antes de cobrarte.</p>
-          </div>
-          <div class="bg-slate-900 p-6 rounded-2xl border border-slate-800">
-            <span class="w-8 h-8 rounded-full bg-cyan-600 text-white font-black text-sm flex items-center justify-center mb-4">2</span>
-            <h4 class="font-bold text-white text-base mb-2">Activación Piloto 48h</h4>
-            <p class="text-xs text-slate-400 leading-relaxed">Te entregamos los accesos y pruebas el cotizador con tus clientes reales durante 2 días completos sin costo.</p>
-          </div>
-          <div class="bg-slate-900 p-6 rounded-2xl border border-slate-800">
-            <span class="w-8 h-8 rounded-full bg-emerald-600 text-white font-black text-sm flex items-center justify-center mb-4">3</span>
-            <h4 class="font-bold text-white text-base mb-2">Validación de Valor</h4>
-            <p class="text-xs text-slate-400 leading-relaxed">Compruebas en tu propio mostrador cómo agiliza los pedidos y ahorra horas de atención en mensajes repetitivos.</p>
-          </div>
-          <div class="bg-slate-900 p-6 rounded-2xl border border-slate-800">
-            <span class="w-8 h-8 rounded-full bg-amber-500 text-slate-950 font-black text-sm flex items-center justify-center mb-4">4</span>
-            <h4 class="font-bold text-white text-base mb-2">Activación Definitiva</h4>
-            <p class="text-xs text-slate-400 leading-relaxed">Si te convence y decides conservarla, realizas el pago único de $100.000 COP y la plataforma queda a tu nombre de por vida.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACTO -->
-    <section id="contacto" class="py-20 bg-slate-950">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-8">
-        <span class="px-3 py-1 bg-blue-950 border border-blue-800 text-blue-400 text-xs font-black rounded-full uppercase tracking-wider">Contacto Directo</span>
-        <h2 class="text-3xl sm:text-5xl font-black text-white">¿Listo para Digitalizar y Agilizar tu Negocio?</h2>
-        <p class="text-slate-300 text-base max-w-2xl mx-auto">
-          Escríbeme directamente o coordina con Hugo, mi asistente personal, para activar tu piloto de 48 horas hoy mismo.
-        </p>
-
-        <div class="flex flex-col sm:flex-row justify-center gap-4 pt-4">
-          <a href="https://wa.me/573162508434?text=Hola%20Ing.%20Juan%20Pablo%20Campo,%20revis%C3%A9%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20activar%20un%20piloto%20de%2048h%20para%20mi%20negocio" target="_blank" class="inline-flex justify-center items-center gap-2 px-8 py-4 rounded-xl font-black text-slate-950 bg-emerald-400 hover:bg-emerald-300 transition shadow-xl text-base">
-            💬 Escribir al WhatsApp de Juan Pablo
-          </a>
-          <a href="tel:573162508434" class="inline-flex justify-center items-center gap-2 px-8 py-4 rounded-xl font-bold text-white bg-slate-900 hover:bg-slate-800 border border-slate-800 transition text-base">
-            📞 Llamar Directamente
-          </a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="bg-slate-950 border-t border-slate-900 py-10 text-center text-xs text-slate-500">
-    <p class="text-slate-300 font-bold">Ing. Juan Pablo Campo — Ingeniero Multimedia (UAO)</p>
-    <p class="mt-1">Especialista en Desarrollo Web B2B & Automatización Comercial • Cali, Colombia</p>
-    <p class="mt-2 text-slate-600">Operado y respaldado por Hugo (Asistente Ejecutivo de IA) en Project Automata</p>
-  </footer>
-
 </body>
 </html>
