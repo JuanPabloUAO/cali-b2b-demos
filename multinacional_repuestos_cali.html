@@ -3,352 +3,65 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Multinacional De Repuestos Cali — Cotizador Digital &amp; Atención Prioritaria</title>
-  <meta name="description" content="Multinacional De Repuestos Cali (Repuestos Automotrices Multimarca, Partes de Motor, Suspensión y Frenos). Plataforma digital de cotización inmediata y atención prioritaria vía WhatsApp.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600&family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <title>Multinacional De Repuestos Cali — Buscador Express de Repuestos &amp; Flotas</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --bg: #F4F5F7;
-      --surface: #FFFFFF;
-      --surface-alt: #E9ECF2;
-      --ink: #0B0F19;
-      --muted: #4B5563;
-      --border: rgba(11, 15, 25, 0.10);
-      --accent: #1D4ED8;
-      --accent-soft: rgba(29, 78, 216, 0.09);
-      --accent-ink: #FFFFFF;
-      --font-display: 'Space Grotesk', -apple-system, sans-serif;
-      --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      --radius: 18px;
-      --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.04), 0 8px 24px rgba(15, 23, 42, 0.05);
-      --shadow-lg: 0 18px 48px rgba(15, 23, 42, 0.09);
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body {
-      background: var(--bg);
-      color: var(--ink);
-      font-family: var(--font-body);
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-    }
-    .container { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
-
-    /* Sticky Glass Navigation */
-    .topbar {
-      position: sticky; top: 0; z-index: 50;
-      background: color-mix(in srgb, var(--bg) 86%, transparent);
-      backdrop-filter: blur(14px);
-      border-bottom: 1px solid var(--border);
-    }
-    .topbar-inner {
-      display: flex; align-items: center; justify-content: space-between;
-      height: 72px; gap: 16px;
-    }
-    .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--ink); }
-    .brand-mark {
-      width: 38px; height: 38px; border-radius: 10px;
-      background: var(--ink); color: var(--bg);
-      display: grid; place-items: center;
-      font-family: var(--font-display); font-weight: 700; font-size: 15px; letter-spacing: 0.03em;
-    }
-    .brand-text strong { display: block; font-size: 15px; font-weight: 700; line-height: 1.15; }
-    .brand-text span { font-size: 12px; color: var(--muted); }
-    .nav-cta {
-      display: inline-flex; align-items: center; gap: 8px;
-      background: var(--accent); color: var(--accent-ink);
-      text-decoration: none; font-weight: 600; font-size: 13.5px;
-      padding: 10px 18px; border-radius: 999px;
-      transition: transform 0.2s ease, opacity 0.2s ease;
-    }
-    .nav-cta:hover { transform: translateY(-1px); opacity: 0.94; }
-
-    /* Editorial Split Hero */
-    .hero { padding: 56px 0 72px; }
-    .hero-grid {
-      display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 48px; align-items: center;
-    }
-    .eyebrow {
-      display: inline-flex; align-items: center; gap: 8px;
-      font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase;
-      color: var(--accent); background: var(--accent-soft);
-      padding: 6px 14px; border-radius: 999px; margin-bottom: 20px;
-    }
-    .hero h1 {
-      font-family: var(--font-display);
-      font-size: clamp(2.15rem, 4.1vw, 3.45rem);
-      line-height: 1.08; letter-spacing: -0.025em; font-weight: 600;
-      margin-bottom: 20px;
-    }
-    .hero-lead { font-size: 1.08rem; color: var(--muted); max-width: 54ch; margin-bottom: 28px; }
-    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 32px; }
-    .btn-primary {
-      display: inline-flex; align-items: center; justify-content: center; gap: 10px;
-      background: var(--ink); color: #FFFFFF; text-decoration: none;
-      padding: 14px 24px; border-radius: 12px; font-weight: 600; font-size: 14.5px;
-      border: none; cursor: pointer; transition: transform 0.2s ease, background 0.2s ease;
-    }
-    .btn-primary:hover { background: var(--accent); transform: translateY(-1px); }
-    .btn-secondary {
-      display: inline-flex; align-items: center; justify-content: center;
-      background: var(--surface); color: var(--ink); text-decoration: none;
-      padding: 14px 22px; border-radius: 12px; font-weight: 600; font-size: 14.5px;
-      border: 1px solid var(--border); transition: border-color 0.2s ease;
-    }
-    .btn-secondary:hover { border-color: var(--ink); }
-
-    .trust-strip {
-      display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
-      padding-top: 24px; border-top: 1px solid var(--border);
-    }
-    .trust-metric strong { display: block; font-size: 1.15rem; font-weight: 700; color: var(--ink); }
-    .trust-metric span { font-size: 12.5px; color: var(--muted); }
-
-    .hero-visual {
-      position: relative; border-radius: 24px; overflow: hidden;
-      background: var(--surface-alt); box-shadow: var(--shadow-lg);
-      aspect-ratio: 4 / 4.4; border: 1px solid var(--border);
-    }
-    .hero-visual img { width: 100%; height: 100%; object-fit: cover; display: block; }
-    .floating-card {
-      position: absolute; left: 18px; right: 18px; bottom: 18px;
-      background: rgba(255, 255, 255, 0.94); backdrop-filter: blur(12px);
-      color: #0F172A; padding: 16px 18px; border-radius: 16px;
-      border: 1px solid rgba(15, 23, 42, 0.08);
-      display: flex; align-items: center; justify-content: space-between; gap: 12px;
-    }
-    .floating-card strong { display: block; font-size: 13.5px; }
-    .floating-card span { font-size: 12px; color: #475569; }
-    .live-pill {
-      font-size: 11px; font-weight: 700; color: #047857;
-      background: #ECFDF5; padding: 5px 10px; border-radius: 999px; white-space: nowrap;
-    }
-
-    /* Bento Value Section */
-    .section { padding: 64px 0; }
-    .section-head { max-width: 640px; margin-bottom: 36px; }
-    .section-head h2 {
-      font-family: var(--font-display); font-size: clamp(1.7rem, 3vw, 2.35rem);
-      line-height: 1.15; letter-spacing: -0.02em; margin-bottom: 10px;
-    }
-    .section-head p { color: var(--muted); font-size: 1rem; }
-    .bento-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-    .bento-card {
-      background: var(--surface); border: 1px solid var(--border);
-      border-radius: var(--radius); padding: 28px; box-shadow: var(--shadow-sm);
-    }
-    .step-num {
-      display: inline-block; font-size: 12px; font-weight: 700; color: var(--accent);
-      background: var(--accent-soft); padding: 4px 10px; border-radius: 8px; margin-bottom: 16px;
-    }
-    .bento-card h3 { font-size: 1.05rem; margin-bottom: 8px; }
-    .bento-card p { font-size: 0.94rem; color: var(--muted); }
-
-    /* Interactive Estimator Section */
-    .estimator-wrap {
-      background: var(--surface); border: 1px solid var(--border);
-      border-radius: 24px; padding: 40px; box-shadow: var(--shadow-lg);
-      display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 40px; align-items: start;
-    }
-    .solution-list { list-style: none; display: grid; gap: 12px; margin-top: 22px; }
-    .solution-list li { display: flex; gap: 12px; align-items: flex-start; font-size: 0.94rem; color: var(--muted); }
-    .check-dot {
-      width: 22px; height: 22px; border-radius: 999px; flex-shrink: 0;
-      background: var(--accent-soft); color: var(--accent);
-      display: grid; place-items: center; font-size: 12px; font-weight: 700; margin-top: 2px;
-    }
-    .quote-box { background: var(--bg); border: 1px solid var(--border); border-radius: 18px; padding: 24px; }
-    .quote-options { display: grid; gap: 10px; margin: 16px 0 18px; }
-    .quote-option {
-      display: flex; align-items: center; gap: 12px; cursor: pointer;
-      background: var(--surface); border: 1px solid var(--border);
-      padding: 14px 16px; border-radius: 12px; transition: border-color 0.2s ease;
-    }
-    .quote-option:has(input:checked) { border-color: var(--accent); background: var(--accent-soft); }
-    .quote-option input { accent-color: var(--accent); width: 16px; height: 16px; }
-    .opt-body { display: flex; justify-content: space-between; width: 100%; gap: 10px; font-size: 13.5px; }
-    .opt-title { font-weight: 600; color: var(--ink); }
-    .opt-price { font-weight: 600; color: var(--accent); white-space: nowrap; }
-    .field { width: 100%; padding: 12px 14px; border-radius: 10px; border: 1px solid var(--border); background: var(--surface); color: var(--ink); font-family: inherit; font-size: 14px; margin-bottom: 14px; }
-    .addi-box {
-      display: flex; justify-content: space-between; align-items: center;
-      background: var(--surface); border: 1px dashed var(--border);
-      padding: 12px 14px; border-radius: 12px; margin-bottom: 16px; font-size: 13px;
-    }
-    .addi-box strong { color: var(--accent); font-size: 14.5px; }
-
-    footer {
-      border-top: 1px solid var(--border); padding: 36px 0 48px;
-      color: var(--muted); font-size: 13px;
-    }
-    .footer-inner { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 14px; }
-
-    @media (max-width: 900px) {
-      .hero-grid, .bento-grid, .estimator-wrap { grid-template-columns: 1fr; }
-      .hero { padding: 36px 0 48px; }
-      .estimator-wrap { padding: 24px; }
-      .hero-visual { aspect-ratio: 16 / 11; }
-    }
+    :root { --accent:#E11D48; }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body { background:#0B0D11; color:#F8FAFC; font-family:'Inter',sans-serif; line-height:1.55; }
+    .wrap { max-width:1160px; margin:0 auto; padding:0 24px; }
+    .top { padding:22px 0; border-bottom:1px solid rgba(255,255,255,.08); display:flex; justify-content:space-between; align-items:center; }
+    .brand { display:flex; align-items:center; gap:12px; text-decoration:none; color:#fff; }
+    .hero { padding:56px 0; display:grid; grid-template-columns:1fr 1fr; gap:36px; align-items:center; }
+    h1 { font-family:'Space Grotesk',sans-serif; font-size:clamp(2.1rem,3.8vw,3.2rem); line-height:1.06; margin-bottom:16px; }
+    .finder { background:#141821; border:1px solid rgba(255,255,255,.12); border-radius:20px; padding:28px; }
+    .pills { display:flex; flex-wrap:wrap; gap:8px; margin:14px 0 18px; }
+    .pill { background:#1E2433; color:#CBD5E1; border:1px solid rgba(255,255,255,.1); padding:8px 14px; border-radius:999px; font-size:13px; cursor:pointer; }
+    .pill.active { background:var(--accent); color:#fff; border-color:var(--accent); font-weight:600; }
+    input { width:100%; background:#0B0D11; color:#fff; border:1px solid rgba(255,255,255,.16); padding:12px 14px; border-radius:10px; margin-bottom:12px; font-family:inherit; }
+    .btn { width:100%; background:var(--accent); color:#fff; border:none; padding:14px; border-radius:10px; font-weight:700; font-size:14.5px; cursor:pointer; }
+    .photo-strip { border-radius:20px; overflow:hidden; border:1px solid rgba(255,255,255,.1); margin-bottom:24px; max-height:240px; }
+    .photo-strip img { width:100%; height:240px; object-fit:cover; }
+    .map-box { border-radius:18px; overflow:hidden; border:1px solid rgba(255,255,255,.12); height:280px; margin-bottom:48px; }
+    .map-box iframe { width:100%; height:100%; border:0; }
+    @media (max-width:860px) { .hero { grid-template-columns:1fr; } }
   </style>
 </head>
 <body>
-  <header class="topbar">
-    <div class="container topbar-inner">
-      <a href="#inicio" class="brand">
-        <div class="brand-mark">MD</div>
-        <div class="brand-text">
-          <strong>Multinacional De Repuestos Cali</strong>
-          <span>Cali · Automotriz & Flotas</span>
-        </div>
-      </a>
-      <a href="#cotizador" class="nav-cta">Confirmar Stock por WhatsApp →</a>
-    </div>
-  </header>
-
-  <main id="inicio">
+  <div class="wrap">
+    <header class="top">
+      <a class="brand" href="#"><svg width="36" height="36" viewBox="0 0 36 36" fill="none"><rect width="36" height="36" rx="10" fill="#E11D48"/><circle cx="18" cy="18" r="8" stroke="white" stroke-width="2.2"/><circle cx="18" cy="18" r="2.5" fill="white"/><path d="M18 10V15.5M11 22L15.8 19.2M25 22L20.2 19.2" stroke="white" stroke-width="2"/></svg><div><strong style="font-family:'Space Grotesk',sans-serif;">Multinacional De Repuestos Cali</strong><div style="font-size:12px;color:#94A3B8;">★ 4.5 / 5 en Google · Carrera 5 # 17-53, Barrio San Nicolás, C</div></div></a>
+      <a href="https://www.google.com/maps/search/?api=1&query=Multinacional%20De%20Repuestos%20Cali%2C%20Carrera%205%20%23%2017-53%2C%20Barrio%20San%20Nicol%C3%A1s%2C%20Cali%2C%20Valle%20del%20Cauca" target="_blank" rel="noopener" style="color:#fff;font-size:13px;text-decoration:none;border:1px solid rgba(255,255,255,.2);padding:8px 14px;border-radius:8px;">Google Maps ↗</a>
+    </header>
     <section class="hero">
-      <div class="container hero-grid">
-        <div>
-          <span class="eyebrow">Stock Multimarca Verificado · Prioridad Talleres</span>
-          <h1>Atención ágil y cotización directa para clientes de Multinacional De Repuestos Cali.</h1>
-          <p class="hero-lead">Especialistas en Repuestos Automotrices Multimarca, Partes de Motor, Suspensión y Frenos. Elimine esperas innecesarias: seleccione su requerimiento en menos de 60 segundos y reciba confirmación directa en WhatsApp con nuestro equipo.</p>
-          <div class="hero-actions">
-            <a href="#cotizador" class="btn-primary">Confirmar Stock por WhatsApp</a>
-            <a href="#ventajas" class="btn-secondary">Ver Respaldo y Ventajas</a>
-          </div>
-          <div class="trust-strip">
-            <div class="trust-metric"><strong>4.5 / 5</strong><span>Reputación verificada</span></div>
-            <div class="trust-metric"><strong>&lt; 15 min</strong><span>Respuesta por WhatsApp</span></div>
-            <div class="trust-metric"><strong>Directo</strong><span>Sin intermediarios</span></div>
-          </div>
+      <div>
+        <div class="photo-strip"><img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=1500&q=85" alt="Multinacional De Repuestos Cali" fetchpriority="high"></div>
+        <h1>Confirme stock de repuestos por marca y modelo al instante.</h1>
+        <p style="color:#94A3B8;">Repuestos Automotrices Multimarca, Partes de Motor, Suspensión y Frenos. Atención prioritaria para talleres mecánicos, flotas y propietarios directos (+57 313 594 5646).</p>
+      </div>
+      <div class="finder">
+        <strong style="font-family:'Space Grotesk',sans-serif;font-size:1.15rem;">1. Seleccione Marca del Vehículo</strong>
+        <div class="pills" id="brandPills">
+          <button class="pill active" data-b="Chevrolet">Chevrolet</button><button class="pill" data-b="Renault">Renault</button><button class="pill" data-b="Kia">Kia</button><button class="pill" data-b="Hyundai">Hyundai</button><button class="pill" data-b="Nissan">Nissan</button><button class="pill" data-b="Mazda">Mazda</button><button class="pill" data-b="Toyota">Toyota</button><button class="pill" data-b="Flotas / Taxis">Flotas / Taxis</button>
         </div>
-        <div class="hero-visual">
-          <img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=1400&q=85" alt="Multinacional De Repuestos Cali" fetchpriority="high">
-          <div class="floating-card">
-            <div>
-              <strong>Multinacional De Repuestos Cali</strong>
-              <span>Carrera 5 # 17-53, Barrio San Nicolás, Cali, Valle del Cauca</span>
-            </div>
-            <span class="live-pill">● Canal Activo</span>
-          </div>
-        </div>
+        <input id="carModel" type="text" placeholder="2. Línea y Año (Ej: Spark GT 2019 / Duster 2021)">
+        <input id="partNeed" type="text" placeholder="3. Repuesto requerido (Ej: Kit embrague, pastillas, amortiguadores)">
+        <button id="goAutoWa" class="btn">Consultar Stock en WhatsApp →</button>
       </div>
     </section>
-
-    <section id="ventajas" class="section">
-      <div class="container">
-        <div class="section-head">
-          <h2>Por qué nos eligen nuestros clientes en Cali.</h2>
-          <p>Combinamos trayectoria real en Repuestos Automotrices Multimarca, Partes de Motor, Suspensión y Frenos con un canal digital inmediato diseñado para ahorrarle tiempo.</p>
-        </div>
-        <div class="bento-grid">
-        <article class="bento-card">
-          <span class="step-num">01</span>
-          <h3>Ventaja Verificada</h3>
-          <p>Inventario multimarca masivo para líneas comerciales y particulares (Chevrolet, Renault, Kia, Hyundai, Nissan)</p>
-        </article>
-        <article class="bento-card">
-          <span class="step-num">02</span>
-          <h3>Ventaja Verificada</h3>
-          <p>Precios especiales para flotas de taxis y talleres mecánicos aliados</p>
-        </article>
-        <article class="bento-card">
-          <span class="step-num">03</span>
-          <h3>Ventaja Verificada</h3>
-          <p>Ubicación privilegiada en la zona autopartista tradicional de San Nicolás</p>
-        </article></div>
-      </div>
-    </section>
-
-    <section id="cotizador" class="section">
-      <div class="container">
-        <div class="estimator-wrap">
-          <div>
-            <span class="eyebrow">Cotizador Interactivo 24/7</span>
-            <h2 style="font-family:var(--font-display);font-size:clamp(1.6rem,2.6vw,2.15rem);line-height:1.15;margin-bottom:12px;">Reciba su cotización exacta sin hacer filas.</h2>
-            <p style="color:var(--muted);">Configure su solicitud y envíela estructurada directamente a nuestra línea oficial (+57 313 594 5646).</p>
-            <ul class="solution-list">
-        <li>
-          <span class="check-dot" aria-hidden="true">✓</span>
-          <span><strong>Resuelto:</strong> Mecánicos y jefes de taller esperando en fila mientras el asesor busca en manuales físicos</span>
-        </li>
-        <li>
-          <span class="check-dot" aria-hidden="true">✓</span>
-          <span><strong>Resuelto:</strong> Pérdida de cotizaciones de flotas de transporte y talleres de colisión por falta de cotizador digital por placa/modelo</span>
-        </li>
-        <li>
-          <span class="check-dot" aria-hidden="true">✓</span>
-          <span><strong>Resuelto:</strong> Falta de canal rápido para enviar fotos de piezas rotas y recibir confirmación inmediata de stock</span>
-        </li></ul>
-          </div>
-          <div class="quote-box">
-            <strong style="font-size:15px;">1. Seleccione tipo de solicitud</strong>
-            <div class="quote-options">
-        <label class="quote-option">
-          <input type="radio" name="service_tier" value="280000" data-label="Repuesto Particular (Validación por Placa)" >
-          <span class="opt-body">
-            <span class="opt-title">Repuesto Particular (Validación por Placa)</span>
-            <span class="opt-price">$280.000 COP ref.</span>
-          </span>
-        </label>
-        <label class="quote-option">
-          <input type="radio" name="service_tier" value="920000" data-label="Kit Mantenimiento / Suspensión / Frenos" checked>
-          <span class="opt-body">
-            <span class="opt-title">Kit Mantenimiento / Suspensión / Frenos</span>
-            <span class="opt-price">$920.000 COP ref.</span>
-          </span>
-        </label>
-        <label class="quote-option">
-          <input type="radio" name="service_tier" value="2600000" data-label="Abastecimiento Flota o Taller Aliado" >
-          <span class="opt-body">
-            <span class="opt-title">Abastecimiento Flota o Taller Aliado</span>
-            <span class="opt-price">$2.600.000 COP ref.</span>
-          </span>
-        </label></div>
-            <label for="clientNote" style="display:block;font-size:12.5px;font-weight:600;margin-bottom:6px;">2. Detalle breve (producto, cita o cantidad)</label>
-            <input id="clientNote" class="field" type="text" placeholder="Ej: Cotización urgente para entrega esta semana...">
-            <div class="addi-box">
-              <span>Referencia en 3 cuotas sin interés (Addi / Sistecrédito):</span>
-              <strong id="addiInstallment">$283.333 COP/mes</strong>
-            </div>
-            <button id="sendWaBtn" type="button" class="btn-primary" style="width:100%;">Confirmar Stock por WhatsApp →</button>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container footer-inner">
-      <span><strong>Multinacional De Repuestos Cali</strong> · Carrera 5 # 17-53, Barrio San Nicolás, Cali, Valle del Cauca</span>
-      <span>Prototipo interactivo V3.0 diseñado por Estudio Ing. Juan Pablo Campo (UAO).</span>
-    </div>
-  </footer>
-
+    <div class="map-box"><iframe loading="lazy" src="https://maps.google.com/maps?q=Multinacional%20De%20Repuestos%20Cali%2C%20Carrera%205%20%23%2017-53%2C%20Barrio%20San%20Nicol%C3%A1s%2C%20Cali%2C%20Valle%20del%20Cauca&t=&z=15&ie=UTF8&iwloc=&output=embed" title="Mapa Multinacional De Repuestos Cali"></iframe></div>
+  </div>
   <script>
-    const waDigits = "573135945646";
-    const bizName = "Multinacional De Repuestos Cali";
-    const radios = document.querySelectorAll('input[name="service_tier"]');
-    const addiEl = document.getElementById('addiInstallment');
-    const noteEl = document.getElementById('clientNote');
-
-    function updateEstimate() {
-      const sel = document.querySelector('input[name="service_tier"]:checked');
-      const val = Number(sel ? sel.value : 850000);
-      const cuota = Math.round(val / 3);
-      addiEl.textContent = '$' + cuota.toLocaleString('es-CO') + ' COP/mes';
-    }
-    radios.forEach(r => r.addEventListener('change', updateEstimate));
-    updateEstimate();
-
-    document.getElementById('sendWaBtn').addEventListener('click', () => {
-      const sel = document.querySelector('input[name="service_tier"]:checked');
-      const tier = sel ? sel.dataset.label : 'Cotización';
-      const note = (noteEl.value || 'Quisiera recibir más información y disponibilidad.').trim();
-      const text = `Hola equipo de ${bizName}, vengo desde su cotizador web. Me interesa: ${tier}. Detalle: ${note}`;
-      window.open(`https://wa.me/${waDigits}?text=${encodeURIComponent(text)}`, '_blank', 'noopener');
+    let brand = "Chevrolet";
+    document.querySelectorAll('.pill').forEach(p => p.addEventListener('click', () => {
+      document.querySelectorAll('.pill').forEach(x => x.classList.remove('active'));
+      p.classList.add('active'); brand = p.dataset.b;
+    }));
+    document.getElementById('goAutoWa').addEventListener('click', () => {
+      const m = document.getElementById('carModel').value || 'Por confirmar';
+      const r = document.getElementById('partNeed').value || 'Consulta de repuesto';
+      const msg = `Hola Multinacional De Repuestos Cali, busco repuesto para ${brand} (${m}): ${r}. ¿Tienen stock hoy?`;
+      window.open(`https://wa.me/573135945646?text=${encodeURIComponent(msg)}`, '_blank', 'noopener');
     });
   </script>
 </body>
