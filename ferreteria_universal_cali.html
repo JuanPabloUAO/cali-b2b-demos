@@ -1,209 +1,354 @@
 <!DOCTYPE html>
-<html lang="es" class="scroll-smooth">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ferretería Universal B2B | Suministros Industriales y Materiales en Cali</title>
-  <meta name="description" content="División corporativa de Ferretería Universal Cali. Suministro industrial y materiales de construcción con despacho directo a obra en Cali y Yumbo.">
-  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Ferretería Universal (Cali) — Cotizador Digital &amp; Atención Prioritaria</title>
+  <meta name="description" content="Ferretería Universal (Cali) (Ferretería Industrial y Materiales de Construcción). Plataforma digital de cotización inmediata y atención prioritaria vía WhatsApp.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: { sans: ['Inter', 'sans-serif'] },
-          colors: {
-            brand: {
-              navy: '#0b192c',
-              dark: '#1e3e62',
-              orange: '#ff6500',
-              amber: '#f59e0b'
-            }
-          }
-        }
-      }
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600&family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #F6F6F3;
+      --surface: #FFFFFF;
+      --surface-alt: #ECECE6;
+      --ink: #111315;
+      --muted: #52525B;
+      --border: rgba(17, 19, 21, 0.11);
+      --accent: #D95D1E;
+      --accent-soft: rgba(217, 93, 30, 0.10);
+      --accent-ink: #FFFFFF;
+      --font-display: 'Space Grotesk', -apple-system, sans-serif;
+      --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --radius: 18px;
+      --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.04), 0 8px 24px rgba(15, 23, 42, 0.05);
+      --shadow-lg: 0 18px 48px rgba(15, 23, 42, 0.09);
     }
-  </script>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: var(--font-body);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    .container { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
+
+    /* Sticky Glass Navigation */
+    .topbar {
+      position: sticky; top: 0; z-index: 50;
+      background: color-mix(in srgb, var(--bg) 86%, transparent);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+    }
+    .topbar-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      height: 72px; gap: 16px;
+    }
+    .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--ink); }
+    .brand-mark {
+      width: 38px; height: 38px; border-radius: 10px;
+      background: var(--ink); color: var(--bg);
+      display: grid; place-items: center;
+      font-family: var(--font-display); font-weight: 700; font-size: 15px; letter-spacing: 0.03em;
+    }
+    .brand-text strong { display: block; font-size: 15px; font-weight: 700; line-height: 1.15; }
+    .brand-text span { font-size: 12px; color: var(--muted); }
+    .nav-cta {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--accent); color: var(--accent-ink);
+      text-decoration: none; font-weight: 600; font-size: 13.5px;
+      padding: 10px 18px; border-radius: 999px;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+    .nav-cta:hover { transform: translateY(-1px); opacity: 0.94; }
+
+    /* Editorial Split Hero */
+    .hero { padding: 56px 0 72px; }
+    .hero-grid {
+      display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 48px; align-items: center;
+    }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase;
+      color: var(--accent); background: var(--accent-soft);
+      padding: 6px 14px; border-radius: 999px; margin-bottom: 20px;
+    }
+    .hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2.15rem, 4.1vw, 3.45rem);
+      line-height: 1.08; letter-spacing: -0.025em; font-weight: 600;
+      margin-bottom: 20px;
+    }
+    .hero-lead { font-size: 1.08rem; color: var(--muted); max-width: 54ch; margin-bottom: 28px; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 32px; }
+    .btn-primary {
+      display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+      background: var(--ink); color: #FFFFFF; text-decoration: none;
+      padding: 14px 24px; border-radius: 12px; font-weight: 600; font-size: 14.5px;
+      border: none; cursor: pointer; transition: transform 0.2s ease, background 0.2s ease;
+    }
+    .btn-primary:hover { background: var(--accent); transform: translateY(-1px); }
+    .btn-secondary {
+      display: inline-flex; align-items: center; justify-content: center;
+      background: var(--surface); color: var(--ink); text-decoration: none;
+      padding: 14px 22px; border-radius: 12px; font-weight: 600; font-size: 14.5px;
+      border: 1px solid var(--border); transition: border-color 0.2s ease;
+    }
+    .btn-secondary:hover { border-color: var(--ink); }
+
+    .trust-strip {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
+      padding-top: 24px; border-top: 1px solid var(--border);
+    }
+    .trust-metric strong { display: block; font-size: 1.15rem; font-weight: 700; color: var(--ink); }
+    .trust-metric span { font-size: 12.5px; color: var(--muted); }
+
+    .hero-visual {
+      position: relative; border-radius: 24px; overflow: hidden;
+      background: var(--surface-alt); box-shadow: var(--shadow-lg);
+      aspect-ratio: 4 / 4.4; border: 1px solid var(--border);
+    }
+    .hero-visual img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .floating-card {
+      position: absolute; left: 18px; right: 18px; bottom: 18px;
+      background: rgba(255, 255, 255, 0.94); backdrop-filter: blur(12px);
+      color: #0F172A; padding: 16px 18px; border-radius: 16px;
+      border: 1px solid rgba(15, 23, 42, 0.08);
+      display: flex; align-items: center; justify-content: space-between; gap: 12px;
+    }
+    .floating-card strong { display: block; font-size: 13.5px; }
+    .floating-card span { font-size: 12px; color: #475569; }
+    .live-pill {
+      font-size: 11px; font-weight: 700; color: #047857;
+      background: #ECFDF5; padding: 5px 10px; border-radius: 999px; white-space: nowrap;
+    }
+
+    /* Bento Value Section */
+    .section { padding: 64px 0; }
+    .section-head { max-width: 640px; margin-bottom: 36px; }
+    .section-head h2 {
+      font-family: var(--font-display); font-size: clamp(1.7rem, 3vw, 2.35rem);
+      line-height: 1.15; letter-spacing: -0.02em; margin-bottom: 10px;
+    }
+    .section-head p { color: var(--muted); font-size: 1rem; }
+    .bento-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .bento-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 28px; box-shadow: var(--shadow-sm);
+    }
+    .step-num {
+      display: inline-block; font-size: 12px; font-weight: 700; color: var(--accent);
+      background: var(--accent-soft); padding: 4px 10px; border-radius: 8px; margin-bottom: 16px;
+    }
+    .bento-card h3 { font-size: 1.05rem; margin-bottom: 8px; }
+    .bento-card p { font-size: 0.94rem; color: var(--muted); }
+
+    /* Interactive Estimator Section */
+    .estimator-wrap {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 24px; padding: 40px; box-shadow: var(--shadow-lg);
+      display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 40px; align-items: start;
+    }
+    .solution-list { list-style: none; display: grid; gap: 12px; margin-top: 22px; }
+    .solution-list li { display: flex; gap: 12px; align-items: flex-start; font-size: 0.94rem; color: var(--muted); }
+    .check-dot {
+      width: 22px; height: 22px; border-radius: 999px; flex-shrink: 0;
+      background: var(--accent-soft); color: var(--accent);
+      display: grid; place-items: center; font-size: 12px; font-weight: 700; margin-top: 2px;
+    }
+    .quote-box { background: var(--bg); border: 1px solid var(--border); border-radius: 18px; padding: 24px; }
+    .quote-options { display: grid; gap: 10px; margin: 16px 0 18px; }
+    .quote-option {
+      display: flex; align-items: center; gap: 12px; cursor: pointer;
+      background: var(--surface); border: 1px solid var(--border);
+      padding: 14px 16px; border-radius: 12px; transition: border-color 0.2s ease;
+    }
+    .quote-option:has(input:checked) { border-color: var(--accent); background: var(--accent-soft); }
+    .quote-option input { accent-color: var(--accent); width: 16px; height: 16px; }
+    .opt-body { display: flex; justify-content: space-between; width: 100%; gap: 10px; font-size: 13.5px; }
+    .opt-title { font-weight: 600; color: var(--ink); }
+    .opt-price { font-weight: 600; color: var(--accent); white-space: nowrap; }
+    .field { width: 100%; padding: 12px 14px; border-radius: 10px; border: 1px solid var(--border); background: var(--surface); color: var(--ink); font-family: inherit; font-size: 14px; margin-bottom: 14px; }
+    .addi-box {
+      display: flex; justify-content: space-between; align-items: center;
+      background: var(--surface); border: 1px dashed var(--border);
+      padding: 12px 14px; border-radius: 12px; margin-bottom: 16px; font-size: 13px;
+    }
+    .addi-box strong { color: var(--accent); font-size: 14.5px; }
+
+    footer {
+      border-top: 1px solid var(--border); padding: 36px 0 48px;
+      color: var(--muted); font-size: 13px;
+    }
+    .footer-inner { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 14px; }
+
+    @media (max-width: 900px) {
+      .hero-grid, .bento-grid, .estimator-wrap { grid-template-columns: 1fr; }
+      .hero { padding: 36px 0 48px; }
+      .estimator-wrap { padding: 24px; }
+      .hero-visual { aspect-ratio: 16 / 11; }
+    }
+  </style>
 </head>
-<body class="bg-slate-50 text-slate-900 antialiased font-sans">
-
-  <!-- TOPBAR -->
-  <div class="bg-brand-navy text-slate-300 text-xs py-2 px-4 border-b border-slate-800">
-    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
-      <div class="flex items-center gap-4">
-        <span class="inline-flex items-center gap-1.5 font-medium text-amber-400">
-          <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-          Canal Corporativo Prioritario B2B
-        </span>
-        <span class="hidden md:inline text-slate-500">|</span>
-        <span class="hidden md:inline">San Nicolás: Calle 15 # 11b-05, Cali</span>
-      </div>
-      <div class="flex items-center gap-4">
-        <a href="tel:6028835430" class="hover:text-white transition-colors flex items-center gap-1">PBX: (602) 883 5430</a>
-        <a href="https://wa.me/573162508434?text=Hola%20Ferreter%C3%ADa%20Universal,%20solicito%20atenci%C3%B3n%20para%20cuenta%20corporativa" target="_blank" class="hover:text-amber-400 transition-colors flex items-center gap-1 font-semibold text-white">
-          WhatsApp Directo: 316 250 8434
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <!-- HEADER -->
-  <header class="bg-white sticky top-0 z-50 shadow-md">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center h-20">
-        <div class="flex items-center gap-3">
-          <div class="bg-brand-navy text-amber-500 p-2.5 rounded-lg shadow-inner">
-            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
-          </div>
-          <div>
-            <span class="text-xl sm:text-2xl font-black tracking-tight text-slate-900 block leading-tight">FERRETERÍA UNIVERSAL</span>
-            <span class="text-xs font-bold tracking-widest uppercase text-blue-700">División Corporativa & Suministro B2B</span>
-          </div>
+<body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a href="#inicio" class="brand">
+        <div class="brand-mark">FU</div>
+        <div class="brand-text">
+          <strong>Ferretería Universal (Cali)</strong>
+          <span>Cali · Ingeniería & Suministro Industrial</span>
         </div>
-
-        <nav class="hidden lg:flex items-center gap-8">
-          <a href="#solucion-b2b" class="text-sm font-semibold text-slate-700 hover:text-blue-700 transition">Ventajas B2B</a>
-          <a href="#lineas" class="text-sm font-semibold text-slate-700 hover:text-blue-700 transition">Portafolio Industrial</a>
-          <a href="#proceso" class="text-sm font-semibold text-slate-700 hover:text-blue-700 transition">Cómo Funciona</a>
-          <a href="#testimonios" class="text-sm font-semibold text-slate-700 hover:text-blue-700 transition">Respaldo</a>
-        </nav>
-
-        <div>
-          <a href="#cotizador" class="inline-flex items-center justify-center px-5 py-3 rounded-lg text-sm font-bold bg-amber-500 hover:bg-amber-600 text-slate-950 transition-all shadow-md">
-            Solicitar Cotización Inmediata
-          </a>
-        </div>
-      </div>
+      </a>
+      <a href="#cotizador" class="nav-cta">Enviar Lista a Cotización Express →</a>
     </div>
   </header>
 
-  <main>
-    <!-- HERO -->
-    <section class="relative bg-brand-navy text-white py-16 lg:py-24 overflow-hidden">
-      <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:16px_16px]"></div>
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div class="grid lg:grid-cols-12 gap-12 items-center">
-          <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
-            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-800 border border-slate-700 text-xs font-semibold text-amber-400">
-              ⚡ Atención Exclusiva para Constructoras, Metalmecánicas y Plantas Industriales
-            </div>
-            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight text-white">
-              Cero Filas. Cotizaciones en 2 Horas y <span class="text-amber-400">Despacho Garantizado a Obra</span> en Cali y Yumbo.
-            </h1>
-            <p class="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto lg:mx-0">
-              Elimine los sobrecostos por paradas operativas en San Nicolás. Acceda a la división mayorista de <strong>Ferretería Universal</strong>: precios por volumen, fichas técnicas para interventoría y crédito comercial a 30 días para empresas.
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-2">
-              <a href="#cotizador" class="inline-flex justify-center items-center gap-2 px-7 py-4 rounded-xl text-base font-bold bg-amber-500 hover:bg-amber-400 text-slate-950 transition shadow-lg shadow-amber-500/20">
-                Cotizar Lista de Materiales (PDF / Excel)
-              </a>
-              <a href="https://wa.me/573162508434?text=Hola,%20requiero%20asesor%C3%ADa%20para%20un%20pedido%20industrial%20con%20Ferreter%C3%ADa%20Universal" target="_blank" class="inline-flex justify-center items-center gap-2 px-7 py-4 rounded-xl text-base font-bold bg-slate-800 hover:bg-slate-700 text-white border border-slate-700 transition">
-                Atención Inmediata por WhatsApp
-              </a>
-            </div>
-            <div class="grid grid-cols-3 gap-4 pt-6 border-t border-slate-800 text-left">
-              <div><span class="block text-2xl font-black text-amber-400">+35 Años</span><span class="text-xs text-slate-400">Trayectoria en Cali</span></div>
-              <div><span class="block text-2xl font-black text-white">&lt; 24 Horas</span><span class="text-xs text-slate-400">Entrega en Cali y Yumbo</span></div>
-              <div><span class="block text-2xl font-black text-emerald-400">100% DIAN</span><span class="text-xs text-slate-400">Facturación Electrónica</span></div>
-            </div>
+  <main id="inicio">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Despacho Mayorista & Obra · Norma Técnica</span>
+          <h1>Atención ágil y cotización directa para clientes de Ferretería Universal (Cali).</h1>
+          <p class="hero-lead">Especialistas en Ferretería Industrial y Materiales de Construcción. Elimine esperas innecesarias: seleccione su requerimiento en menos de 60 segundos y reciba confirmación directa en WhatsApp con nuestro equipo.</p>
+          <div class="hero-actions">
+            <a href="#cotizador" class="btn-primary">Enviar Lista a Cotización Express</a>
+            <a href="#ventajas" class="btn-secondary">Ver Respaldo y Ventajas</a>
           </div>
-
-          <div class="lg:col-span-5">
-            <div class="bg-slate-800/90 border border-slate-700 p-6 sm:p-8 rounded-2xl shadow-2xl backdrop-blur-sm space-y-4">
-              <div class="flex items-center justify-between pb-4 border-b border-slate-700">
-                <span class="text-sm font-bold text-slate-200">Canal Corporativo Prioritario</span>
-                <span class="px-2.5 py-1 text-xs rounded-full font-bold bg-amber-400/10 text-amber-400 border border-amber-400/20">NIT / Empresas</span>
-              </div>
-              <ul class="space-y-3 text-xs sm:text-sm text-slate-300">
-                <li class="flex items-start gap-2.5">
-                  <span class="text-emerald-400 font-bold">✓</span>
-                  <span><strong>Despacho sin acudir al centro:</strong> Camiones directos a obra o nave industrial.</span>
-                </li>
-                <li class="flex items-start gap-2.5">
-                  <span class="text-emerald-400 font-bold">✓</span>
-                  <span><strong>Precios mayoristas escalados:</strong> Descuentos agresivos por volumen y continuidad.</span>
-                </li>
-                <li class="flex items-start gap-2.5">
-                  <span class="text-emerald-400 font-bold">✓</span>
-                  <span><strong>Dossier técnico para interventoría:</strong> Fichas y ensayos de calidad homologados.</span>
-                </li>
-              </ul>
-              <div class="bg-slate-900/80 rounded-xl p-4 border border-slate-700 text-center mt-4">
-                <p class="text-xs text-slate-300">¿Requerimiento urgente de obra?</p>
-                <a href="#cotizador" class="mt-2 block w-full py-2.5 bg-blue-600 hover:bg-blue-500 text-white rounded-lg text-xs font-bold transition">
-                  Subir requerimiento ahora &rarr;
-                </a>
-              </div>
+          <div class="trust-strip">
+            <div class="trust-metric"><strong>4.3 / 5</strong><span>Reputación verificada</span></div>
+            <div class="trust-metric"><strong>&lt; 15 min</strong><span>Respuesta por WhatsApp</span></div>
+            <div class="trust-metric"><strong>Directo</strong><span>Sin intermediarios</span></div>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1400&q=85" alt="Ferretería Universal (Cali)" fetchpriority="high">
+          <div class="floating-card">
+            <div>
+              <strong>Ferretería Universal (Cali)</strong>
+              <span>Calle 15 # 11b-05 / Calle 15 # 11-57, San Nicolás, Cali, Colombia</span>
             </div>
+            <span class="live-pill">● Canal Activo</span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- FORMULARIO DE COTIZACIÓN -->
-    <section id="cotizador" class="py-16 bg-slate-50">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="bg-white rounded-2xl shadow-xl border border-slate-200 overflow-hidden">
-          <div class="bg-brand-navy p-6 sm:p-8 text-white text-center">
-            <span class="px-3 py-1 bg-amber-500/20 text-amber-400 border border-amber-500/30 text-xs font-bold rounded-full uppercase tracking-wider">Mesa de Cotización B2B</span>
-            <h2 class="text-2xl sm:text-3xl font-extrabold mt-3">Solicite Cotización Formal en Menos de 2 Horas</h2>
-            <p class="text-xs sm:text-sm text-slate-300 max-w-xl mx-auto mt-2">
-              Ingrese su requerimiento. Un asesor técnico corporativo asignado validará existencias y precios mayoristas de inmediato.
-            </p>
+    <section id="ventajas" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Por qué nos eligen nuestros clientes en Cali.</h2>
+          <p>Combinamos trayectoria real en Ferretería Industrial y Materiales de Construcción con un canal digital inmediato diseñado para ahorrarle tiempo.</p>
+        </div>
+        <div class="bento-grid">
+        <article class="bento-card">
+          <span class="step-num">01</span>
+          <h3>Ventaja Verificada</h3>
+          <p>+35 años de trayectoria en el sector</p>
+        </article>
+        <article class="bento-card">
+          <span class="step-num">02</span>
+          <h3>Ventaja Verificada</h3>
+          <p>Excelente surtido en metalmecánica, soldadura y obra gris</p>
+        </article>
+        <article class="bento-card">
+          <span class="step-num">03</span>
+          <h3>Ventaja Verificada</h3>
+          <p>Asesoría técnica honesta y precios mayoristas competitivos</p>
+        </article></div>
+      </div>
+    </section>
+
+    <section id="cotizador" class="section">
+      <div class="container">
+        <div class="estimator-wrap">
+          <div>
+            <span class="eyebrow">Cotizador Interactivo 24/7</span>
+            <h2 style="font-family:var(--font-display);font-size:clamp(1.6rem,2.6vw,2.15rem);line-height:1.15;margin-bottom:12px;">Reciba su cotización exacta sin hacer filas.</h2>
+            <p style="color:var(--muted);">Configure su solicitud y envíela estructurada directamente a nuestra línea oficial (+57 316 250 8434).</p>
+            <ul class="solution-list">
+        <li>
+          <span class="check-dot" aria-hidden="true">✓</span>
+          <span><strong>Resuelto:</strong> Congestión en mostrador y filas de hasta 45 minutos en San Nicolás</span>
+        </li>
+        <li>
+          <span class="check-dot" aria-hidden="true">✓</span>
+          <span><strong>Resuelto:</strong> Pérdida de clientes corporativos por no tener canal digital de cotización rápida</span>
+        </li>
+        <li>
+          <span class="check-dot" aria-hidden="true">✓</span>
+          <span><strong>Resuelto:</strong> Falta de catálogo estructurado y fichas técnicas online para ingenieros e interventorías</span>
+        </li></ul>
           </div>
-
-          <form id="b2bQuoteForm" class="p-6 sm:p-8 space-y-6">
-            <div class="grid sm:grid-cols-2 gap-6">
-              <div>
-                <label for="companyName" class="block text-xs font-bold text-slate-700 uppercase mb-1">Empresa / Razón Social *</label>
-                <input type="text" id="companyName" required placeholder="Ej. Constructora del Valle S.A.S." class="w-full px-4 py-3 rounded-lg border border-slate-300 text-sm">
-              </div>
-              <div>
-                <label for="nit" class="block text-xs font-bold text-slate-700 uppercase mb-1">NIT o Identificación *</label>
-                <input type="text" id="nit" required placeholder="Ej. 900.123.456-7" class="w-full px-4 py-3 rounded-lg border border-slate-300 text-sm">
-              </div>
-              <div>
-                <label for="contactPerson" class="block text-xs font-bold text-slate-700 uppercase mb-1">Persona de Contacto *</label>
-                <input type="text" id="contactPerson" required placeholder="Ej. Ing. Carlos Pérez" class="w-full px-4 py-3 rounded-lg border border-slate-300 text-sm">
-              </div>
-              <div>
-                <label for="phoneWhatsapp" class="block text-xs font-bold text-slate-700 uppercase mb-1">WhatsApp / Celular *</label>
-                <input type="tel" id="phoneWhatsapp" required placeholder="Ej. 316 123 4567" class="w-full px-4 py-3 rounded-lg border border-slate-300 text-sm">
-              </div>
+          <div class="quote-box">
+            <strong style="font-size:15px;">1. Seleccione tipo de solicitud</strong>
+            <div class="quote-options">
+        <label class="quote-option">
+          <input type="radio" name="service_tier" value="350000" data-label="Pedido Express Mostrador / Taller" >
+          <span class="opt-body">
+            <span class="opt-title">Pedido Express Mostrador / Taller</span>
+            <span class="opt-price">$350.000 COP ref.</span>
+          </span>
+        </label>
+        <label class="quote-option">
+          <input type="radio" name="service_tier" value="1800000" data-label="Suministro de Obra / Lista de Despiece" checked>
+          <span class="opt-body">
+            <span class="opt-title">Suministro de Obra / Lista de Despiece</span>
+            <span class="opt-price">$1.800.000 COP ref.</span>
+          </span>
+        </label>
+        <label class="quote-option">
+          <input type="radio" name="service_tier" value="4500000" data-label="Convenio Corporativo &amp; Volumen" >
+          <span class="opt-body">
+            <span class="opt-title">Convenio Corporativo &amp; Volumen</span>
+            <span class="opt-price">$4.500.000 COP ref.</span>
+          </span>
+        </label></div>
+            <label for="clientNote" style="display:block;font-size:12.5px;font-weight:600;margin-bottom:6px;">2. Detalle breve (producto, cita o cantidad)</label>
+            <input id="clientNote" class="field" type="text" placeholder="Ej: Cotización urgente para entrega esta semana...">
+            <div class="addi-box">
+              <span>Referencia en 3 cuotas sin interés (Addi / Sistecrédito):</span>
+              <strong id="addiInstallment">$283.333 COP/mes</strong>
             </div>
-
-            <div>
-              <label for="materialList" class="block text-xs font-bold text-slate-700 uppercase mb-1">Listado de Materiales o Cantidades Requeridas *</label>
-              <textarea id="materialList" required rows="4" placeholder="Ej. 50 tubos PVC 1/2 pulgada, 20 varillas corrugadas 1/2, 5 bultos pegacor gris..." class="w-full px-4 py-3 rounded-lg border border-slate-300 text-sm"></textarea>
-            </div>
-
-            <button type="submit" class="w-full py-4 px-6 rounded-xl font-bold text-slate-950 bg-amber-500 hover:bg-amber-400 transition shadow-lg text-base">
-              Generar Cotización y Conectar por WhatsApp &rarr;
-            </button>
-          </form>
+            <button id="sendWaBtn" type="button" class="btn-primary" style="width:100%;">Enviar Lista a Cotización Express →</button>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="bg-brand-navy text-slate-400 py-8 text-center text-xs border-t border-slate-800">
-    <p class="text-slate-300 font-bold">Ferretería Universal — División Corporativa & B2B Cali</p>
-    <p class="text-slate-500 mt-1">Calle 15 # 11b-05, San Nicolás, Cali, Valle del Cauca. PBX: (602) 883 5430</p>
+  <footer>
+    <div class="container footer-inner">
+      <span><strong>Ferretería Universal (Cali)</strong> · Calle 15 # 11b-05 / Calle 15 # 11-57, San Nicolás, Cali, Colombia</span>
+      <span>Prototipo interactivo V3.0 diseñado por Estudio Ing. Juan Pablo Campo (UAO).</span>
+    </div>
   </footer>
 
   <script>
-    document.getElementById('b2bQuoteForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      const company = document.getElementById('companyName').value.trim();
-      const nit = document.getElementById('nit').value.trim();
-      const contact = document.getElementById('contactPerson').value.trim();
-      const phone = document.getElementById('phoneWhatsapp').value.trim();
-      const materials = document.getElementById('materialList').value.trim();
+    const waDigits = "573162508434";
+    const bizName = "Ferreter\u00eda Universal (Cali)";
+    const radios = document.querySelectorAll('input[name="service_tier"]');
+    const addiEl = document.getElementById('addiInstallment');
+    const noteEl = document.getElementById('clientNote');
 
-      const waText = `*SOLICITUD DE COTIZACIÓN B2B - FERRETERÍA UNIVERSAL*\nEmpresa: ${company}\nNIT: ${nit}\nContacto: ${contact}\nTeléfono: ${phone}\n\n*MATERIALES:*\n${materials}\n\n_Generado desde la plataforma web B2B._`;
-      window.open(`https://wa.me/573162508434?text=${encodeURIComponent(waText)}`, '_blank');
+    function updateEstimate() {
+      const sel = document.querySelector('input[name="service_tier"]:checked');
+      const val = Number(sel ? sel.value : 850000);
+      const cuota = Math.round(val / 3);
+      addiEl.textContent = '$' + cuota.toLocaleString('es-CO') + ' COP/mes';
+    }
+    radios.forEach(r => r.addEventListener('change', updateEstimate));
+    updateEstimate();
+
+    document.getElementById('sendWaBtn').addEventListener('click', () => {
+      const sel = document.querySelector('input[name="service_tier"]:checked');
+      const tier = sel ? sel.dataset.label : 'Cotización';
+      const note = (noteEl.value || 'Quisiera recibir más información y disponibilidad.').trim();
+      const text = `Hola equipo de ${bizName}, vengo desde su cotizador web. Me interesa: ${tier}. Detalle: ${note}`;
+      window.open(`https://wa.me/${waDigits}?text=${encodeURIComponent(text)}`, '_blank', 'noopener');
     });
   </script>
 </body>
