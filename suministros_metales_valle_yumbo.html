@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Suministros & Metales del Valle (Yumbo / Cali) | Cotizador Oficial y Atención Prioritaria</title>
+  <meta name="description" content="Plataforma interactiva oficial de Suministros & Metales del Valle (Yumbo / Cali). Simula tu presupuesto en 30 segundos, calcula cuotas Addi y agenda atención prioritaria en Zona Industrial La Acopi.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    .glass-card {
+      background: rgba(15, 23, 42, 0.78);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .glass-nav {
+      background: rgba(2, 6, 23, 0.88);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+    .gradient-glow {
+      background: radial-gradient(circle at 50% 0%, rgba(245, 158, 11, 0.16) 0%, rgba(2, 6, 23, 0) 70%);
+    }
+    input[type=range]::-webkit-slider-thumb {
+      appearance: none;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: #f59e0b;
+      cursor: pointer;
+      box-shadow: 0 0 14px rgba(245, 158, 11, 0.7);
+      border: 3px solid #ffffff;
+    }
+    input:focus-visible, select:focus-visible, textarea:focus-visible, button:focus-visible, a:focus-visible {
+      outline: 2px solid #f59e0b;
+      outline-offset: 2px;
+    }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100 antialiased selection:bg-amber-500 selection:text-white min-h-screen relative overflow-x-hidden">
+
+  <div class="fixed inset-0 pointer-events-none gradient-glow z-0"></div>
+
+  <!-- Top Announcement -->
+  <aside class="relative z-50 bg-gradient-to-r from-slate-900 via-slate-950 to-slate-900 border-b border-slate-800 py-2.5 px-4 text-center text-xs font-semibold text-amber-300 flex items-center justify-center gap-2">
+    <span class="flex h-2 w-2 rounded-full bg-amber-400 animate-pulse"></span>
+    <span>⚡ <strong>Canal Digital de Atención Prioritaria:</strong> Zona Industrial La Acopi, Carrera 32 # 12-40, Yumbo, Valle del Cauca</span>
+  </aside>
+
+  <!-- Navbar with Custom Brand SVG Logo -->
+  <nav class="sticky top-0 z-40 glass-nav">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3 group" title="Suministros & Metales del Valle (Yumbo / Cali)">
+        <svg viewBox="0 0 260 52" class="h-11 sm:h-12 w-auto" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Logo Oficial de Suministros & Metales del Valle (Yumbo / Cali)">
+      <defs>
+        <linearGradient id="grad_lead_010" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#f59e0b"/>
+          <stop offset="100%" stop-color="#b45309"/>
+        </linearGradient>
+        <filter id="glow_lead_010" x="-20%" y="-20%" width="140%" height="140%">
+          <feGaussianBlur stdDeviation="3" result="blur"/>
+          <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+        </filter>
+      </defs>
+      
+      <!-- Monogram Emblem Shield -->
+      <g transform="translate(4, 2)">
+        <rect x="0" y="0" width="44" height="44" rx="14" fill="#0f172a" stroke="rgba(255,255,255,0.12)" stroke-width="1.2"/>
+        <rect x="2" y="2" width="40" height="40" rx="12" fill="none" stroke="url(#grad_lead_010)" stroke-width="1.5" opacity="0.6"/>
+        <g transform="translate(2, -1)">
+          
+        <!-- Industrial Hexagon & Laser Spark -->
+        <polygon points="20,11 31,17 31,31 20,37 9,31 9,17" stroke="url(#grad_lead_010)" stroke-width="2.5" fill="none"/>
+        <circle cx="20" cy="24" r="4.5" fill="url(#grad_lead_010)"/>
+        <line x1="20" y1="14" x2="20" y2="34" stroke="#ffffff" stroke-width="1.5" stroke-dasharray="2,2"/>
+        <line x1="12" y1="24" x2="28" y2="24" stroke="#ffffff" stroke-width="1.5" stroke-dasharray="2,2"/>
+        
+        </g>
+      </g>
+      
+      <!-- Brand Name Typography -->
+      <text x="58" y="24" fill="#ffffff" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="15" letter-spacing="-0.3">
+        METALES DEL VALLE
+      </text>
+      <text x="58" y="38" fill="#f59e0b" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="9.5" letter-spacing="1.2">
+        ACEROS INDUSTRIALES
+      </text>
+    </svg>
+      </a>
+
+      <div class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-300">
+        <a href="#simulador" class="hover:text-amber-400 transition">Simulador</a>
+        <a href="#servicios" class="hover:text-amber-400 transition">Portafolio</a>
+        <a href="#tecnologia" class="hover:text-amber-400 transition">Tecnología</a>
+        <a href="#autoridad" class="hover:text-amber-400 transition">Especialista</a>
+        <a href="#faq" class="hover:text-amber-400 transition">Preguntas</a>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <a href="#simulador" class="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-amber-500/10 text-amber-300 border border-amber-500/30 text-xs font-bold hover:bg-amber-500/20 transition">
+          Simular Presupuesto
+        </a>
+        <a href="https://wa.me/573168821199?text=Hola%20equipo%20de%20Suministros & Metales del Valle (Yumbo / Cali)%2C%20deseo%20solicitar%20atenci%C3%B3n%20prioritaria%20y%20cotizaci%C3%B3n." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 text-xs font-black shadow-lg shadow-amber-500/20 transition">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+            <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.299.144.347.491 1.2.534 1.288.043.087.072.188.014.303-.058.116-.087.188-.173.289l-.26.302c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.861.174.086.275.072.376-.044.101-.116.433-.506.549-.68.116-.173.231-.145.39-.086.159.058 1.011.477 1.184.564.173.087.289.13.332.202.043.073.043.419-.101.824z"/>
+          </svg>
+          WhatsApp Directo
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section with Contextual Image Showcase -->
+  <header class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 pt-12 sm:pt-16 pb-12">
+    <div class="grid lg:grid-cols-12 gap-10 items-center">
+      <div class="lg:col-span-7 text-left space-y-6">
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card text-amber-300 text-xs font-bold border border-amber-500/30 shadow-lg">
+          <span class="w-2 h-2 rounded-full bg-amber-400"></span>
+          <span>⭐ 4.6 / 5 • +124 Casos Atendidos con Éxito</span>
+        </div>
+
+        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-[1.1]">
+          Suministros & Metales del Valle (Yumbo / Cali)
+        </h1>
+
+        <p class="text-base sm:text-lg text-slate-300 font-normal leading-relaxed">
+          Aceros Industriales, Perfilería Estructural y Corte CNC en Yumbo. Simula tu presupuesto estimado en 30 segundos, calcula opciones de financiación con Addi / Sistecredito y agenda tu valoración prioritaria en WhatsApp sin filas ni esperas.
+        </p>
+
+        <!-- Social Proof & Tech Pills -->
+        <div class="pt-2 flex flex-wrap gap-2">
+          <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-xs text-slate-300 font-medium"><svg class="w-3.5 h-3.5 text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>Corte Plasma CNC Milimétrico</span><span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-xs text-slate-300 font-medium"><svg class="w-3.5 h-3.5 text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>Certificado de Calidad de Molino</span><span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-xs text-slate-300 font-medium"><svg class="w-3.5 h-3.5 text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>Despacho Directo Acopi / Cali</span>
+        </div>
+
+        <div class="pt-4 flex flex-wrap items-center gap-4 text-xs font-semibold text-slate-400">
+          <div class="flex items-center gap-2">
+            <span>📍 Zona Industrial La Acopi, Carrera 32 # 12-40, Yumbo, Valle del Cauca</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span>⚡ Respuesta oficial en menos de 15 minutos</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Visual Showcase Image (LCP with fetchpriority="high") -->
+      <div class="lg:col-span-5 relative">
+        <div class="relative rounded-3xl p-1 bg-gradient-to-br from-amber-500/40 via-slate-800/40 to-slate-900/60 shadow-2xl">
+          <div class="rounded-[22px] overflow-hidden bg-slate-950 relative aspect-[4/3]">
+            <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1200&q=80"
+                 alt="Instalaciones y atención especializada en Suministros & Metales del Valle (Yumbo / Cali)"
+                 fetchpriority="high"
+                 decoding="async"
+                 width="1200" height="800"
+                 class="w-full h-full object-cover transform hover:scale-105 transition duration-700 ease-out">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
+            <div class="absolute bottom-4 left-4 right-4 p-3.5 glass-card rounded-xl border border-white/10 flex items-center justify-between">
+              <div>
+                <span class="text-[10px] font-extrabold uppercase tracking-wider text-amber-400 block">Sede Autorizada</span>
+                <strong class="text-xs text-white block">Metales del Valle</strong>
+              </div>
+              <span class="px-2.5 py-1 bg-amber-500/20 text-amber-300 rounded text-[10px] font-bold">
+                EN SERVICIO
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 space-y-24 pb-28">
+
+    <!-- INTERACTIVE QUOTE & FINANCING SIMULATOR -->
+    <section id="simulador" class="scroll-mt-24">
+      <div class="relative rounded-3xl p-1 bg-gradient-to-b from-amber-500/30 via-slate-800/40 to-slate-900/20 shadow-2xl">
+        <div class="bg-slate-900/95 rounded-[22px] p-6 sm:p-12 backdrop-blur-xl border border-slate-800/80">
+          <div class="max-w-2xl mx-auto text-center mb-10">
+            <span class="px-3 py-1 bg-amber-500/20 text-amber-300 rounded-full text-[11px] font-extrabold uppercase tracking-wider">
+              Simulador Dinámico Oficial 2026
+            </span>
+            <h2 class="text-2xl sm:text-4xl font-black text-white mt-3">Calcula tu Presupuesto en Tiempo Real</h2>
+            <p class="text-sm text-slate-400 mt-2">
+              Ajusta los parámetros según tu requerimiento para calcular la inversión estimada, el descuento por pago de contado y las cuotas Addi disponibles.
+            </p>
+          </div>
+
+          <form id="quoteForm" onsubmit="event.preventDefault(); sendWhatsAppLead();" class="grid lg:grid-cols-12 gap-8 items-start">
+            
+            <div class="lg:col-span-7 space-y-6">
+              
+              <fieldset>
+                <legend class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-3">
+                  1. Servicio o Requerimiento Principal: <span class="text-amber-400">*</span>
+                </legend>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  
+        <label class="cursor-pointer p-4 rounded-xl border border-amber-500/50 bg-amber-950/25 hover:border-amber-500/50 transition flex items-start gap-3 treatment-tile">
+          <input type="radio" name="serviceKey" value="srv_0" checked class="mt-1 text-amber-500 focus:ring-amber-500" onchange="recalcQuote()">
+          <div>
+            <strong class="block text-sm font-bold text-white">Lámina HR / CR & Acero Inoxidable 304</strong>
+            <span class="text-xs text-slate-400 block mt-0.5">Stock permanente con certificado de calidad y corte a medida</span>
+          </div>
+        </label>
+        
+        <label class="cursor-pointer p-4 rounded-xl border border-slate-800 bg-slate-950/40 hover:border-amber-500/50 transition flex items-start gap-3 treatment-tile">
+          <input type="radio" name="serviceKey" value="srv_1"  class="mt-1 text-amber-500 focus:ring-amber-500" onchange="recalcQuote()">
+          <div>
+            <strong class="block text-sm font-bold text-white">Perfilería Estructural IPE / HEA / Canal U</strong>
+            <span class="text-xs text-slate-400 block mt-0.5">Suministro por volumen para bodegas y obra civil en el Valle</span>
+          </div>
+        </label>
+        
+        <label class="cursor-pointer p-4 rounded-xl border border-slate-800 bg-slate-950/40 hover:border-amber-500/50 transition flex items-start gap-3 treatment-tile">
+          <input type="radio" name="serviceKey" value="srv_2"  class="mt-1 text-amber-500 focus:ring-amber-500" onchange="recalcQuote()">
+          <div>
+            <strong class="block text-sm font-bold text-white">Corte CNC Plasma y Doblez Industrial</strong>
+            <span class="text-xs text-slate-400 block mt-0.5">Maquila rápida sobre plano DXF/DWG sin desperdicio</span>
+          </div>
+        </label>
+        
+        <label class="cursor-pointer p-4 rounded-xl border border-slate-800 bg-slate-950/40 hover:border-amber-500/50 transition flex items-start gap-3 treatment-tile">
+          <input type="radio" name="serviceKey" value="srv_3"  class="mt-1 text-amber-500 focus:ring-amber-500" onchange="recalcQuote()">
+          <div>
+            <strong class="block text-sm font-bold text-white">Tubería Estructural y Mecánica</strong>
+            <span class="text-xs text-slate-400 block mt-0.5">Entregas programadas en obra en Yumbo, Cali y Palmira</span>
+          </div>
+        </label>
+        
+                </div>
+              </fieldset>
+
+              <div class="bg-slate-950/60 p-5 rounded-2xl border border-slate-800/80">
+                <div class="flex justify-between items-center mb-2">
+                  <label for="unitsSlider" class="text-xs font-bold uppercase tracking-wider text-slate-300">
+                    Cantidad / Toneladas / Lotes:
+                  </label>
+                  <span id="sliderValDisplay" class="px-3 py-1 bg-amber-500/20 text-amber-300 rounded-lg text-sm font-black">
+                    1 Toneladas / Lotes
+                  </span>
+                </div>
+                <input type="range" id="unitsSlider" min="1" max="10" value="1" step="1" class="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer mt-2" oninput="recalcQuote()">
+                <div class="flex justify-between text-[11px] text-slate-500 mt-2 font-medium">
+                  <span>Mínimo (1)</span>
+                  <span>Promedio (5)</span>
+                  <span>Escala Mayor (10)</span>
+                </div>
+              </div>
+
+              <div class="grid sm:grid-cols-2 gap-4">
+                <div>
+                  <label for="clientName" class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-1.5">
+                    Tu Nombre o Razón Social: <span class="text-amber-400">*</span>
+                  </label>
+                  <input type="text" id="clientName" name="clientName" required placeholder="Ej. Carlos Mendoza" autocomplete="name" class="w-full px-4 py-3 bg-slate-950 border border-slate-800 rounded-xl text-sm text-white placeholder-slate-600 focus:border-amber-500 transition">
+                </div>
+                <div>
+                  <label for="clientPhone" class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-1.5">
+                    Teléfono / WhatsApp de Contacto: <span class="text-amber-400">*</span>
+                  </label>
+                  <input type="tel" id="clientPhone" name="clientPhone" required placeholder="Ej. 315 123 4567" inputmode="tel" autocomplete="tel" class="w-full px-4 py-3 bg-slate-950 border border-slate-800 rounded-xl text-sm text-white placeholder-slate-600 focus:border-amber-500 transition">
+                </div>
+              </div>
+            </div>
+
+            <!-- Total Card with Addi Financing -->
+            <div class="lg:col-span-5 glass-card rounded-2xl p-6 sm:p-7 border border-amber-500/30 flex flex-col justify-between h-full bg-gradient-to-br from-slate-900 to-slate-950 shadow-xl">
+              <div>
+                <div class="flex items-center justify-between pb-4 border-b border-slate-800">
+                  <span class="text-xs font-bold uppercase tracking-wider text-slate-400">Presupuesto Estimado</span>
+                  <span class="px-2.5 py-1 bg-amber-500/10 text-amber-400 border border-amber-500/20 text-[10px] font-bold rounded-md">
+                    VALOR ESTIMADO
+                  </span>
+                </div>
+
+                <div class="mt-5">
+                  <div class="text-3xl sm:text-4xl font-black text-white tracking-tight" id="totalEstimatePrice">
+                    $4.600.000 COP
+                  </div>
+                  <p class="text-xs text-slate-400 mt-1" id="treatmentSummary">
+                    Estimado en tiempo real con especificaciones técnicas oficiales
+                  </p>
+                </div>
+
+                <div class="mt-6 space-y-3 bg-slate-950/70 p-4 rounded-xl border border-slate-800/80 text-xs">
+                  <div class="flex justify-between text-slate-300">
+                    <span>Descuento Pago de Contado (10%):</span>
+                    <strong class="text-amber-400" id="cashDiscountText">-$0 COP</strong>
+                  </div>
+                  <div class="flex justify-between text-slate-300">
+                    <span>Precio Final de Contado:</span>
+                    <strong class="text-white" id="cashTotalText">$4.600.000 COP</strong>
+                  </div>
+                  <div class="pt-2 border-t border-slate-800 flex justify-between items-center">
+                    <span class="text-slate-400">Financiación Addi / Sistecredito:</span>
+                    <strong class="text-amber-300 font-bold" id="addiInstallmentsText">Desde 3 cuotas mensuales</strong>
+                  </div>
+                </div>
+
+                <ul class="mt-5 space-y-2 text-xs text-slate-300">
+                  <li class="flex items-center gap-2">
+                    <span class="text-amber-400 font-bold">✓</span>
+                    <span>Asesoría personalizada y respuesta ágil en WhatsApp</span>
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span class="text-amber-400 font-bold">✓</span>
+                    <span>Sin compromisos iniciales ni sobrecostos imprevistos</span>
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span class="text-amber-400 font-bold">✓</span>
+                    <span>Facturación electrónica legal DIAN y garantía por escrito</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="mt-6 pt-4 border-t border-slate-800">
+                <button type="submit" class="w-full py-4 px-6 bg-amber-500 hover:bg-amber-400 text-slate-950 font-black rounded-xl text-sm shadow-xl shadow-amber-500/20 transition transform active:scale-[0.99] flex items-center justify-center gap-2">
+                  <span>Solicitar Atención con Este Presupuesto</span>
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                    <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.299.144.347.491 1.2.534 1.288.043.087.072.188.014.303-.058.116-.087.188-.173.289l-.26.302c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.861.174.086.275.072.376-.044.101-.116.433-.506.549-.68.116-.173.231-.145.39-.086.159.058 1.011.477 1.184.564.173.087.289.13.332.202.043.073.043.419-.101.824z"/>
+                  </svg>
+                </button>
+                <p class="text-[10px] text-center text-slate-500 mt-2">
+                  🔒 Tus datos son confidenciales. Te redirigiremos al WhatsApp oficial de Suministros & Metales del Valle (Yumbo / Cali).
+                </p>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- PORTFOLIO SERVICES -->
+    <section id="servicios" class="scroll-mt-24">
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <span class="text-xs font-bold uppercase tracking-wider text-amber-400">Portafolio Integral</span>
+        <h2 class="text-3xl sm:text-4xl font-black text-white mt-2">Nuestras Líneas Especializadas</h2>
+        <p class="text-slate-400 text-sm mt-3">Diseñadas para entregar resultados medibles, duraderos y certificados.</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <div class="glass-card rounded-2xl p-7 border border-slate-800 hover:border-amber-500/40 transition group flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-400 flex items-center justify-center font-bold text-lg mb-5 group-hover:scale-110 transition">
+              ✦
+            </div>
+            <span class="text-[11px] font-bold text-amber-400 uppercase tracking-wider">Línea Certificada #1</span>
+            <h3 class="text-xl font-bold text-white mt-1 leading-snug">Lámina HR / CR & Acero Inoxidable 304</h3>
+            <p class="text-slate-400 text-xs mt-3 leading-relaxed">Stock permanente con certificado de calidad y corte a medida</p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs">
+            <span class="text-slate-400 font-medium">Disponibilidad Inmediata</span>
+            <a href="#simulador" class="text-amber-400 font-bold hover:underline">Cotizar →</a>
+          </div>
+        </div>
+        
+        <div class="glass-card rounded-2xl p-7 border border-slate-800 hover:border-amber-500/40 transition group flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-400 flex items-center justify-center font-bold text-lg mb-5 group-hover:scale-110 transition">
+              ✦
+            </div>
+            <span class="text-[11px] font-bold text-amber-400 uppercase tracking-wider">Línea Certificada #2</span>
+            <h3 class="text-xl font-bold text-white mt-1 leading-snug">Perfilería Estructural IPE / HEA / Canal U</h3>
+            <p class="text-slate-400 text-xs mt-3 leading-relaxed">Suministro por volumen para bodegas y obra civil en el Valle</p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs">
+            <span class="text-slate-400 font-medium">Disponibilidad Inmediata</span>
+            <a href="#simulador" class="text-amber-400 font-bold hover:underline">Cotizar →</a>
+          </div>
+        </div>
+        
+        <div class="glass-card rounded-2xl p-7 border border-slate-800 hover:border-amber-500/40 transition group flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-400 flex items-center justify-center font-bold text-lg mb-5 group-hover:scale-110 transition">
+              ✦
+            </div>
+            <span class="text-[11px] font-bold text-amber-400 uppercase tracking-wider">Línea Certificada #3</span>
+            <h3 class="text-xl font-bold text-white mt-1 leading-snug">Corte CNC Plasma y Doblez Industrial</h3>
+            <p class="text-slate-400 text-xs mt-3 leading-relaxed">Maquila rápida sobre plano DXF/DWG sin desperdicio</p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs">
+            <span class="text-slate-400 font-medium">Disponibilidad Inmediata</span>
+            <a href="#simulador" class="text-amber-400 font-bold hover:underline">Cotizar →</a>
+          </div>
+        </div>
+        
+        <div class="glass-card rounded-2xl p-7 border border-slate-800 hover:border-amber-500/40 transition group flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-400 flex items-center justify-center font-bold text-lg mb-5 group-hover:scale-110 transition">
+              ✦
+            </div>
+            <span class="text-[11px] font-bold text-amber-400 uppercase tracking-wider">Línea Certificada #4</span>
+            <h3 class="text-xl font-bold text-white mt-1 leading-snug">Tubería Estructural y Mecánica</h3>
+            <p class="text-slate-400 text-xs mt-3 leading-relaxed">Entregas programadas en obra en Yumbo, Cali y Palmira</p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs">
+            <span class="text-slate-400 font-medium">Disponibilidad Inmediata</span>
+            <a href="#simulador" class="text-amber-400 font-bold hover:underline">Cotizar →</a>
+          </div>
+        </div>
+        
+      </div>
+    </section>
+
+    <!-- SPECIALIZED TECHNOLOGY & EQUIPMENT SHOWCASE -->
+    <section id="tecnologia" class="scroll-mt-24">
+      <div class="grid lg:grid-cols-12 gap-10 items-center">
+        <div class="lg:col-span-5 space-y-6">
+          <span class="text-xs font-bold uppercase tracking-wider text-amber-400">Tecnología de Vanguardia</span>
+          <h2 class="text-3xl sm:text-4xl font-black text-white leading-tight">
+            Equipamiento de Élite para Resultados Insuperables
+          </h2>
+          <p class="text-sm text-slate-300 leading-relaxed">
+            En <strong>Suministros & Metales del Valle (Yumbo / Cali)</strong> invertimos en tecnología certificada para garantizar procedimientos seguros, indoloros y con exactitud milimétrica.
+          </p>
+          <div class="space-y-3 pt-2">
+            <div class="flex items-start gap-3">
+              <span class="w-6 h-6 rounded-full bg-amber-500/20 text-amber-400 flex items-center justify-center text-xs font-bold mt-0.5">✓</span>
+              <p class="text-xs text-slate-300"><strong>Precisión Digital:</strong> Eliminamos errores humanos mediante instrumentación calibrada.</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="w-6 h-6 rounded-full bg-amber-500/20 text-amber-400 flex items-center justify-center text-xs font-bold mt-0.5">✓</span>
+              <p class="text-xs text-slate-300"><strong>Bioseguridad de Nivel Hospitalario:</strong> Esterilización y empaque estéril individual para cada paciente.</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="w-6 h-6 rounded-full bg-amber-500/20 text-amber-400 flex items-center justify-center text-xs font-bold mt-0.5">✓</span>
+              <p class="text-xs text-slate-300"><strong>Biomateriales Originales:</strong> Suministros con trazabilidad directa del fabricante internacional.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-7 grid sm:grid-cols-2 gap-5">
+          <div class="glass-card rounded-2xl overflow-hidden border border-slate-800">
+            <div class="aspect-[4/3] bg-slate-950 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=800&q=80"
+                   alt="Equipamiento técnico especializado en Suministros & Metales del Valle (Yumbo / Cali)"
+                   loading="lazy"
+                   decoding="async"
+                   width="800" height="600"
+                   class="w-full h-full object-cover hover:scale-105 transition duration-500">
+            </div>
+            <div class="p-5">
+              <span class="text-[10px] font-bold text-amber-400 uppercase tracking-wider">Infraestructura</span>
+              <h4 class="text-base font-bold text-white mt-1">Instrumentación y Calibración</h4>
+              <p class="text-xs text-slate-400 mt-2">Tecnología de última generación para diagnósticos y procedimientos indoloros.</p>
+            </div>
+          </div>
+
+          <div class="glass-card rounded-2xl overflow-hidden border border-slate-800">
+            <div class="aspect-[4/3] bg-slate-950 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80"
+                   alt="Casos y resultados certificados en Suministros & Metales del Valle (Yumbo / Cali)"
+                   loading="lazy"
+                   decoding="async"
+                   width="800" height="600"
+                   class="w-full h-full object-cover hover:scale-105 transition duration-500">
+            </div>
+            <div class="p-5">
+              <span class="text-[10px] font-bold text-amber-400 uppercase tracking-wider">Evidencia Clínica / Técnica</span>
+              <h4 class="text-base font-bold text-white mt-1">Resultados Comprobados</h4>
+              <p class="text-xs text-slate-400 mt-2">Cientos de pacientes y clientes satisfechos con resultados visibles y garantizados.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DIRECTOR & AUTHORITY SECTION -->
+    <section id="autoridad" class="scroll-mt-24">
+      <div class="glass-card rounded-3xl p-8 sm:p-12 border border-slate-800 bg-gradient-to-br from-slate-900 to-slate-950">
+        <div class="grid lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-8 space-y-4">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/10 text-amber-300 text-xs font-bold border border-amber-500/30">
+              <span>Dirección Médica y Profesional</span>
+            </div>
+            <h3 class="text-2xl sm:text-3xl font-black text-white">Ing. Carlos Eduardo Ospina</h3>
+            <p class="text-sm font-semibold text-amber-400">Ingeniero Metalúrgico & Director de Abastecimiento Industrial (Univ. del Valle)</p>
+            <p class="text-xs text-slate-400 leading-relaxed max-w-2xl">
+              Respaldado por el registro oficial <strong>COPNIA No. 76202-88412 VLL • Certificación de Calidad Aceros NTC</strong>. En Suministros & Metales del Valle (Yumbo / Cali) cada caso es evaluado de manera personalizada por profesionales titulados, garantizando ética, rigor técnico y un estándar de atención prioritario.
+            </p>
+            <div class="pt-2 text-xs text-slate-400 flex items-center gap-3">
+              <span>📍 Sede Física: <strong>Zona Industrial La Acopi, Carrera 32 # 12-40, Yumbo, Valle del Cauca</strong></span>
+            </div>
+          </div>
+          <div class="lg:col-span-4 flex flex-col gap-3 justify-center">
+            <a href="https://wa.me/573168821199?text=Hola%20Suministros & Metales del Valle (Yumbo / Cali)%2C%20deseo%20agendar%20una%20cita%20con%20Ing. Carlos Eduardo Ospina." target="_blank" rel="noopener noreferrer" class="py-3 px-6 bg-amber-500 hover:bg-amber-400 text-slate-950 font-black rounded-xl text-xs text-center shadow-lg transition">
+              Agendar con Dirección Médica
+            </a>
+            <a href="#simulador" class="py-3 px-6 glass-card hover:bg-slate-800 text-white font-bold rounded-xl text-xs text-center border border-slate-700 transition">
+              Volver al Simulador
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="max-w-3xl mx-auto scroll-mt-24">
+      <div class="text-center mb-10">
+        <span class="text-xs font-bold uppercase tracking-wider text-amber-400">Preguntas Frecuentes</span>
+        <h2 class="text-2xl sm:text-3xl font-black text-white mt-1">Dudas Habituales</h2>
+      </div>
+
+      <div class="space-y-3">
+        <details class="glass-card rounded-xl p-5 border border-slate-800 group" open>
+          <summary class="font-bold text-sm text-white cursor-pointer flex justify-between items-center list-none">
+            <span>¿Cómo se confirma el presupuesto final?</span>
+            <span class="text-amber-400 text-lg group-open:rotate-45 transition transform">+</span>
+          </summary>
+          <p class="text-xs text-slate-400 mt-3 leading-relaxed">
+            El simulador calcula un estimado exacto según tarifas base. Al enviar la solicitud por WhatsApp, nuestro asesor técnico confirma especificaciones, descuentos por volumen y agenda tu cita o despacho formal.
+          </p>
+        </details>
+        <details class="glass-card rounded-xl p-5 border border-slate-800 group">
+          <summary class="font-bold text-sm text-white cursor-pointer flex justify-between items-center list-none">
+            <span>¿Cuáles son las facilidades de financiación con Addi?</span>
+            <span class="text-amber-400 text-lg group-open:rotate-45 transition transform">+</span>
+          </summary>
+          <p class="text-xs text-slate-400 mt-3 leading-relaxed">
+            Puedes pagar a cuotas con aprobación inmediata en línea mediante Addi o Sistecredito, solo presentando tu cédula y número de celular, sin trámites bancarios engorrosos ni papeleo.
+          </p>
+        </details>
+        <details class="glass-card rounded-xl p-5 border border-slate-800 group">
+          <summary class="font-bold text-sm text-white cursor-pointer flex justify-between items-center list-none">
+            <span>¿Qué garantías legales y técnicas respaldan el servicio?</span>
+            <span class="text-amber-400 text-lg group-open:rotate-45 transition transform">+</span>
+          </summary>
+          <p class="text-xs text-slate-400 mt-3 leading-relaxed">
+            Entregamos factura electrónica legal DIAN, póliza o garantía escrita por servicio y trabajamos estrictamente bajo habilitaciones y normas técnicas colombianas vigentes.
+          </p>
+        </details>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Sticky Mobile Bar -->
+  <aside class="fixed bottom-0 inset-x-0 z-50 glass-nav p-3 flex sm:hidden items-center justify-between gap-3 border-t border-slate-800">
+    <div class="flex-1">
+      <span class="text-[10px] text-slate-400 block leading-tight">Presupuesto Estimado:</span>
+      <span class="text-xs font-black text-amber-400" id="stickyPriceText">$4.600.000 COP</span>
+    </div>
+    <a href="#simulador" class="px-4 py-2.5 bg-amber-500 hover:bg-amber-400 text-slate-950 font-black rounded-xl text-xs flex items-center gap-1.5 shadow-lg">
+      <span>Cotizar</span>
+    </a>
+  </aside>
+
+  <!-- Footer with Brand Logo -->
+  <footer class="relative z-10 border-t border-slate-900 bg-slate-950 py-12 text-center text-xs text-slate-500">
+    <div class="max-w-6xl mx-auto px-4 space-y-4">
+      <div class="flex justify-center">
+        <svg viewBox="0 0 260 52" class="h-11 sm:h-12 w-auto" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Logo Oficial de Suministros & Metales del Valle (Yumbo / Cali)">
+      <defs>
+        <linearGradient id="grad_lead_010" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#f59e0b"/>
+          <stop offset="100%" stop-color="#b45309"/>
+        </linearGradient>
+        <filter id="glow_lead_010" x="-20%" y="-20%" width="140%" height="140%">
+          <feGaussianBlur stdDeviation="3" result="blur"/>
+          <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+        </filter>
+      </defs>
+      
+      <!-- Monogram Emblem Shield -->
+      <g transform="translate(4, 2)">
+        <rect x="0" y="0" width="44" height="44" rx="14" fill="#0f172a" stroke="rgba(255,255,255,0.12)" stroke-width="1.2"/>
+        <rect x="2" y="2" width="40" height="40" rx="12" fill="none" stroke="url(#grad_lead_010)" stroke-width="1.5" opacity="0.6"/>
+        <g transform="translate(2, -1)">
+          
+        <!-- Industrial Hexagon & Laser Spark -->
+        <polygon points="20,11 31,17 31,31 20,37 9,31 9,17" stroke="url(#grad_lead_010)" stroke-width="2.5" fill="none"/>
+        <circle cx="20" cy="24" r="4.5" fill="url(#grad_lead_010)"/>
+        <line x1="20" y1="14" x2="20" y2="34" stroke="#ffffff" stroke-width="1.5" stroke-dasharray="2,2"/>
+        <line x1="12" y1="24" x2="28" y2="24" stroke="#ffffff" stroke-width="1.5" stroke-dasharray="2,2"/>
+        
+        </g>
+      </g>
+      
+      <!-- Brand Name Typography -->
+      <text x="58" y="24" fill="#ffffff" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="15" letter-spacing="-0.3">
+        METALES DEL VALLE
+      </text>
+      <text x="58" y="38" fill="#f59e0b" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="9.5" letter-spacing="1.2">
+        ACEROS INDUSTRIALES
+      </text>
+    </svg>
+      </div>
+      <p class="font-bold text-slate-300">Suministros & Metales del Valle (Yumbo / Cali)</p>
+      <p>Zona Industrial La Acopi, Carrera 32 # 12-40, Yumbo, Valle del Cauca • PBX / WhatsApp: +57 316 882 1199</p>
+      <p class="text-[11px] text-slate-600">
+        Plataforma interactiva diseñada por <strong>Ing. Juan Pablo Campo</strong> (Piloto comercial 48h sin costo).
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    const PRICING_DATA = {"srv_0": {"name": "Lámina HR / CR & Acero Inoxidable 304", "unitPrice": 4600000, "desc": "Stock permanente con certificado de calidad y corte a medida"}, "srv_1": {"name": "Perfilería Estructural IPE / HEA / Canal U", "unitPrice": 3850000, "desc": "Suministro por volumen para bodegas y obra civil en el Valle"}, "srv_2": {"name": "Corte CNC Plasma y Doblez Industrial", "unitPrice": 950000, "desc": "Maquila rápida sobre plano DXF/DWG sin desperdicio"}, "srv_3": {"name": "Tubería Estructural y Mecánica", "unitPrice": 2400000, "desc": "Entregas programadas en obra en Yumbo, Cali y Palmira"}};
+
+    function recalcQuote() {
+      const selKey = document.querySelector('input[name="serviceKey"]:checked')?.value;
+      const cfg = PRICING_DATA[selKey] || Object.values(PRICING_DATA)[0];
+      const units = parseInt(document.getElementById('unitsSlider').value, 10);
+      const subtotal = units * cfg.unitPrice;
+      const discount = Math.round(subtotal * 0.10);
+      const total = subtotal - discount;
+      const addi3m = Math.round(subtotal / 3);
+
+      const fmt = (n) => '$' + n.toLocaleString('es-CO') + ' COP';
+
+      document.getElementById('sliderValDisplay').textContent = `${units} Toneladas / Lotes`;
+      document.getElementById('totalEstimatePrice').textContent = fmt(subtotal);
+      document.getElementById('treatmentSummary').textContent = `${units}x ${cfg.name} (${cfg.desc})`;
+      document.getElementById('cashDiscountText').textContent = `-${fmt(discount)}`;
+      document.getElementById('cashTotalText').textContent = fmt(total);
+      document.getElementById('addiInstallmentsText').textContent = `3 cuotas de ${fmt(addi3m)} sin interés`;
+      document.getElementById('stickyPriceText').textContent = fmt(subtotal);
+
+      document.querySelectorAll('.treatment-tile').forEach(t => {
+        const inp = t.querySelector('input');
+        if (inp && inp.checked) {
+          t.classList.add('border-amber-500/50', 'bg-amber-950/25');
+          t.classList.remove('border-slate-800', 'bg-slate-950/40');
+        } else {
+          t.classList.remove('border-amber-500/50', 'bg-amber-950/25');
+          t.classList.add('border-slate-800', 'bg-slate-950/40');
+        }
+      });
+    }
+
+    function sendWhatsAppLead() {
+      const selKey = document.querySelector('input[name="serviceKey"]:checked')?.value;
+      const cfg = PRICING_DATA[selKey] || Object.values(PRICING_DATA)[0];
+      const units = document.getElementById('unitsSlider').value;
+      const name = document.getElementById('clientName').value.trim() || 'Cliente Preferencial';
+      const phone = document.getElementById('clientPhone').value.trim() || 'No indicado';
+      const total = document.getElementById('totalEstimatePrice').textContent;
+      const cashTotal = document.getElementById('cashTotalText').textContent;
+
+      const msg = `👋 Hola equipo de Suministros & Metales del Valle (Yumbo / Cali),%0A%0A` +
+        `Mi nombre es *${encodeURIComponent(name)}* (Tel: ${encodeURIComponent(phone)}).%0A` +
+        `Utilicé su cotizador interactivo en la web con este requerimiento:%0A%0A` +
+        `📌 *Línea / Servicio:* ${encodeURIComponent(cfg.name)}%0A` +
+        `🔢 *Cantidad:* ${units} Toneladas / Lotes%0A` +
+        `💰 *Inversión Estimada:* ${encodeURIComponent(total)}%0A` +
+        `💳 *Total con Descuento Contado (10%):* ${encodeURIComponent(cashTotal)}%0A%0A` +
+        `Deseo solicitar atención prioritaria y confirmar disponibilidad para este requerimiento. ¡Muchas gracias!`;
+
+      window.open(`https://wa.me/573168821199?text=${msg}`, '_blank');
+    }
+
+    window.addEventListener('DOMContentLoaded', recalcQuote);
+  </script>
+</body>
+</html>
