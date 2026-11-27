@@ -3,107 +3,353 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Centro Estético & Spa Renacer (Cali) | Plataforma Oficial de Cotización y Atención Prioritaria</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
-  <style>body { font-family: 'Inter', sans-serif; }</style>
+  <title>Centro Estético &amp; Spa Renacer (Cali) — Cotizador Digital &amp; Atención Prioritaria</title>
+  <meta name="description" content="Centro Estético &amp; Spa Renacer (Cali) (Medicina Estética, Rejuvenecimiento Facial, Depilación Láser y Moldeo Corporal). Plataforma digital de cotización inmediata y atención prioritaria vía WhatsApp.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #FAF9F6;
+      --surface: #FFFFFF;
+      --surface-alt: #F2F6F5;
+      --ink: #0F172A;
+      --muted: #475569;
+      --border: rgba(15, 23, 42, 0.09);
+      --accent: #0D6E6E;
+      --accent-soft: rgba(13, 110, 110, 0.09);
+      --accent-ink: #FFFFFF;
+      --font-display: 'Fraunces', Georgia, serif;
+      --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      --radius: 18px;
+      --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.04), 0 8px 24px rgba(15, 23, 42, 0.05);
+      --shadow-lg: 0 18px 48px rgba(15, 23, 42, 0.09);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: var(--font-body);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    .container { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
+
+    /* Sticky Glass Navigation */
+    .topbar {
+      position: sticky; top: 0; z-index: 50;
+      background: color-mix(in srgb, var(--bg) 86%, transparent);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+    }
+    .topbar-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      height: 72px; gap: 16px;
+    }
+    .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--ink); }
+    .brand-mark {
+      width: 38px; height: 38px; border-radius: 10px;
+      background: var(--ink); color: var(--bg);
+      display: grid; place-items: center;
+      font-family: var(--font-display); font-weight: 700; font-size: 15px; letter-spacing: 0.03em;
+    }
+    .brand-text strong { display: block; font-size: 15px; font-weight: 700; line-height: 1.15; }
+    .brand-text span { font-size: 12px; color: var(--muted); }
+    .nav-cta {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--accent); color: var(--accent-ink);
+      text-decoration: none; font-weight: 600; font-size: 13.5px;
+      padding: 10px 18px; border-radius: 999px;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+    .nav-cta:hover { transform: translateY(-1px); opacity: 0.94; }
+
+    /* Editorial Split Hero */
+    .hero { padding: 56px 0 72px; }
+    .hero-grid {
+      display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 48px; align-items: center;
+    }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase;
+      color: var(--accent); background: var(--accent-soft);
+      padding: 6px 14px; border-radius: 999px; margin-bottom: 20px;
+    }
+    .hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2.15rem, 4.1vw, 3.45rem);
+      line-height: 1.08; letter-spacing: -0.025em; font-weight: 600;
+      margin-bottom: 20px;
+    }
+    .hero-lead { font-size: 1.08rem; color: var(--muted); max-width: 54ch; margin-bottom: 28px; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 32px; }
+    .btn-primary {
+      display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+      background: var(--ink); color: #FFFFFF; text-decoration: none;
+      padding: 14px 24px; border-radius: 12px; font-weight: 600; font-size: 14.5px;
+      border: none; cursor: pointer; transition: transform 0.2s ease, background 0.2s ease;
+    }
+    .btn-primary:hover { background: var(--accent); transform: translateY(-1px); }
+    .btn-secondary {
+      display: inline-flex; align-items: center; justify-content: center;
+      background: var(--surface); color: var(--ink); text-decoration: none;
+      padding: 14px 22px; border-radius: 12px; font-weight: 600; font-size: 14.5px;
+      border: 1px solid var(--border); transition: border-color 0.2s ease;
+    }
+    .btn-secondary:hover { border-color: var(--ink); }
+
+    .trust-strip {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
+      padding-top: 24px; border-top: 1px solid var(--border);
+    }
+    .trust-metric strong { display: block; font-size: 1.15rem; font-weight: 700; color: var(--ink); }
+    .trust-metric span { font-size: 12.5px; color: var(--muted); }
+
+    .hero-visual {
+      position: relative; border-radius: 24px; overflow: hidden;
+      background: var(--surface-alt); box-shadow: var(--shadow-lg);
+      aspect-ratio: 4 / 4.4; border: 1px solid var(--border);
+    }
+    .hero-visual img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .floating-card {
+      position: absolute; left: 18px; right: 18px; bottom: 18px;
+      background: rgba(255, 255, 255, 0.94); backdrop-filter: blur(12px);
+      color: #0F172A; padding: 16px 18px; border-radius: 16px;
+      border: 1px solid rgba(15, 23, 42, 0.08);
+      display: flex; align-items: center; justify-content: space-between; gap: 12px;
+    }
+    .floating-card strong { display: block; font-size: 13.5px; }
+    .floating-card span { font-size: 12px; color: #475569; }
+    .live-pill {
+      font-size: 11px; font-weight: 700; color: #047857;
+      background: #ECFDF5; padding: 5px 10px; border-radius: 999px; white-space: nowrap;
+    }
+
+    /* Bento Value Section */
+    .section { padding: 64px 0; }
+    .section-head { max-width: 640px; margin-bottom: 36px; }
+    .section-head h2 {
+      font-family: var(--font-display); font-size: clamp(1.7rem, 3vw, 2.35rem);
+      line-height: 1.15; letter-spacing: -0.02em; margin-bottom: 10px;
+    }
+    .section-head p { color: var(--muted); font-size: 1rem; }
+    .bento-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .bento-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 28px; box-shadow: var(--shadow-sm);
+    }
+    .step-num {
+      display: inline-block; font-size: 12px; font-weight: 700; color: var(--accent);
+      background: var(--accent-soft); padding: 4px 10px; border-radius: 8px; margin-bottom: 16px;
+    }
+    .bento-card h3 { font-size: 1.05rem; margin-bottom: 8px; }
+    .bento-card p { font-size: 0.94rem; color: var(--muted); }
+
+    /* Interactive Estimator Section */
+    .estimator-wrap {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 24px; padding: 40px; box-shadow: var(--shadow-lg);
+      display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 40px; align-items: start;
+    }
+    .solution-list { list-style: none; display: grid; gap: 12px; margin-top: 22px; }
+    .solution-list li { display: flex; gap: 12px; align-items: flex-start; font-size: 0.94rem; color: var(--muted); }
+    .check-dot {
+      width: 22px; height: 22px; border-radius: 999px; flex-shrink: 0;
+      background: var(--accent-soft); color: var(--accent);
+      display: grid; place-items: center; font-size: 12px; font-weight: 700; margin-top: 2px;
+    }
+    .quote-box { background: var(--bg); border: 1px solid var(--border); border-radius: 18px; padding: 24px; }
+    .quote-options { display: grid; gap: 10px; margin: 16px 0 18px; }
+    .quote-option {
+      display: flex; align-items: center; gap: 12px; cursor: pointer;
+      background: var(--surface); border: 1px solid var(--border);
+      padding: 14px 16px; border-radius: 12px; transition: border-color 0.2s ease;
+    }
+    .quote-option:has(input:checked) { border-color: var(--accent); background: var(--accent-soft); }
+    .quote-option input { accent-color: var(--accent); width: 16px; height: 16px; }
+    .opt-body { display: flex; justify-content: space-between; width: 100%; gap: 10px; font-size: 13.5px; }
+    .opt-title { font-weight: 600; color: var(--ink); }
+    .opt-price { font-weight: 600; color: var(--accent); white-space: nowrap; }
+    .field { width: 100%; padding: 12px 14px; border-radius: 10px; border: 1px solid var(--border); background: var(--surface); color: var(--ink); font-family: inherit; font-size: 14px; margin-bottom: 14px; }
+    .addi-box {
+      display: flex; justify-content: space-between; align-items: center;
+      background: var(--surface); border: 1px dashed var(--border);
+      padding: 12px 14px; border-radius: 12px; margin-bottom: 16px; font-size: 13px;
+    }
+    .addi-box strong { color: var(--accent); font-size: 14.5px; }
+
+    footer {
+      border-top: 1px solid var(--border); padding: 36px 0 48px;
+      color: var(--muted); font-size: 13px;
+    }
+    .footer-inner { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 14px; }
+
+    @media (max-width: 900px) {
+      .hero-grid, .bento-grid, .estimator-wrap { grid-template-columns: 1fr; }
+      .hero { padding: 36px 0 48px; }
+      .estimator-wrap { padding: 24px; }
+      .hero-visual { aspect-ratio: 16 / 11; }
+    }
+  </style>
 </head>
-<body class="bg-slate-950 text-slate-100 min-h-screen">
-  <header class="max-w-5xl mx-auto px-6 pt-12 pb-10 text-center">
-    <span class="px-3.5 py-1.5 bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 rounded-full text-xs font-bold uppercase">
-      ⚡ Canal Digital de Atención Prioritaria • Barrio Ciudad Jardín / Tequendama, Cali, Valle del Cauca
-    </span>
-    <h1 class="text-3xl sm:text-5xl font-black text-white mt-5">Centro Estético & Spa Renacer (Cali)</h1>
-    <p class="text-slate-400 text-base sm:text-lg mt-3 max-w-2xl mx-auto">Medicina Estética, Rejuvenecimiento Facial, Depilación Láser y Moldeo Corporal</p>
-    <div class="mt-7 flex flex-wrap justify-center gap-4">
-      <a href="#cotizador" class="px-8 py-4 bg-emerald-600 hover:bg-emerald-500 text-white font-black rounded-xl text-sm shadow-lg shadow-emerald-900/40 transition">
-        📲 Cotizar / Agendar en 30 Segundos por WhatsApp
+<body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a href="#inicio" class="brand">
+        <div class="brand-mark">CE</div>
+        <div class="brand-text">
+          <strong>Centro Estético &amp; Spa Renacer (Cali)</strong>
+          <span>Cali · Salud & Especialistas</span>
+        </div>
       </a>
+      <a href="#cotizador" class="nav-cta">Agendar Valoración por WhatsApp →</a>
     </div>
   </header>
 
-  <main class="max-w-5xl mx-auto px-6 pb-16 space-y-12">
-    <section>
-      <h2 class="text-2xl font-black text-white mb-6 text-center">Catálogo de Servicios y Líneas Especializadas</h2>
-      <div class="grid sm:grid-cols-2 gap-5">
-        
-        <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 hover:border-emerald-500/50 transition">
-          <h3 class="text-lg font-bold text-white">Armonización Facial (Toxina Botulínica & Ácido Hialurónico)</h3>
-          <p class="text-xs text-slate-400 mt-2">Rejuvenecimiento natural sin cirugía con valoración médica</p>
-          <a href="#cotizador" class="inline-block mt-4 text-xs font-bold text-emerald-400 hover:text-emerald-300">
-            Cotizar / Agendar ahora →
-          </a>
+  <main id="inicio">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Protocolo Clínico Verificado · Atención Prioritaria</span>
+          <h1>Atención ágil y cotización directa para clientes de Centro Estético &amp; Spa Renacer (Cali).</h1>
+          <p class="hero-lead">Especialistas en Medicina Estética, Rejuvenecimiento Facial, Depilación Láser y Moldeo Corporal. Elimine esperas innecesarias: seleccione su requerimiento en menos de 60 segundos y reciba confirmación directa en WhatsApp con nuestro equipo.</p>
+          <div class="hero-actions">
+            <a href="#cotizador" class="btn-primary">Agendar Valoración por WhatsApp</a>
+            <a href="#ventajas" class="btn-secondary">Ver Respaldo y Ventajas</a>
+          </div>
+          <div class="trust-strip">
+            <div class="trust-metric"><strong>4.8 / 5</strong><span>Reputación verificada</span></div>
+            <div class="trust-metric"><strong>&lt; 15 min</strong><span>Respuesta por WhatsApp</span></div>
+            <div class="trust-metric"><strong>Directo</strong><span>Sin intermediarios</span></div>
+          </div>
         </div>
-        
-        <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 hover:border-emerald-500/50 transition">
-          <h3 class="text-lg font-bold text-white">Paquete Moldeo Corporal & Reducción No Invasiva</h3>
-          <p class="text-xs text-slate-400 mt-2">Cavitación + Radiofrecuencia + Drenaje Linfático</p>
-          <a href="#cotizador" class="inline-block mt-4 text-xs font-bold text-emerald-400 hover:text-emerald-300">
-            Cotizar / Agendar ahora →
-          </a>
+        <div class="hero-visual">
+          <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1400&q=85" alt="Centro Estético &amp; Spa Renacer (Cali)" fetchpriority="high">
+          <div class="floating-card">
+            <div>
+              <strong>Centro Estético &amp; Spa Renacer (Cali)</strong>
+              <span>Barrio Ciudad Jardín / Tequendama, Cali, Valle del Cauca</span>
+            </div>
+            <span class="live-pill">● Canal Activo</span>
+          </div>
         </div>
-        
-        <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 hover:border-emerald-500/50 transition">
-          <h3 class="text-lg font-bold text-white">Depilación Láser Diodo Definitiva</h3>
-          <p class="text-xs text-slate-400 mt-2">Paquetes por zonas con tecnología fría indolora</p>
-          <a href="#cotizador" class="inline-block mt-4 text-xs font-bold text-emerald-400 hover:text-emerald-300">
-            Cotizar / Agendar ahora →
-          </a>
-        </div>
-        
-        <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 hover:border-emerald-500/50 transition">
-          <h3 class="text-lg font-bold text-white">Limpieza Facial Profunda Hydrafacial MD</h3>
-          <p class="text-xs text-slate-400 mt-2">Extracción ultrasónica, peeling suave e hidratación antioxidante</p>
-          <a href="#cotizador" class="inline-block mt-4 text-xs font-bold text-emerald-400 hover:text-emerald-300">
-            Cotizar / Agendar ahora →
-          </a>
-        </div>
-        
       </div>
     </section>
 
-    <section id="cotizador" class="bg-slate-900 border border-slate-800 rounded-2xl p-6 sm:p-10 max-w-2xl mx-auto">
-      <h2 class="text-2xl font-black text-white">Cotizador y Agendamiento Directo a WhatsApp</h2>
-      <p class="text-xs text-slate-400 mt-1">Selecciona tu requerimiento y recibe respuesta prioritaria sin filas ni esperas:</p>
-      <div class="space-y-4 mt-6">
-        <div>
-          <label class="block text-xs font-bold text-slate-300 mb-1">Nombre o Empresa</label>
-          <input id="clientName" type="text" placeholder="Ej. Ing. Carlos Mendoza / Dra. Laura Gómez" class="w-full px-4 py-3 bg-slate-950 border border-slate-800 rounded-xl text-sm text-white">
+    <section id="ventajas" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Por qué nos eligen nuestros clientes en Cali.</h2>
+          <p>Combinamos trayectoria real en Medicina Estética, Rejuvenecimiento Facial, Depilación Láser y Moldeo Corporal con un canal digital inmediato diseñado para ahorrarle tiempo.</p>
         </div>
-        <div>
-          <label class="block text-xs font-bold text-slate-300 mb-1">Servicio o Línea de Interés</label>
-          <select id="serviceSelect" class="w-full px-4 py-3 bg-slate-950 border border-slate-800 rounded-xl text-sm text-white">
-            <option value="Armonización Facial (Toxina Botulínica & Ácido Hialurónico)">Armonización Facial (Toxina Botulínica & Ácido Hialurónico)</option>
-<option value="Paquete Moldeo Corporal & Reducción No Invasiva">Paquete Moldeo Corporal & Reducción No Invasiva</option>
-<option value="Depilación Láser Diodo Definitiva">Depilación Láser Diodo Definitiva</option>
-<option value="Limpieza Facial Profunda Hydrafacial MD">Limpieza Facial Profunda Hydrafacial MD</option>
+        <div class="bento-grid">
+        <article class="bento-card">
+          <span class="step-num">01</span>
+          <h3>Ventaja Verificada</h3>
+          <p>Médicos especialistas en armonización facial con insumos aprobados por INVIMA</p>
+        </article>
+        <article class="bento-card">
+          <span class="step-num">02</span>
+          <h3>Ventaja Verificada</h3>
+          <p>Equipos de última generación en láser diodo, radiofrecuencia y ultrasonido focalizado</p>
+        </article>
+        <article class="bento-card">
+          <span class="step-num">03</span>
+          <h3>Ventaja Verificada</h3>
+          <p>Ubicación exclusiva con parqueadero privado en el sur de Cali</p>
+        </article></div>
+      </div>
+    </section>
 
-          </select>
+    <section id="cotizador" class="section">
+      <div class="container">
+        <div class="estimator-wrap">
+          <div>
+            <span class="eyebrow">Cotizador Interactivo 24/7</span>
+            <h2 style="font-family:var(--font-display);font-size:clamp(1.6rem,2.6vw,2.15rem);line-height:1.15;margin-bottom:12px;">Reciba su cotización exacta sin hacer filas.</h2>
+            <p style="color:var(--muted);">Configure su solicitud y envíela estructurada directamente a nuestra línea oficial (+57 315 892 4410).</p>
+            <ul class="solution-list">
+        <li>
+          <span class="check-dot" aria-hidden="true">✓</span>
+          <span><strong>Resuelto:</strong> Pérdida de pacientes de alto valor que buscan agendar paquetes faciales y corporales fuera de horario de oficina</span>
+        </li>
+        <li>
+          <span class="check-dot" aria-hidden="true">✓</span>
+          <span><strong>Resuelto:</strong> Demora en cotizar combinaciones de procedimientos (Botox + Ácido Hialurónico + Hidrafacial) por chat manual</span>
+        </li>
+        <li>
+          <span class="check-dot" aria-hidden="true">✓</span>
+          <span><strong>Resuelto:</strong> Falta de catálogo interactivo que muestre beneficios clínicos y reserve cita directo al WhatsApp de recepción</span>
+        </li></ul>
+          </div>
+          <div class="quote-box">
+            <strong style="font-size:15px;">1. Seleccione tipo de solicitud</strong>
+            <div class="quote-options">
+        <label class="quote-option">
+          <input type="radio" name="service_tier" value="120000" data-label="Valoración / Consulta Inicial" >
+          <span class="opt-body">
+            <span class="opt-title">Valoración / Consulta Inicial</span>
+            <span class="opt-price">$120.000 COP ref.</span>
+          </span>
+        </label>
+        <label class="quote-option">
+          <input type="radio" name="service_tier" value="850000" data-label="Tratamiento Especializado Integral" checked>
+          <span class="opt-body">
+            <span class="opt-title">Tratamiento Especializado Integral</span>
+            <span class="opt-price">$850.000 COP ref.</span>
+          </span>
+        </label>
+        <label class="quote-option">
+          <input type="radio" name="service_tier" value="1600000" data-label="Plan Preventivo o Estético Completo" >
+          <span class="opt-body">
+            <span class="opt-title">Plan Preventivo o Estético Completo</span>
+            <span class="opt-price">$1.600.000 COP ref.</span>
+          </span>
+        </label></div>
+            <label for="clientNote" style="display:block;font-size:12.5px;font-weight:600;margin-bottom:6px;">2. Detalle breve (producto, cita o cantidad)</label>
+            <input id="clientNote" class="field" type="text" placeholder="Ej: Cotización urgente para entrega esta semana...">
+            <div class="addi-box">
+              <span>Referencia en 3 cuotas sin interés (Addi / Sistecrédito):</span>
+              <strong id="addiInstallment">$283.333 COP/mes</strong>
+            </div>
+            <button id="sendWaBtn" type="button" class="btn-primary" style="width:100%;">Agendar Valoración por WhatsApp →</button>
+          </div>
         </div>
-        <div>
-          <label class="block text-xs font-bold text-slate-300 mb-1">Detalles / Cantidades / Fecha deseada</label>
-          <textarea id="details" rows="3" placeholder="Escribe aquí las especificaciones o consulta..." class="w-full px-4 py-3 bg-slate-950 border border-slate-800 rounded-xl text-sm text-white"></textarea>
-        </div>
-        <button onclick="sendQuote()" class="w-full py-4 bg-emerald-600 hover:bg-emerald-500 text-white font-black rounded-xl text-sm transition">
-          💬 Enviar Solicitud Directa por WhatsApp
-        </button>
       </div>
     </section>
   </main>
 
-  <footer class="border-t border-slate-900 py-8 text-center text-xs text-slate-500">
-    <p>Centro Estético & Spa Renacer (Cali) • Barrio Ciudad Jardín / Tequendama, Cali, Valle del Cauca</p>
-    <p class="mt-1">Prototipo B2B desarrollado por <strong>Ing. Juan Pablo Campo</strong> (Piloto 48h • Activación definitiva: $180.000 COP)</p>
+  <footer>
+    <div class="container footer-inner">
+      <span><strong>Centro Estético &amp; Spa Renacer (Cali)</strong> · Barrio Ciudad Jardín / Tequendama, Cali, Valle del Cauca</span>
+      <span>Prototipo interactivo V3.0 diseñado por Estudio Ing. Juan Pablo Campo (UAO).</span>
+    </div>
   </footer>
 
   <script>
-    function sendQuote() {
-      const name = document.getElementById('clientName').value || 'Cliente Preferencial';
-      const service = document.getElementById('serviceSelect').value;
-      const details = document.getElementById('details').value || 'Solicito cotización e información prioritaria.';
-      const msg = `Hola equipo de Centro Estético & Spa Renacer (Cali), soy ${name}. Solicito atención prioritaria desde su plataforma web:%0A%0A*Requerimiento:* ${service}%0A*Detalles:* ${details}`;
-      window.open(`https://wa.me/573158924410?text=${msg}`, '_blank');
+    const waDigits = "573158924410";
+    const bizName = "Centro Est\u00e9tico & Spa Renacer (Cali)";
+    const radios = document.querySelectorAll('input[name="service_tier"]');
+    const addiEl = document.getElementById('addiInstallment');
+    const noteEl = document.getElementById('clientNote');
+
+    function updateEstimate() {
+      const sel = document.querySelector('input[name="service_tier"]:checked');
+      const val = Number(sel ? sel.value : 850000);
+      const cuota = Math.round(val / 3);
+      addiEl.textContent = '$' + cuota.toLocaleString('es-CO') + ' COP/mes';
     }
+    radios.forEach(r => r.addEventListener('change', updateEstimate));
+    updateEstimate();
+
+    document.getElementById('sendWaBtn').addEventListener('click', () => {
+      const sel = document.querySelector('input[name="service_tier"]:checked');
+      const tier = sel ? sel.dataset.label : 'Cotización';
+      const note = (noteEl.value || 'Quisiera recibir más información y disponibilidad.').trim();
+      const text = `Hola equipo de ${bizName}, vengo desde su cotizador web. Me interesa: ${tier}. Detalle: ${note}`;
+      window.open(`https://wa.me/${waDigits}?text=${encodeURIComponent(text)}`, '_blank', 'noopener');
+    });
   </script>
 </body>
 </html>
