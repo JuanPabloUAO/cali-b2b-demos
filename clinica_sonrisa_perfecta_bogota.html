@@ -1,709 +1,355 @@
 <!DOCTYPE html>
-<html lang="es" class="scroll-smooth">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Clínica Odontológica Sonrisa Perfecta Bogotá | Odontología Estética, Implantes & Carillas 3D</title>
-  <meta name="description" content="Simula tu presupuesto de diseño de sonrisa, carillas cerámicas e implantes en 30 segundos. Valoración digital prioritaria en Bogotá (Chicó / Chapinero).">
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Google Fonts: Plus Jakarta Sans -->
+  <title>Clínica Odontológica Sonrisa Perfecta (Bogotá) — Cotizador Digital &amp; Atención Prioritaria</title>
+  <meta name="description" content="Clínica Odontológica Sonrisa Perfecta (Bogotá) (Odontología Estética, Diseño de Sonrisa, Implantes y Ortodoncia). Plataforma digital de cotización inmediata y atención prioritaria vía WhatsApp.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          fontFamily: {
-            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-          },
-          colors: {
-            brand: {
-              50: '#ecfdf5',
-              100: '#d1fae5',
-              400: '#34d399',
-              500: '#10b981',
-              600: '#059669',
-              700: '#047857',
-              900: '#064e3b',
-            }
-          }
-        }
-      }
-    }
-  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    body { font-family: 'Plus Jakarta Sans', sans-serif; }
-    .glass-card {
-      background: rgba(15, 23, 42, 0.75);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border: 1px solid rgba(255, 255, 255, 0.08);
+    :root {
+      --bg: #FAF9F6;
+      --surface: #FFFFFF;
+      --surface-alt: #F2F6F5;
+      --ink: #0F172A;
+      --muted: #475569;
+      --border: rgba(15, 23, 42, 0.09);
+      --accent: #0D6E6E;
+      --accent-soft: rgba(13, 110, 110, 0.09);
+      --accent-ink: #FFFFFF;
+      --font-display: 'Fraunces', Georgia, serif;
+      --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      --radius: 18px;
+      --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.04), 0 8px 24px rgba(15, 23, 42, 0.05);
+      --shadow-lg: 0 18px 48px rgba(15, 23, 42, 0.09);
     }
-    .glass-nav {
-      background: rgba(2, 6, 23, 0.85);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: var(--font-body);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
     }
-    .gradient-glow {
-      background: radial-gradient(circle at 50% 0%, rgba(16, 185, 129, 0.18) 0%, rgba(2, 6, 23, 0) 70%);
+    .container { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
+
+    /* Sticky Glass Navigation */
+    .topbar {
+      position: sticky; top: 0; z-index: 50;
+      background: color-mix(in srgb, var(--bg) 86%, transparent);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
     }
-    .accent-border {
-      background: linear-gradient(135deg, rgba(16, 185, 129, 0.4), rgba(255, 255, 255, 0.05), rgba(16, 185, 129, 0.1));
+    .topbar-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      height: 72px; gap: 16px;
     }
-    /* Slider Range Styling */
-    input[type=range]::-webkit-slider-thumb {
-      appearance: none;
-      width: 22px;
-      height: 22px;
-      border-radius: 50%;
-      background: #10b981;
-      cursor: pointer;
-      box-shadow: 0 0 14px rgba(16, 185, 129, 0.7);
-      border: 3px solid #ffffff;
+    .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--ink); }
+    .brand-mark {
+      width: 38px; height: 38px; border-radius: 10px;
+      background: var(--ink); color: var(--bg);
+      display: grid; place-items: center;
+      font-family: var(--font-display); font-weight: 700; font-size: 15px; letter-spacing: 0.03em;
     }
-    /* Accessible focus */
-    input:focus-visible, select:focus-visible, textarea:focus-visible, button:focus-visible, a:focus-visible {
-      outline: 2px solid #10b981;
-      outline-offset: 2px;
+    .brand-text strong { display: block; font-size: 15px; font-weight: 700; line-height: 1.15; }
+    .brand-text span { font-size: 12px; color: var(--muted); }
+    .nav-cta {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--accent); color: var(--accent-ink);
+      text-decoration: none; font-weight: 600; font-size: 13.5px;
+      padding: 10px 18px; border-radius: 999px;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+    .nav-cta:hover { transform: translateY(-1px); opacity: 0.94; }
+
+    /* Editorial Split Hero */
+    .hero { padding: 56px 0 72px; }
+    .hero-grid {
+      display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 48px; align-items: center;
+    }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase;
+      color: var(--accent); background: var(--accent-soft);
+      padding: 6px 14px; border-radius: 999px; margin-bottom: 20px;
+    }
+    .hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2.15rem, 4.1vw, 3.45rem);
+      line-height: 1.08; letter-spacing: -0.025em; font-weight: 600;
+      margin-bottom: 20px;
+    }
+    .hero-lead { font-size: 1.08rem; color: var(--muted); max-width: 54ch; margin-bottom: 28px; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 32px; }
+    .btn-primary {
+      display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+      background: var(--ink); color: #FFFFFF; text-decoration: none;
+      padding: 14px 24px; border-radius: 12px; font-weight: 600; font-size: 14.5px;
+      border: none; cursor: pointer; transition: transform 0.2s ease, background 0.2s ease;
+    }
+    .btn-primary:hover { background: var(--accent); transform: translateY(-1px); }
+    .btn-secondary {
+      display: inline-flex; align-items: center; justify-content: center;
+      background: var(--surface); color: var(--ink); text-decoration: none;
+      padding: 14px 22px; border-radius: 12px; font-weight: 600; font-size: 14.5px;
+      border: 1px solid var(--border); transition: border-color 0.2s ease;
+    }
+    .btn-secondary:hover { border-color: var(--ink); }
+
+    .trust-strip {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
+      padding-top: 24px; border-top: 1px solid var(--border);
+    }
+    .trust-metric strong { display: block; font-size: 1.15rem; font-weight: 700; color: var(--ink); }
+    .trust-metric span { font-size: 12.5px; color: var(--muted); }
+
+    .hero-visual {
+      position: relative; border-radius: 24px; overflow: hidden;
+      background: var(--surface-alt); box-shadow: var(--shadow-lg);
+      aspect-ratio: 4 / 4.4; border: 1px solid var(--border);
+    }
+    .hero-visual img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .floating-card {
+      position: absolute; left: 18px; right: 18px; bottom: 18px;
+      background: rgba(255, 255, 255, 0.94); backdrop-filter: blur(12px);
+      color: #0F172A; padding: 16px 18px; border-radius: 16px;
+      border: 1px solid rgba(15, 23, 42, 0.08);
+      display: flex; align-items: center; justify-content: space-between; gap: 12px;
+    }
+    .floating-card strong { display: block; font-size: 13.5px; }
+    .floating-card span { font-size: 12px; color: #475569; }
+    .live-pill {
+      font-size: 11px; font-weight: 700; color: #047857;
+      background: #ECFDF5; padding: 5px 10px; border-radius: 999px; white-space: nowrap;
+    }
+
+    /* Bento Value Section */
+    .section { padding: 64px 0; }
+    .section-head { max-width: 640px; margin-bottom: 36px; }
+    .section-head h2 {
+      font-family: var(--font-display); font-size: clamp(1.7rem, 3vw, 2.35rem);
+      line-height: 1.15; letter-spacing: -0.02em; margin-bottom: 10px;
+    }
+    .section-head p { color: var(--muted); font-size: 1rem; }
+    .bento-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .bento-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 28px; box-shadow: var(--shadow-sm);
+    }
+    .step-num {
+      display: inline-block; font-size: 12px; font-weight: 700; color: var(--accent);
+      background: var(--accent-soft); padding: 4px 10px; border-radius: 8px; margin-bottom: 16px;
+    }
+    .bento-card h3 { font-size: 1.05rem; margin-bottom: 8px; }
+    .bento-card p { font-size: 0.94rem; color: var(--muted); }
+
+    /* Interactive Estimator Section */
+    .estimator-wrap {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 24px; padding: 40px; box-shadow: var(--shadow-lg);
+      display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 40px; align-items: start;
+    }
+    .solution-list { list-style: none; display: grid; gap: 12px; margin-top: 22px; }
+    .solution-list li { display: flex; gap: 12px; align-items: flex-start; font-size: 0.94rem; color: var(--muted); }
+    .check-dot {
+      width: 22px; height: 22px; border-radius: 999px; flex-shrink: 0;
+      background: var(--accent-soft); color: var(--accent);
+      display: grid; place-items: center; font-size: 12px; font-weight: 700; margin-top: 2px;
+    }
+    .quote-box { background: var(--bg); border: 1px solid var(--border); border-radius: 18px; padding: 24px; }
+    .quote-options { display: grid; gap: 10px; margin: 16px 0 18px; }
+    .quote-option {
+      display: flex; align-items: center; gap: 12px; cursor: pointer;
+      background: var(--surface); border: 1px solid var(--border);
+      padding: 14px 16px; border-radius: 12px; transition: border-color 0.2s ease;
+    }
+    .quote-option:has(input:checked) { border-color: var(--accent); background: var(--accent-soft); }
+    .quote-option input { accent-color: var(--accent); width: 16px; height: 16px; }
+    .opt-body { display: flex; justify-content: space-between; width: 100%; gap: 10px; font-size: 13.5px; }
+    .opt-title { font-weight: 600; color: var(--ink); }
+    .opt-price { font-weight: 600; color: var(--accent); white-space: nowrap; }
+    .field { width: 100%; padding: 12px 14px; border-radius: 10px; border: 1px solid var(--border); background: var(--surface); color: var(--ink); font-family: inherit; font-size: 14px; margin-bottom: 14px; }
+    .addi-box {
+      display: flex; justify-content: space-between; align-items: center;
+      background: var(--surface); border: 1px dashed var(--border);
+      padding: 12px 14px; border-radius: 12px; margin-bottom: 16px; font-size: 13px;
+    }
+    .addi-box strong { color: var(--accent); font-size: 14.5px; }
+
+    footer {
+      border-top: 1px solid var(--border); padding: 36px 0 48px;
+      color: var(--muted); font-size: 13px;
+    }
+    .footer-inner { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 14px; }
+
+    @media (max-width: 900px) {
+      .hero-grid, .bento-grid, .estimator-wrap { grid-template-columns: 1fr; }
+      .hero { padding: 36px 0 48px; }
+      .estimator-wrap { padding: 24px; }
+      .hero-visual { aspect-ratio: 16 / 11; }
     }
   </style>
 </head>
-<body class="bg-slate-950 text-slate-100 antialiased selection:bg-brand-500 selection:text-white min-h-screen relative overflow-x-hidden">
-
-  <!-- Ambient Background Glow -->
-  <div class="fixed inset-0 pointer-events-none gradient-glow z-0"></div>
-
-  <!-- Top Announcement Bar -->
-  <aside class="relative z-50 bg-gradient-to-r from-emerald-950 via-slate-900 to-emerald-950 border-b border-emerald-500/20 py-2.5 px-4 text-center text-xs font-semibold text-emerald-300 flex items-center justify-center gap-2">
-    <span class="flex h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
-    <span>⚡ <strong>Canal Digital Prioritario:</strong> Agenda tu valoración intraoral 3D con simulación digital sin costo hoy</span>
-    <span class="hidden md:inline text-emerald-500">• Bogotá D.C. (Chicó / Chapinero)</span>
-  </aside>
-
-  <!-- Navigation Bar -->
-  <nav class="sticky top-0 z-40 glass-nav transition-all">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
-      <a href="#" class="flex items-center gap-3 group" title="Clínica Sonrisa Perfecta Bogotá">
-        <svg viewBox="0 0 260 52" class="h-11 sm:h-12 w-auto" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Logo Oficial de Clínica Sonrisa Perfecta">
-          <defs>
-            <linearGradient id="grad_sp_bogota" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stop-color="#10b981"/>
-              <stop offset="100%" stop-color="#047857"/>
-            </linearGradient>
-          </defs>
-          <g transform="translate(4, 2)">
-            <rect x="0" y="0" width="44" height="44" rx="14" fill="#0f172a" stroke="rgba(255,255,255,0.12)" stroke-width="1.2"/>
-            <rect x="2" y="2" width="40" height="40" rx="12" fill="none" stroke="url(#grad_sp_bogota)" stroke-width="1.5" opacity="0.6"/>
-            <g transform="translate(2, -1)">
-              <path d="M26 13C23 13 21 14.5 20 16.5C19 14.5 17 13 14 13C8.5 13 6 18.5 6 23.5C6 31 11.5 38 20 45C28.5 38 34 31 34 23.5C34 18.5 31.5 13 26 13Z" fill="url(#grad_sp_bogota)" opacity="0.92"/>
-              <path d="M16 20C16 18 17.5 16.5 19.5 16.5" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round"/>
-            </g>
-          </g>
-          <text x="58" y="24" fill="#ffffff" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="15" letter-spacing="-0.3">
-            SONRISA PERFECTA
-          </text>
-          <text x="58" y="38" fill="#10b981" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="9.5" letter-spacing="1.2">
-            ODONTOLOGÍA ESTÉTICA • BOGOTÁ
-          </text>
-        </svg>
-      </a>
-
-      <div class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-300">
-        <a href="#simulador" class="hover:text-emerald-400 transition">Simulador de Presupuesto</a>
-        <a href="#tratamientos" class="hover:text-emerald-400 transition">Tratamientos</a>
-        <a href="#casos" class="hover:text-emerald-400 transition">Casos Clínicos</a>
-        <a href="#garantia" class="hover:text-emerald-400 transition">Garantía & Financiación</a>
-        <a href="#faq" class="hover:text-emerald-400 transition">Preguntas</a>
-      </div>
-
-      <div class="flex items-center gap-3">
-        <a href="#simulador" class="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-emerald-500/10 text-emerald-300 border border-emerald-500/30 text-xs font-bold hover:bg-emerald-500/20 transition">
-          <svg class="w-4 h-4 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
-          </svg>
-          Simular Presupuesto
-        </a>
-        <a href="https://wa.me/573104558920?text=Hola%20Cl%C3%ADnica%20Sonrisa%20Perfecta%2C%20deseo%20agendar%20una%20valoraci%C3%B3n%20prioritaria." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 text-xs font-black shadow-lg shadow-emerald-500/25 transition">
-          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
-            <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.299.144.347.491 1.2.534 1.288.043.087.072.188.014.303-.058.116-.087.188-.173.289l-.26.302c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.861.174.086.275.072.376-.044.101-.116.433-.506.549-.68.116-.173.231-.145.39-.086.159.058 1.011.477 1.184.564.173.087.289.13.332.202.043.073.043.419-.101.824z"/>
-          </svg>
-          WhatsApp Directo
-        </a>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Hero Section -->
-  <header class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 pt-12 sm:pt-20 pb-16 text-center">
-    <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full glass-card text-emerald-300 text-xs font-bold mb-8 border border-emerald-500/30 shadow-lg shadow-emerald-950/50">
-      <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
-      <span>⭐ 4.9 / 5 en Google • +184 Pacientes Felices • Chicó & Chapinero</span>
-    </div>
-
-    <h1 class="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight text-white max-w-4xl mx-auto leading-[1.08]">
-      La sonrisa que siempre soñaste, <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-200 to-emerald-300">diseñada con precisión 3D.</span>
-    </h1>
-
-    <p class="mt-6 text-base sm:text-xl text-slate-300 max-w-2xl mx-auto font-normal leading-relaxed">
-      Especialistas certificados en <strong>Diseño de Sonrisa Cerámico</strong>, <strong>Implantes de Carga Inmediata</strong> y <strong>Ortodoncia Invisible</strong>. Simula tu presupuesto estimado en 30 segundos y agenda tu cita prioritaria sin filas.
-    </p>
-
-    <!-- Social Proof Badges -->
-    <div class="mt-10 flex flex-wrap justify-center items-center gap-4 text-xs font-semibold text-slate-300">
-      <div class="flex items-center gap-2 px-4 py-2 rounded-xl bg-slate-900/60 border border-slate-800">
-        <svg class="w-4 h-4 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-        </svg>
-        <span>Registro Seccional de Salud Aprobado</span>
-      </div>
-      <div class="flex items-center gap-2 px-4 py-2 rounded-xl bg-slate-900/60 border border-slate-800">
-        <svg class="w-4 h-4 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-        </svg>
-        <span>Escáner Digital 3D Sin Moldes de Yeso</span>
-      </div>
-      <div class="flex items-center gap-2 px-4 py-2 rounded-xl bg-slate-900/60 border border-slate-800">
-        <svg class="w-4 h-4 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-        </svg>
-        <span>Financiación Addi / Sistecredito hasta 24 cuotas</span>
-      </div>
-    </div>
-
-    <!-- Hero Showcase Image (LCP Candidate with fetchpriority="high") -->
-    <div class="mt-12 max-w-4xl mx-auto rounded-3xl p-1 bg-gradient-to-br from-emerald-500/40 via-slate-800/40 to-slate-900/60 shadow-2xl">
-      <div class="rounded-[22px] overflow-hidden bg-slate-950 relative aspect-[16/9]">
-        <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1200&q=80"
-             alt="Instalaciones clínicas de alta gama en Clínica Sonrisa Perfecta Bogotá"
-             fetchpriority="high"
-             decoding="async"
-             width="1200" height="675"
-             class="w-full h-full object-cover">
-        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
-        <div class="absolute bottom-5 left-6 right-6 flex items-center justify-between text-left">
-          <div>
-            <span class="text-[11px] font-extrabold text-emerald-400 uppercase tracking-wider block">Sede Chicó Calle 94</span>
-            <strong class="text-sm sm:text-base text-white">Quirófano y Suites de Odontología Digital 3D</strong>
-          </div>
-          <span class="px-3 py-1 bg-emerald-500/20 text-emerald-300 rounded-lg text-xs font-bold border border-emerald-500/30">
-            Habilitación Bogotá No. 11029
-          </span>
+<body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a href="#inicio" class="brand">
+        <div class="brand-mark">CO</div>
+        <div class="brand-text">
+          <strong>Clínica Odontológica Sonrisa Perfecta (Bogotá)</strong>
+          <span>Bogotá D.C. · Salud & Especialistas</span>
         </div>
-      </div>
+      </a>
+      <a href="#cotizador" class="nav-cta">Agendar Valoración por WhatsApp →</a>
     </div>
   </header>
 
-  <!-- Main Container -->
-  <main class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 space-y-24 pb-28">
-
-    <!-- INTERACTIVE SECTION 1: DYNAMIC QUOTE SIMULATOR (HIGH CONVERSION) -->
-    <section id="simulador" class="scroll-mt-24">
-      <div class="relative rounded-3xl p-1 bg-gradient-to-b from-emerald-500/30 via-slate-800/40 to-slate-900/20 shadow-2xl">
-        <div class="bg-slate-900/95 rounded-[22px] p-6 sm:p-12 backdrop-blur-xl border border-slate-800/80">
-          <div class="max-w-2xl mx-auto text-center mb-10">
-            <span class="px-3 py-1 bg-emerald-500/20 text-emerald-300 rounded-full text-[11px] font-extrabold uppercase tracking-wider">
-              Calculadora Instantánea 2026
-            </span>
-            <h2 class="text-2xl sm:text-4xl font-black text-white mt-3">Simula tu Presupuesto en Tiempo Real</h2>
-            <p class="text-sm text-slate-400 mt-2">
-              Selecciona tu tratamiento y ajusta los detalles para obtener una estimación de inversión y cuotas mensuales con Addi / Sistecredito.
-            </p>
+  <main id="inicio">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Protocolo Clínico Verificado · Atención Prioritaria</span>
+          <h1>Atención ágil y cotización directa para clientes de Clínica Odontológica Sonrisa Perfecta (Bogotá).</h1>
+          <p class="hero-lead">Especialistas en Odontología Estética, Diseño de Sonrisa, Implantes y Ortodoncia. Elimine esperas innecesarias: seleccione su requerimiento en menos de 60 segundos y reciba confirmación directa en WhatsApp con nuestro equipo.</p>
+          <div class="hero-actions">
+            <a href="#cotizador" class="btn-primary">Agendar Valoración por WhatsApp</a>
+            <a href="#ventajas" class="btn-secondary">Ver Respaldo y Ventajas</a>
           </div>
-
-          <form id="quoteForm" onsubmit="event.preventDefault(); handleSendWhatsApp();" class="grid lg:grid-cols-12 gap-8 items-start">
-            
-            <!-- Controls (Left Column) -->
-            <div class="lg:col-span-7 space-y-6">
-              
-              <!-- Treatment Selection (Radio Tiles for Scanability) -->
-              <fieldset>
-                <legend class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-3">
-                  1. Selecciona tu Tratamiento Principal: <span class="text-emerald-400">*</span>
-                </legend>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3" id="treatmentGrid">
-                  
-                  <label class="cursor-pointer p-4 rounded-xl border border-emerald-500/40 bg-emerald-950/20 hover:border-emerald-500 transition flex items-start gap-3 treatment-tile active-tile">
-                    <input type="radio" name="treatment" value="diseno_ceramica" checked class="mt-1 text-emerald-500 focus:ring-emerald-500" onchange="recalculateQuote()">
-                    <div>
-                      <strong class="block text-sm font-bold text-white">Carillas Cerámicas E-Max</strong>
-                      <span class="text-xs text-slate-400 block mt-0.5">Máxima estética y cero manchas</span>
-                    </div>
-                  </label>
-
-                  <label class="cursor-pointer p-4 rounded-xl border border-slate-800 bg-slate-950/40 hover:border-slate-700 transition flex items-start gap-3 treatment-tile">
-                    <input type="radio" name="treatment" value="diseno_resina" class="mt-1 text-emerald-500 focus:ring-emerald-500" onchange="recalculateQuote()">
-                    <div>
-                      <strong class="block text-sm font-bold text-white">Diseño en Resina de Alta Carga</strong>
-                      <span class="text-xs text-slate-400 block mt-0.5">Económico, reversible en 1 sesión</span>
-                    </div>
-                  </label>
-
-                  <label class="cursor-pointer p-4 rounded-xl border border-slate-800 bg-slate-950/40 hover:border-slate-700 transition flex items-start gap-3 treatment-tile">
-                    <input type="radio" name="treatment" value="implante_titanio" class="mt-1 text-emerald-500 focus:ring-emerald-500" onchange="recalculateQuote()">
-                    <div>
-                      <strong class="block text-sm font-bold text-white">Implante Dental de Titanio</strong>
-                      <span class="text-xs text-slate-400 block mt-0.5">Recupera dientes perdidos de raíz</span>
-                    </div>
-                  </label>
-
-                  <label class="cursor-pointer p-4 rounded-xl border border-slate-800 bg-slate-950/40 hover:border-slate-700 transition flex items-start gap-3 treatment-tile">
-                    <input type="radio" name="treatment" value="ortodoncia_invisible" class="mt-1 text-emerald-500 focus:ring-emerald-500" onchange="recalculateQuote()">
-                    <div>
-                      <strong class="block text-sm font-bold text-white">Alineadores Invisibles</strong>
-                      <span class="text-xs text-slate-400 block mt-0.5">Sin brackets metálicos ni heridas</span>
-                    </div>
-                  </label>
-                </div>
-              </fieldset>
-
-              <!-- Dynamic Unit Slider -->
-              <div class="bg-slate-950/60 p-5 rounded-2xl border border-slate-800/80">
-                <div class="flex justify-between items-center mb-2">
-                  <label for="unitsSlider" id="sliderLabel" class="text-xs font-bold uppercase tracking-wider text-slate-300">
-                    Número de Dientes / Carillas:
-                  </label>
-                  <span id="sliderValueText" class="px-3 py-1 bg-emerald-500/20 text-emerald-300 rounded-lg text-sm font-black">
-                    8 Dientes
-                  </span>
-                </div>
-                <input type="range" id="unitsSlider" min="2" max="20" value="8" step="1" class="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer mt-2" oninput="recalculateQuote()">
-                <div class="flex justify-between text-[11px] text-slate-500 mt-2 font-medium">
-                  <span>Mínimo (2)</span>
-                  <span>Frente Estético (6 a 10)</span>
-                  <span>Sonrisa Completa (20)</span>
-                </div>
-              </div>
-
-              <!-- Contact Inputs -->
-              <div class="grid sm:grid-cols-2 gap-4">
-                <div>
-                  <label for="userName" class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-1.5">
-                    Tu Nombre: <span class="text-emerald-400">*</span>
-                  </label>
-                  <input type="text" id="userName" name="userName" required placeholder="Ej. Dra. Carolina Mejía" autocomplete="name" class="w-full px-4 py-3 bg-slate-950 border border-slate-800 rounded-xl text-sm text-white placeholder-slate-600 focus:border-emerald-500 transition">
-                </div>
-                <div>
-                  <label for="userPhone" class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-1.5">
-                    WhatsApp de Contacto: <span class="text-emerald-400">*</span>
-                  </label>
-                  <input type="tel" id="userPhone" name="userPhone" required placeholder="Ej. 310 123 4567" inputmode="tel" autocomplete="tel" class="w-full px-4 py-3 bg-slate-950 border border-slate-800 rounded-xl text-sm text-white placeholder-slate-600 focus:border-emerald-500 transition">
-                </div>
-              </div>
-            </div>
-
-            <!-- Real-Time Calculation Card (Right Column) -->
-            <div class="lg:col-span-5 glass-card rounded-2xl p-6 sm:p-7 border border-emerald-500/30 flex flex-col justify-between h-full bg-gradient-to-br from-slate-900 to-slate-950 shadow-xl">
-              <div>
-                <div class="flex items-center justify-between pb-4 border-b border-slate-800">
-                  <span class="text-xs font-bold uppercase tracking-wider text-slate-400">Presupuesto Estimado</span>
-                  <span class="px-2.5 py-1 bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 text-[10px] font-bold rounded-md">
-                    VALOR ESTIMADO
-                  </span>
-                </div>
-
-                <div class="mt-5">
-                  <div class="text-3xl sm:text-4xl font-black text-white tracking-tight" id="totalEstimatePrice">
-                    $4.800.000 COP
-                  </div>
-                  <p class="text-xs text-slate-400 mt-1" id="treatmentSummary">
-                    8 carillas cerámicas E-Max de alta resistencia
-                  </p>
-                </div>
-
-                <div class="mt-6 space-y-3 bg-slate-950/70 p-4 rounded-xl border border-slate-800/80 text-xs">
-                  <div class="flex justify-between text-slate-300">
-                    <span>Descuento Pago de Contado (10%):</span>
-                    <strong class="text-emerald-400" id="cashDiscountText">-$480.000 COP</strong>
-                  </div>
-                  <div class="flex justify-between text-slate-300">
-                    <span>Precio Final de Contado:</span>
-                    <strong class="text-white" id="cashTotalText">$4.320.000 COP</strong>
-                  </div>
-                  <div class="pt-2 border-t border-slate-800 flex justify-between items-center">
-                    <span class="text-slate-400">Cuotas estimadas con Addi:</span>
-                    <span class="text-emerald-300 font-bold" id="monthlyInstallmentText">Desde $240.000 / mes</span>
-                  </div>
-                </div>
-
-                <ul class="mt-5 space-y-2 text-xs text-slate-300">
-                  <li class="flex items-center gap-2">
-                    <svg class="w-4 h-4 text-emerald-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span>Incluye Escaneo Intraoral 3D y Prueba Estética Mock-up</span>
-                  </li>
-                  <li class="flex items-center gap-2">
-                    <svg class="w-4 h-4 text-emerald-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span>Garantía escrita de 5 años en materiales cerámicos</span>
-                  </li>
-                  <li class="flex items-center gap-2">
-                    <svg class="w-4 h-4 text-emerald-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span>Sin cuota inicial sujeta a aprobación digital en 2 min</span>
-                  </li>
-                </ul>
-              </div>
-
-              <div class="mt-6 pt-4 border-t border-slate-800">
-                <button type="submit" class="w-full py-4 px-6 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-black rounded-xl text-sm shadow-xl shadow-emerald-500/20 transition transform active:scale-[0.99] flex items-center justify-center gap-2">
-                  <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
-                    <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.299.144.347.491 1.2.534 1.288.043.087.072.188.014.303-.058.116-.087.188-.173.289l-.26.302c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.861.174.086.275.072.376-.044.101-.116.433-.506.549-.68.116-.173.231-.145.39-.086.159.058 1.011.477 1.184.564.173.087.289.13.332.202.043.073.043.419-.101.824z"/>
-                  </svg>
-                  <span>Solicitar Cita de Valoración con Este Presupuesto</span>
-                </button>
-                <p class="text-[10px] text-center text-slate-500 mt-2">
-                  🔒 Tus datos están protegidos. Te redirigiremos de inmediato a WhatsApp con la recepcionista médica.
-                </p>
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
-    </section>
-
-    <!-- SECTION 2: SPECIALIZED TREATMENTS SHOWCASE -->
-    <section id="tratamientos" class="scroll-mt-24">
-      <div class="text-center max-w-2xl mx-auto mb-14">
-        <span class="text-xs font-bold uppercase tracking-wider text-emerald-400">Catálogo Clínico Avanzado</span>
-        <h2 class="text-3xl sm:text-4xl font-black text-white mt-2">Tratamientos Odontológicos de Élite</h2>
-        <p class="text-slate-400 text-sm mt-3">Combinamos biomateriales de importación europea con odontología digital indolora.</p>
-      </div>
-
-      <div class="grid md:grid-cols-3 gap-6">
-        
-        <!-- Card 1 -->
-        <div class="glass-card rounded-2xl p-7 border border-slate-800 hover:border-emerald-500/40 transition group">
-          <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold text-lg mb-5 group-hover:scale-110 transition">
-            💎
-          </div>
-          <span class="text-[11px] font-bold text-emerald-400 uppercase tracking-wider">Estética de Alta Gama</span>
-          <h3 class="text-xl font-bold text-white mt-1">Carillas Cerámicas E-Max</h3>
-          <p class="text-slate-400 text-xs mt-3 leading-relaxed">
-            Láminas ultrafinas de porcelana feldespática que no se manchan con café ni vino tinto. Diseñadas por software CAD/CAM según la fisonomía de tu rostro.
-          </p>
-          <div class="mt-6 pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs">
-            <span class="text-slate-400">Durabilidad: <strong>10 a 15 años</strong></span>
-            <a href="#simulador" class="text-emerald-400 font-bold hover:underline">Cotizar →</a>
+          <div class="trust-strip">
+            <div class="trust-metric"><strong>4.7 / 5</strong><span>Reputación verificada</span></div>
+            <div class="trust-metric"><strong>&lt; 15 min</strong><span>Respuesta por WhatsApp</span></div>
+            <div class="trust-metric"><strong>Directo</strong><span>Sin intermediarios</span></div>
           </div>
         </div>
-
-        <!-- Card 2 -->
-        <div class="glass-card rounded-2xl p-7 border border-slate-800 hover:border-emerald-500/40 transition group">
-          <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold text-lg mb-5 group-hover:scale-110 transition">
-            🔩
-          </div>
-          <span class="text-[11px] font-bold text-emerald-400 uppercase tracking-wider">Rehabilitación Oral</span>
-          <h3 class="text-xl font-bold text-white mt-1">Implantes de Carga Inmediata</h3>
-          <p class="text-slate-400 text-xs mt-3 leading-relaxed">
-            Reemplaza piezas perdidas con raíces de titanio grado quirúrgico y corona en zirconio. Procedimiento mínimamente invasivo guiado por tomografía 3D.
-          </p>
-          <div class="mt-6 pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs">
-            <span class="text-slate-400">Osteointegración: <strong>98.7%</strong></span>
-            <a href="#simulador" class="text-emerald-400 font-bold hover:underline">Cotizar →</a>
-          </div>
-        </div>
-
-        <!-- Card 3 -->
-        <div class="glass-card rounded-2xl p-7 border border-slate-800 hover:border-emerald-500/40 transition group">
-          <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold text-lg mb-5 group-hover:scale-110 transition">
-            ✨
-          </div>
-          <span class="text-[11px] font-bold text-emerald-400 uppercase tracking-wider">Ortodoncia Invisible</span>
-          <h3 class="text-xl font-bold text-white mt-1">Alineadores Transparentes</h3>
-          <p class="text-slate-400 text-xs mt-3 leading-relaxed">
-            Corrige apiñamiento y mordida sin alambres ni dolor. Placas transparentes removibles que te permiten comer sin restricciones e higienizarte fácilmente.
-          </p>
-          <div class="mt-6 pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs">
-            <span class="text-slate-400">Duración: <strong>6 a 14 meses</strong></span>
-            <a href="#simulador" class="text-emerald-400 font-bold hover:underline">Cotizar →</a>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- SECTION 3: SOCIAL PROOF & CLINICAL EVIDENCE -->
-    <section id="casos" class="scroll-mt-24">
-      <div class="grid lg:grid-cols-12 gap-10 items-center">
-        <div class="lg:col-span-5 space-y-6">
-          <span class="text-xs font-bold uppercase tracking-wider text-emerald-400">Evidencia y Confianza</span>
-          <h2 class="text-3xl sm:text-4xl font-black text-white leading-tight">
-            Más de 1.200 sonrisas transformadas con tecnología digital.
-          </h2>
-          <p class="text-sm text-slate-300 leading-relaxed">
-            En Clínica Sonrisa Perfecta no improvisamos. Antes de tocar un solo diente, generamos un <strong>Mock-up Digital en vivo</strong> para que veas en pantalla y pruebes en tu boca cómo lucirá tu sonrisa terminada.
-          </p>
-
-          <div class="space-y-4 pt-2">
-            <div class="flex items-start gap-3">
-              <div class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-xs font-bold mt-0.5">✓</div>
-              <p class="text-xs text-slate-300"><strong>Sin sorpresas:</strong> Sabes el costo total cerrado desde el día 1, sin sobrecostos imprevistos.</p>
+        <div class="hero-visual">
+          <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1400&q=85" alt="Clínica Odontológica Sonrisa Perfecta (Bogotá)" fetchpriority="high">
+          <div class="floating-card">
+            <div>
+              <strong>Clínica Odontológica Sonrisa Perfecta (Bogotá)</strong>
+              <span>Chapinero / Chicó, Bogotá D.C., Colombia</span>
             </div>
-            <div class="flex items-start gap-3">
-              <div class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-xs font-bold mt-0.5">✓</div>
-              <p class="text-xs text-slate-300"><strong>Biomateriales Premium:</strong> Trabajamos exclusivamente con porcelanas Ivoclar Vivadent (Liechtenstein).</p>
-            </div>
-            <div class="flex items-start gap-3">
-              <div class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-xs font-bold mt-0.5">✓</div>
-              <p class="text-xs text-slate-300"><strong>Ubicación VIP:</strong> Sedes en Chicó Calle 93 y Chapinero Alto con parqueadero privado vigilado.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="lg:col-span-7 grid sm:grid-cols-2 gap-4">
-          <!-- Testimonial 1 -->
-          <div class="glass-card rounded-2xl p-6 border border-slate-800">
-            <div class="flex items-center gap-1 text-amber-400 text-sm mb-3">★★★★★</div>
-            <p class="text-xs text-slate-300 italic leading-relaxed">
-              "Me daba pavor hacerme diseño de sonrisa por miedo a que quedaran 'dientes de chicle'. Los doctores me mostraron la simulación 3D y el resultado en cerámica fue hipernatural. Nadie nota que son carillas."
-            </p>
-            <div class="mt-4 pt-3 border-t border-slate-800/80 flex items-center justify-between">
-              <div>
-                <strong class="text-xs text-white block">Dra. Marcela Valencia</strong>
-                <span class="text-[10px] text-slate-400">Diseño en Cerámica • Chicó</span>
-              </div>
-              <span class="text-[10px] font-bold text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded">Verificado</span>
-            </div>
-          </div>
-
-          <!-- Testimonial 2 -->
-          <div class="glass-card rounded-2xl p-6 border border-slate-800">
-            <div class="flex items-center gap-1 text-amber-400 text-sm mb-3">★★★★★</div>
-            <p class="text-xs text-slate-300 italic leading-relaxed">
-              "Perdí una muela hace años y pospuse el implante por miedo al dolor. La cirugía guiada por computador duró menos de 40 minutos y al día siguiente estaba trabajando sin molestia alguna."
-            </p>
-            <div class="mt-4 pt-3 border-t border-slate-800/80 flex items-center justify-between">
-              <div>
-                <strong class="text-xs text-white block">Ing. Andrés Felipe Rojas</strong>
-                <span class="text-[10px] text-slate-400">Implante de Titanio • Chapinero</span>
-              </div>
-              <span class="text-[10px] font-bold text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded">Verificado</span>
-            </div>
+            <span class="live-pill">● Canal Activo</span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- SECTION 4: FREQUENTLY ASKED QUESTIONS (ACCORDION) -->
-    <section id="faq" class="max-w-3xl mx-auto scroll-mt-24">
-      <div class="text-center mb-10">
-        <span class="text-xs font-bold uppercase tracking-wider text-emerald-400">Respuestas Claras</span>
-        <h2 class="text-2xl sm:text-3xl font-black text-white mt-1">Preguntas Frecuentes</h2>
-      </div>
-
-      <div class="space-y-3" id="faqAccordion">
-        
-        <details class="glass-card rounded-xl p-5 border border-slate-800 group" open>
-          <summary class="font-bold text-sm text-white cursor-pointer flex justify-between items-center list-none">
-            <span>¿Cuánto cuesta realmente un diseño de sonrisa en Bogotá?</span>
-            <span class="text-emerald-400 text-lg group-open:rotate-45 transition transform">+</span>
-          </summary>
-          <p class="text-xs text-slate-400 mt-3 leading-relaxed">
-            El valor depende del material y la cantidad de dientes. En resinas de alta estética oscila entre $250.000 y $450.000 COP por pieza. En carillas cerámicas de laboratorio E-Max está entre $600.000 y $950.000 COP por pieza. Con nuestro simulador interactivo arriba obtienes el rango exacto de acuerdo a tu caso.
-          </p>
-        </details>
-
-        <details class="glass-card rounded-xl p-5 border border-slate-800 group">
-          <summary class="font-bold text-sm text-white cursor-pointer flex justify-between items-center list-none">
-            <span>¿Cómo funciona la financiación con Addi o Sistecredito?</span>
-            <span class="text-emerald-400 text-lg group-open:rotate-45 transition transform">+</span>
-          </summary>
-          <p class="text-xs text-slate-400 mt-3 leading-relaxed">
-            Aprobamos tu cupo en solo 2 minutos en recepción con tu cédula y número de celular, sin papeleos ni certificados laborales. Puedes diferir tu tratamiento hasta en 24 cuotas mensuales sin descapitalizarte.
-          </p>
-        </details>
-
-        <details class="glass-card rounded-xl p-5 border border-slate-800 group">
-          <summary class="font-bold text-sm text-white cursor-pointer flex justify-between items-center list-none">
-            <span>¿El procedimiento de carillas o implantes es doloroso?</span>
-            <span class="text-emerald-400 text-lg group-open:rotate-45 transition transform">+</span>
-          </summary>
-          <p class="text-xs text-slate-400 mt-3 leading-relaxed">
-            No. Utilizamos anestesia computarizada de alta precisión y protocolos de sedación consciente para pacientes ansiosos. La mayoría de nuestros pacientes no requieren analgésicos fuertes tras el procedimiento.
-          </p>
-        </details>
-
+    <section id="ventajas" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Por qué nos eligen nuestros clientes en Bogotá D.C..</h2>
+          <p>Combinamos trayectoria real en Odontología Estética, Diseño de Sonrisa, Implantes y Ortodoncia con un canal digital inmediato diseñado para ahorrarle tiempo.</p>
+        </div>
+        <div class="bento-grid">
+        <article class="bento-card">
+          <span class="step-num">01</span>
+          <h3>Ventaja Verificada</h3>
+          <p>Especialistas certificados en rehabilitación oral, carillas cerámicas e implantología</p>
+        </article>
+        <article class="bento-card">
+          <span class="step-num">02</span>
+          <h3>Ventaja Verificada</h3>
+          <p>Tecnología de escaneo intraoral 3D indoloro</p>
+        </article>
+        <article class="bento-card">
+          <span class="step-num">03</span>
+          <h3>Ventaja Verificada</h3>
+          <p>Planes de financiación directa para tratamientos estéticos</p>
+        </article></div>
       </div>
     </section>
 
-    <!-- SECTION 5: FINAL CTA -->
-    <section class="glass-card rounded-3xl p-8 sm:p-14 text-center border border-emerald-500/40 relative overflow-hidden">
-      <div class="relative z-10 max-w-2xl mx-auto">
-        <h2 class="text-3xl sm:text-5xl font-black text-white">¿Listo para estrenar tu mejor sonrisa?</h2>
-        <p class="text-slate-300 text-sm sm:text-base mt-4 leading-relaxed">
-          Agenda tu cita de valoración con escaneo digital 3D hoy mismo y asegura tu tarifa promocional de piloto activo.
-        </p>
-        <div class="mt-8 flex flex-wrap justify-center gap-4">
-          <a href="#simulador" class="px-8 py-4 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-black rounded-xl text-sm shadow-xl shadow-emerald-500/25 transition">
-            📲 Simular y Agendar por WhatsApp
-          </a>
-          <a href="tel:+573104558920" class="px-7 py-4 bg-slate-900 hover:bg-slate-800 text-white font-bold rounded-xl text-sm border border-slate-700 transition">
-            📞 Llamar a Recepción: (601) 642 3310
-          </a>
+    <section id="cotizador" class="section">
+      <div class="container">
+        <div class="estimator-wrap">
+          <div>
+            <span class="eyebrow">Cotizador Interactivo 24/7</span>
+            <h2 style="font-family:var(--font-display);font-size:clamp(1.6rem,2.6vw,2.15rem);line-height:1.15;margin-bottom:12px;">Reciba su cotización exacta sin hacer filas.</h2>
+            <p style="color:var(--muted);">Configure su solicitud y envíela estructurada directamente a nuestra línea oficial (+57 310 455 8920).</p>
+            <ul class="solution-list">
+        <li>
+          <span class="check-dot" aria-hidden="true">✓</span>
+          <span><strong>Resuelto:</strong> Pacientes potenciales de Diseño de Sonrisa e Implantes que abandonan la consulta por no tener simulador de presupuesto rápido</span>
+        </li>
+        <li>
+          <span class="check-dot" aria-hidden="true">✓</span>
+          <span><strong>Resuelto:</strong> Recepción saturada respondiendo preguntas repetitivas sobre valoraciones y financiación por WhatsApp</span>
+        </li>
+        <li>
+          <span class="check-dot" aria-hidden="true">✓</span>
+          <span><strong>Resuelto:</strong> Falta de embudo digital interactivo 24/7 para agendar citas de valoración prioritaria</span>
+        </li></ul>
+          </div>
+          <div class="quote-box">
+            <strong style="font-size:15px;">1. Seleccione tipo de solicitud</strong>
+            <div class="quote-options">
+        <label class="quote-option">
+          <input type="radio" name="service_tier" value="120000" data-label="Valoración / Consulta Inicial" >
+          <span class="opt-body">
+            <span class="opt-title">Valoración / Consulta Inicial</span>
+            <span class="opt-price">$120.000 COP ref.</span>
+          </span>
+        </label>
+        <label class="quote-option">
+          <input type="radio" name="service_tier" value="850000" data-label="Tratamiento Especializado Integral" checked>
+          <span class="opt-body">
+            <span class="opt-title">Tratamiento Especializado Integral</span>
+            <span class="opt-price">$850.000 COP ref.</span>
+          </span>
+        </label>
+        <label class="quote-option">
+          <input type="radio" name="service_tier" value="1600000" data-label="Plan Preventivo o Estético Completo" >
+          <span class="opt-body">
+            <span class="opt-title">Plan Preventivo o Estético Completo</span>
+            <span class="opt-price">$1.600.000 COP ref.</span>
+          </span>
+        </label></div>
+            <label for="clientNote" style="display:block;font-size:12.5px;font-weight:600;margin-bottom:6px;">2. Detalle breve (producto, cita o cantidad)</label>
+            <input id="clientNote" class="field" type="text" placeholder="Ej: Cotización urgente para entrega esta semana...">
+            <div class="addi-box">
+              <span>Referencia en 3 cuotas sin interés (Addi / Sistecrédito):</span>
+              <strong id="addiInstallment">$283.333 COP/mes</strong>
+            </div>
+            <button id="sendWaBtn" type="button" class="btn-primary" style="width:100%;">Agendar Valoración por WhatsApp →</button>
+          </div>
         </div>
       </div>
     </section>
-
   </main>
 
-  <!-- Sticky Mobile Bottom Bar (Conversion Safety Net) -->
-  <aside class="fixed bottom-0 inset-x-0 z-50 glass-nav p-3 flex sm:hidden items-center justify-between gap-3 border-t border-slate-800">
-    <div class="flex-1">
-      <span class="text-[10px] text-slate-400 block leading-tight">Presupuesto Rápido:</span>
-      <span class="text-xs font-black text-emerald-400" id="stickyPriceText">$4.800.000 COP</span>
-    </div>
-    <a href="#simulador" class="px-4 py-2.5 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-black rounded-xl text-xs flex items-center gap-1.5 shadow-lg">
-      <span>Agendar</span>
-      <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
-        <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.299.144.347.491 1.2.534 1.288.043.087.072.188.014.303-.058.116-.087.188-.173.289l-.26.302c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.861.174.086.275.072.376-.044.101-.116.433-.506.549-.68.116-.173.231-.145.39-.086.159.058 1.011.477 1.184.564.173.087.289.13.332.202.043.073.043.419-.101.824z"/>
-      </svg>
-    </a>
-  </aside>
-
-  <!-- Footer -->
-  <footer class="relative z-10 border-t border-slate-900 bg-slate-950 py-12 text-center text-xs text-slate-500">
-    <div class="max-w-6xl mx-auto px-4 space-y-4">
-      <div class="flex justify-center">
-        <svg viewBox="0 0 260 52" class="h-11 sm:h-12 w-auto" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Logo Oficial de Clínica Sonrisa Perfecta">
-          <defs>
-            <linearGradient id="grad_sp_footer" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stop-color="#10b981"/>
-              <stop offset="100%" stop-color="#047857"/>
-            </linearGradient>
-          </defs>
-          <g transform="translate(4, 2)">
-            <rect x="0" y="0" width="44" height="44" rx="14" fill="#0f172a" stroke="rgba(255,255,255,0.12)" stroke-width="1.2"/>
-            <rect x="2" y="2" width="40" height="40" rx="12" fill="none" stroke="url(#grad_sp_footer)" stroke-width="1.5" opacity="0.6"/>
-            <g transform="translate(2, -1)">
-              <path d="M26 13C23 13 21 14.5 20 16.5C19 14.5 17 13 14 13C8.5 13 6 18.5 6 23.5C6 31 11.5 38 20 45C28.5 38 34 31 34 23.5C34 18.5 31.5 13 26 13Z" fill="url(#grad_sp_footer)" opacity="0.92"/>
-              <path d="M16 20C16 18 17.5 16.5 19.5 16.5" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round"/>
-            </g>
-          </g>
-          <text x="58" y="24" fill="#ffffff" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="15" letter-spacing="-0.3">
-            SONRISA PERFECTA
-          </text>
-          <text x="58" y="38" fill="#10b981" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="9.5" letter-spacing="1.2">
-            ODONTOLOGÍA ESTÉTICA • BOGOTÁ
-          </text>
-        </svg>
-      </div>
-      <p class="font-bold text-slate-400">Clínica Odontológica Sonrisa Perfecta Bogotá D.C.</p>
-      <p>Sede Chicó: Calle 93 # 14-20 • Sede Chapinero: Cra 7 # 54-10 • PBX: (601) 642 3310</p>
-      <p class="text-[11px] text-slate-600">
-        Plataforma y cotizador digital desarrollados por <strong>Ing. Juan Pablo Campo</strong> (Piloto comercial 48h sin costo).
-      </p>
+  <footer>
+    <div class="container footer-inner">
+      <span><strong>Clínica Odontológica Sonrisa Perfecta (Bogotá)</strong> · Chapinero / Chicó, Bogotá D.C., Colombia</span>
+      <span>Prototipo interactivo V3.0 diseñado por Estudio Ing. Juan Pablo Campo (UAO).</span>
     </div>
   </footer>
 
-  <!-- Interactive Logic Engine -->
   <script>
-    const PRICING_MODEL = {
-      diseno_ceramica: {
-        name: "Carillas Cerámicas E-Max",
-        unitName: "Carillas / Dientes",
-        unitPrice: 600000,
-        min: 2,
-        max: 20,
-        defaultUnits: 8
-      },
-      diseno_resina: {
-        name: "Diseño en Resina de Alta Carga",
-        unitName: "Dientes en Resina",
-        unitPrice: 280000,
-        min: 2,
-        max: 20,
-        defaultUnits: 8
-      },
-      implante_titanio: {
-        name: "Implante Dental de Titanio + Corona",
-        unitName: "Implantes Dentales",
-        unitPrice: 1850000,
-        min: 1,
-        max: 8,
-        defaultUnits: 1
-      },
-      ortodoncia_invisible: {
-        name: "Alineadores Invisibles",
-        unitName: "Fases de Tratamiento",
-        unitPrice: 1200000,
-        min: 1,
-        max: 3,
-        defaultUnits: 2
-      }
-    };
+    const waDigits = "573104558920";
+    const bizName = "Cl\u00ednica Odontol\u00f3gica Sonrisa Perfecta (Bogot\u00e1)";
+    const radios = document.querySelectorAll('input[name="service_tier"]');
+    const addiEl = document.getElementById('addiInstallment');
+    const noteEl = document.getElementById('clientNote');
 
-    function recalculateQuote() {
-      const selectedKey = document.querySelector('input[name="treatment"]:checked')?.value || 'diseno_ceramica';
-      const cfg = PRICING_MODEL[selectedKey];
-      const slider = document.getElementById('unitsSlider');
-      const units = parseInt(slider.value, 10);
-
-      // Adjust slider constraints
-      slider.min = cfg.min;
-      slider.max = cfg.max;
-      if (units < cfg.min) slider.value = cfg.min;
-      if (units > cfg.max) slider.value = cfg.max;
-      const currentUnits = parseInt(slider.value, 10);
-
-      const subtotal = currentUnits * cfg.unitPrice;
-      const discount = Math.round(subtotal * 0.10);
-      const cashTotal = subtotal - discount;
-      const monthlyAddi = Math.round(subtotal / 24);
-
-      // Formatter
-      const fmt = (n) => '$' + n.toLocaleString('es-CO') + ' COP';
-
-      // Update UI
-      document.getElementById('sliderLabel').textContent = `Número de ${cfg.unitName}:`;
-      document.getElementById('sliderValueText').textContent = `${currentUnits} ${cfg.unitName}`;
-      document.getElementById('totalEstimatePrice').textContent = fmt(subtotal);
-      document.getElementById('treatmentSummary').textContent = `${currentUnits} ${cfg.name} con simulación digital`;
-      document.getElementById('cashDiscountText').textContent = `-${fmt(discount)}`;
-      document.getElementById('cashTotalText').textContent = fmt(cashTotal);
-      document.getElementById('monthlyInstallmentText').textContent = `Desde ${fmt(monthlyAddi)} / mes`;
-      document.getElementById('stickyPriceText').textContent = fmt(subtotal);
-
-      // Highlight active tile
-      document.querySelectorAll('.treatment-tile').forEach(t => {
-        const inp = t.querySelector('input');
-        if (inp && inp.checked) {
-          t.classList.add('border-emerald-500/50', 'bg-emerald-950/20');
-          t.classList.remove('border-slate-800', 'bg-slate-950/40');
-        } else {
-          t.classList.remove('border-emerald-500/50', 'bg-emerald-950/20');
-          t.classList.add('border-slate-800', 'bg-slate-950/40');
-        }
-      });
+    function updateEstimate() {
+      const sel = document.querySelector('input[name="service_tier"]:checked');
+      const val = Number(sel ? sel.value : 850000);
+      const cuota = Math.round(val / 3);
+      addiEl.textContent = '$' + cuota.toLocaleString('es-CO') + ' COP/mes';
     }
+    radios.forEach(r => r.addEventListener('change', updateEstimate));
+    updateEstimate();
 
-    function handleSendWhatsApp() {
-      const selectedKey = document.querySelector('input[name="treatment"]:checked')?.value || 'diseno_ceramica';
-      const cfg = PRICING_MODEL[selectedKey];
-      const units = document.getElementById('unitsSlider').value;
-      const userName = document.getElementById('userName').value.trim() || 'Paciente Preferencial';
-      const userPhone = document.getElementById('userPhone').value.trim() || 'No indicado';
-      const subtotal = document.getElementById('totalEstimatePrice').textContent;
-
-      const message = `👋 Hola Clínica Odontológica Sonrisa Perfecta Bogotá,%0A%0A` +
-        `Mi nombre es *${encodeURIComponent(userName)}* (Tel: ${encodeURIComponent(userPhone)}).%0A` +
-        `Acabo de usar su *Simulador Digital 3D* en la página web con este requerimiento:%0A%0A` +
-        `🦷 *Tratamiento:* ${encodeURIComponent(cfg.name)}%0A` +
-        `🔢 *Cantidad:* ${units} ${encodeURIComponent(cfg.unitName)}%0A` +
-        `💰 *Inversión Estimada:* ${encodeURIComponent(subtotal)}%0A%0A` +
-        `Deseo agendar una valoración prioritaria con escaneo 3D para confirmar este presupuesto. ¿Qué horarios tienen disponibles?`;
-
-      window.open(`https://wa.me/573104558920?text=${message}`, '_blank');
-    }
-
-    // Initialize on load
-    window.addEventListener('DOMContentLoaded', recalculateQuote);
+    document.getElementById('sendWaBtn').addEventListener('click', () => {
+      const sel = document.querySelector('input[name="service_tier"]:checked');
+      const tier = sel ? sel.dataset.label : 'Cotización';
+      const note = (noteEl.value || 'Quisiera recibir más información y disponibilidad.').trim();
+      const text = `Hola equipo de ${bizName}, vengo desde su cotizador web. Me interesa: ${tier}. Detalle: ${note}`;
+      window.open(`https://wa.me/${waDigits}?text=${encodeURIComponent(text)}`, '_blank', 'noopener');
+    });
   </script>
 </body>
 </html>
