@@ -3,352 +3,109 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Acero &amp; Suministros Industriales Antioquia (Medellín) — Cotizador Digital &amp; Atención Prioritaria</title>
-  <meta name="description" content="Acero &amp; Suministros Industriales Antioquia (Medellín) (Aceros Especiales, Láminas HR/CR, Tubería Estructural y Corte CNC). Plataforma digital de cotización inmediata y atención prioritaria vía WhatsApp.">
+  <title>Acero &amp; Suministros Industriales Antioquia (Medellín) — Mesa de Cotización Técnica &amp; Catálogo B2B</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600&family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --bg: #F6F6F3;
-      --surface: #FFFFFF;
-      --surface-alt: #ECECE6;
-      --ink: #111315;
-      --muted: #52525B;
-      --border: rgba(17, 19, 21, 0.11);
-      --accent: #D95D1E;
-      --accent-soft: rgba(217, 93, 30, 0.10);
-      --accent-ink: #FFFFFF;
-      --font-display: 'Space Grotesk', -apple-system, sans-serif;
-      --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      --radius: 18px;
-      --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.04), 0 8px 24px rgba(15, 23, 42, 0.05);
-      --shadow-lg: 0 18px 48px rgba(15, 23, 42, 0.09);
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body {
-      background: var(--bg);
-      color: var(--ink);
-      font-family: var(--font-body);
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-    }
-    .container { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
-
-    /* Sticky Glass Navigation */
-    .topbar {
-      position: sticky; top: 0; z-index: 50;
-      background: color-mix(in srgb, var(--bg) 86%, transparent);
-      backdrop-filter: blur(14px);
-      border-bottom: 1px solid var(--border);
-    }
-    .topbar-inner {
-      display: flex; align-items: center; justify-content: space-between;
-      height: 72px; gap: 16px;
-    }
-    .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--ink); }
-    .brand-mark {
-      width: 38px; height: 38px; border-radius: 10px;
-      background: var(--ink); color: var(--bg);
-      display: grid; place-items: center;
-      font-family: var(--font-display); font-weight: 700; font-size: 15px; letter-spacing: 0.03em;
-    }
-    .brand-text strong { display: block; font-size: 15px; font-weight: 700; line-height: 1.15; }
-    .brand-text span { font-size: 12px; color: var(--muted); }
-    .nav-cta {
-      display: inline-flex; align-items: center; gap: 8px;
-      background: var(--accent); color: var(--accent-ink);
-      text-decoration: none; font-weight: 600; font-size: 13.5px;
-      padding: 10px 18px; border-radius: 999px;
-      transition: transform 0.2s ease, opacity 0.2s ease;
-    }
-    .nav-cta:hover { transform: translateY(-1px); opacity: 0.94; }
-
-    /* Editorial Split Hero */
-    .hero { padding: 56px 0 72px; }
-    .hero-grid {
-      display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 48px; align-items: center;
-    }
-    .eyebrow {
-      display: inline-flex; align-items: center; gap: 8px;
-      font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase;
-      color: var(--accent); background: var(--accent-soft);
-      padding: 6px 14px; border-radius: 999px; margin-bottom: 20px;
-    }
-    .hero h1 {
-      font-family: var(--font-display);
-      font-size: clamp(2.15rem, 4.1vw, 3.45rem);
-      line-height: 1.08; letter-spacing: -0.025em; font-weight: 600;
-      margin-bottom: 20px;
-    }
-    .hero-lead { font-size: 1.08rem; color: var(--muted); max-width: 54ch; margin-bottom: 28px; }
-    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 32px; }
-    .btn-primary {
-      display: inline-flex; align-items: center; justify-content: center; gap: 10px;
-      background: var(--ink); color: #FFFFFF; text-decoration: none;
-      padding: 14px 24px; border-radius: 12px; font-weight: 600; font-size: 14.5px;
-      border: none; cursor: pointer; transition: transform 0.2s ease, background 0.2s ease;
-    }
-    .btn-primary:hover { background: var(--accent); transform: translateY(-1px); }
-    .btn-secondary {
-      display: inline-flex; align-items: center; justify-content: center;
-      background: var(--surface); color: var(--ink); text-decoration: none;
-      padding: 14px 22px; border-radius: 12px; font-weight: 600; font-size: 14.5px;
-      border: 1px solid var(--border); transition: border-color 0.2s ease;
-    }
-    .btn-secondary:hover { border-color: var(--ink); }
-
-    .trust-strip {
-      display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
-      padding-top: 24px; border-top: 1px solid var(--border);
-    }
-    .trust-metric strong { display: block; font-size: 1.15rem; font-weight: 700; color: var(--ink); }
-    .trust-metric span { font-size: 12.5px; color: var(--muted); }
-
-    .hero-visual {
-      position: relative; border-radius: 24px; overflow: hidden;
-      background: var(--surface-alt); box-shadow: var(--shadow-lg);
-      aspect-ratio: 4 / 4.4; border: 1px solid var(--border);
-    }
-    .hero-visual img { width: 100%; height: 100%; object-fit: cover; display: block; }
-    .floating-card {
-      position: absolute; left: 18px; right: 18px; bottom: 18px;
-      background: rgba(255, 255, 255, 0.94); backdrop-filter: blur(12px);
-      color: #0F172A; padding: 16px 18px; border-radius: 16px;
-      border: 1px solid rgba(15, 23, 42, 0.08);
-      display: flex; align-items: center; justify-content: space-between; gap: 12px;
-    }
-    .floating-card strong { display: block; font-size: 13.5px; }
-    .floating-card span { font-size: 12px; color: #475569; }
-    .live-pill {
-      font-size: 11px; font-weight: 700; color: #047857;
-      background: #ECFDF5; padding: 5px 10px; border-radius: 999px; white-space: nowrap;
-    }
-
-    /* Bento Value Section */
-    .section { padding: 64px 0; }
-    .section-head { max-width: 640px; margin-bottom: 36px; }
-    .section-head h2 {
-      font-family: var(--font-display); font-size: clamp(1.7rem, 3vw, 2.35rem);
-      line-height: 1.15; letter-spacing: -0.02em; margin-bottom: 10px;
-    }
-    .section-head p { color: var(--muted); font-size: 1rem; }
-    .bento-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-    .bento-card {
-      background: var(--surface); border: 1px solid var(--border);
-      border-radius: var(--radius); padding: 28px; box-shadow: var(--shadow-sm);
-    }
-    .step-num {
-      display: inline-block; font-size: 12px; font-weight: 700; color: var(--accent);
-      background: var(--accent-soft); padding: 4px 10px; border-radius: 8px; margin-bottom: 16px;
-    }
-    .bento-card h3 { font-size: 1.05rem; margin-bottom: 8px; }
-    .bento-card p { font-size: 0.94rem; color: var(--muted); }
-
-    /* Interactive Estimator Section */
-    .estimator-wrap {
-      background: var(--surface); border: 1px solid var(--border);
-      border-radius: 24px; padding: 40px; box-shadow: var(--shadow-lg);
-      display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 40px; align-items: start;
-    }
-    .solution-list { list-style: none; display: grid; gap: 12px; margin-top: 22px; }
-    .solution-list li { display: flex; gap: 12px; align-items: flex-start; font-size: 0.94rem; color: var(--muted); }
-    .check-dot {
-      width: 22px; height: 22px; border-radius: 999px; flex-shrink: 0;
-      background: var(--accent-soft); color: var(--accent);
-      display: grid; place-items: center; font-size: 12px; font-weight: 700; margin-top: 2px;
-    }
-    .quote-box { background: var(--bg); border: 1px solid var(--border); border-radius: 18px; padding: 24px; }
-    .quote-options { display: grid; gap: 10px; margin: 16px 0 18px; }
-    .quote-option {
-      display: flex; align-items: center; gap: 12px; cursor: pointer;
-      background: var(--surface); border: 1px solid var(--border);
-      padding: 14px 16px; border-radius: 12px; transition: border-color 0.2s ease;
-    }
-    .quote-option:has(input:checked) { border-color: var(--accent); background: var(--accent-soft); }
-    .quote-option input { accent-color: var(--accent); width: 16px; height: 16px; }
-    .opt-body { display: flex; justify-content: space-between; width: 100%; gap: 10px; font-size: 13.5px; }
-    .opt-title { font-weight: 600; color: var(--ink); }
-    .opt-price { font-weight: 600; color: var(--accent); white-space: nowrap; }
-    .field { width: 100%; padding: 12px 14px; border-radius: 10px; border: 1px solid var(--border); background: var(--surface); color: var(--ink); font-family: inherit; font-size: 14px; margin-bottom: 14px; }
-    .addi-box {
-      display: flex; justify-content: space-between; align-items: center;
-      background: var(--surface); border: 1px dashed var(--border);
-      padding: 12px 14px; border-radius: 12px; margin-bottom: 16px; font-size: 13px;
-    }
-    .addi-box strong { color: var(--accent); font-size: 14.5px; }
-
-    footer {
-      border-top: 1px solid var(--border); padding: 36px 0 48px;
-      color: var(--muted); font-size: 13px;
-    }
-    .footer-inner { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 14px; }
-
-    @media (max-width: 900px) {
-      .hero-grid, .bento-grid, .estimator-wrap { grid-template-columns: 1fr; }
-      .hero { padding: 36px 0 48px; }
-      .estimator-wrap { padding: 24px; }
-      .hero-visual { aspect-ratio: 16 / 11; }
-    }
+    :root { --bg:#F4F7F6; --accent:#0F766E; --ink:#111315; --muted:#52525B; --border:rgba(17,19,21,.12); }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body { background:var(--bg); color:var(--ink); font-family:'Inter',sans-serif; line-height:1.55; }
+    .wrap { max-width:1200px; margin:0 auto; padding:0 24px; }
+    /* DARK SWISS INDUSTRIAL HEADER BAND */
+    .dark-band { background:#111315; color:#F8FAFC; padding:24px 0 56px; }
+    .nav-row { display:flex; align-items:center; justify-content:space-between; padding-bottom:32px; border-bottom:1px solid rgba(255,255,255,.1); margin-bottom:40px; gap:14px; }
+    .brand { display:flex; align-items:center; gap:12px; color:#fff; text-decoration:none; }
+    .brand strong { display:block; font-family:'Space Grotesk',sans-serif; font-size:16px; }
+    .brand span { font-family:'JetBrains Mono',monospace; font-size:11.5px; color:#94A3B8; }
+    .hero-2col { display:grid; grid-template-columns:1.15fr .85fr; gap:36px; align-items:center; }
+    .mono-tag { font-family:'JetBrains Mono',monospace; font-size:11.5px; color:var(--accent); text-transform:uppercase; letter-spacing:.08em; margin-bottom:12px; display:inline-block; }
+    h1 { font-family:'Space Grotesk',sans-serif; font-size:clamp(2rem,3.6vw,3.1rem); line-height:1.06; letter-spacing:-.025em; margin-bottom:16px; }
+    .hero-img { border-radius:16px; overflow:hidden; border:1px solid rgba(255,255,255,.14); aspect-ratio:16/10; }
+    .hero-img img { width:100%; height:100%; object-fit:cover; }
+    .kpi-row { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-top:24px; }
+    .kpi { background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.1); border-radius:12px; padding:14px; }
+    .kpi strong { display:block; font-family:'JetBrains Mono',monospace; font-size:1.1rem; color:#fff; }
+    .kpi span { font-size:11.5px; color:#94A3B8; }
+    /* INTERACTIVE MULTI-ITEM QUOTE CART */
+    .sec { padding:56px 0; }
+    .cart-grid { display:grid; grid-template-columns:1.25fr .75fr; gap:24px; align-items:start; }
+    .sku-card { background:#fff; border:1px solid var(--border); border-radius:14px; padding:18px 20px; display:flex; align-items:center; justify-content:space-between; gap:14px; margin-bottom:12px; }
+    .sku-code { font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--accent); font-weight:600; }
+    .add-btn { background:#111315; color:#fff; border:none; padding:9px 14px; border-radius:8px; font-weight:600; font-size:12.5px; cursor:pointer; }
+    .add-btn.added { background:var(--accent); }
+    .cart-panel { background:#fff; border:2px solid #111315; border-radius:16px; padding:24px; position:sticky; top:20px; }
+    .btn-wa { width:100%; background:var(--accent); color:#fff; border:none; padding:14px; border-radius:10px; font-weight:700; font-size:14px; cursor:pointer; margin-top:14px; }
+    .map-row { display:grid; grid-template-columns:.9fr 1.1fr; gap:24px; }
+    .map-box { border-radius:16px; overflow:hidden; border:1px solid var(--border); min-height:290px; }
+    .map-box iframe { width:100%; height:100%; min-height:290px; border:0; }
+    @media (max-width:860px) { .hero-2col, .cart-grid, .map-row { grid-template-columns:1fr; } }
   </style>
 </head>
 <body>
-  <header class="topbar">
-    <div class="container topbar-inner">
-      <a href="#inicio" class="brand">
-        <div class="brand-mark">AS</div>
-        <div class="brand-text">
-          <strong>Acero &amp; Suministros Industriales Antioquia (Medellín)</strong>
-          <span>Medellín · Ingeniería & Suministro Industrial</span>
-        </div>
-      </a>
-      <a href="#cotizador" class="nav-cta">Enviar Lista a Cotización Express →</a>
+  <section class="dark-band"><div class="wrap">
+    <div class="nav-row">
+      <a class="brand" href="#"><svg width="36" height="36" viewBox="0 0 36 36" fill="none"><rect width="36" height="36" rx="8" fill="#0F766E"/><polygon points="18,8 26.5,13 26.5,23 18,28 9.5,23 9.5,13" stroke="white" stroke-width="2.2" fill="none"/><circle cx="18" cy="18" r="3.5" stroke="white" stroke-width="2"/></svg><div><strong>Acero &amp; Suministros Industriales Antioquia (Medellín)</strong><span>GOOGLE 4.6 / 5 · DESPACHO DIRECTO</span></div></a>
+      <a href="#mesa" style="background:var(--accent);color:#fff;text-decoration:none;padding:10px 18px;border-radius:8px;font-weight:700;font-size:13px;">Armar Pedido →</a>
     </div>
-  </header>
-
-  <main id="inicio">
-    <section class="hero">
-      <div class="container hero-grid">
-        <div>
-          <span class="eyebrow">Despacho Mayorista & Obra · Norma Técnica</span>
-          <h1>Atención ágil y cotización directa para clientes de Acero &amp; Suministros Industriales Antioquia (Medellín).</h1>
-          <p class="hero-lead">Especialistas en Aceros Especiales, Láminas HR/CR, Tubería Estructural y Corte CNC. Elimine esperas innecesarias: seleccione su requerimiento en menos de 60 segundos y reciba confirmación directa en WhatsApp con nuestro equipo.</p>
-          <div class="hero-actions">
-            <a href="#cotizador" class="btn-primary">Enviar Lista a Cotización Express</a>
-            <a href="#ventajas" class="btn-secondary">Ver Respaldo y Ventajas</a>
-          </div>
-          <div class="trust-strip">
-            <div class="trust-metric"><strong>4.6 / 5</strong><span>Reputación verificada</span></div>
-            <div class="trust-metric"><strong>&lt; 15 min</strong><span>Respuesta por WhatsApp</span></div>
-            <div class="trust-metric"><strong>Directo</strong><span>Sin intermediarios</span></div>
-          </div>
-        </div>
-        <div class="hero-visual">
-          <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1400&q=85" alt="Acero &amp; Suministros Industriales Antioquia (Medellín)" fetchpriority="high">
-          <div class="floating-card">
-            <div>
-              <strong>Acero &amp; Suministros Industriales Antioquia (Medellín)</strong>
-              <span>Zona Industrial Guayabal, Medellín, Antioquia</span>
-            </div>
-            <span class="live-pill">● Canal Activo</span>
-          </div>
+    <div class="hero-2col">
+      <div>
+        <span class="mono-tag">// Aceros Especiales, Láminas HR/CR, Tubería Estructural y Corte CN</span>
+        <h1>Cotice listas de obra y suministro mayorista en 60 segundos.</h1>
+        <p style="color:#CBD5E1;max-width:54ch;">Stock permanente en láminas HR, CR, Alfajor, Galvanizada y aceros inoxidables. Evite filas en mostrador enviando su despiece directo a nuestra mesa técnica por WhatsApp.</p>
+        <div class="kpi-row">
+          <div class="kpi"><strong>★ 4.6 / 5</strong><span>Calificación Google</span></div>
+          <div class="kpi"><strong>PBX (604) 322 4590</strong><span>Línea Comercial</span></div>
+          <div class="kpi"><strong>MAYORISTA</strong><span>Obra &amp; Industria</span></div>
         </div>
       </div>
-    </section>
-
-    <section id="ventajas" class="section">
-      <div class="container">
-        <div class="section-head">
-          <h2>Por qué nos eligen nuestros clientes en Medellín.</h2>
-          <p>Combinamos trayectoria real en Aceros Especiales, Láminas HR/CR, Tubería Estructural y Corte CNC con un canal digital inmediato diseñado para ahorrarle tiempo.</p>
-        </div>
-        <div class="bento-grid">
-        <article class="bento-card">
-          <span class="step-num">01</span>
-          <h3>Ventaja Verificada</h3>
-          <p>Stock permanente en láminas HR, CR, Alfajor, Galvanizada y aceros inoxidables</p>
-        </article>
-        <article class="bento-card">
-          <span class="step-num">02</span>
-          <h3>Ventaja Verificada</h3>
-          <p>Servicio de corte por plasma CNC, doblez y despacho en Antioquia</p>
-        </article>
-        <article class="bento-card">
-          <span class="step-num">03</span>
-          <h3>Ventaja Verificada</h3>
-          <p>Precios mayoristas directos para constructoras y consorcios viales</p>
-        </article></div>
-      </div>
-    </section>
-
-    <section id="cotizador" class="section">
-      <div class="container">
-        <div class="estimator-wrap">
-          <div>
-            <span class="eyebrow">Cotizador Interactivo 24/7</span>
-            <h2 style="font-family:var(--font-display);font-size:clamp(1.6rem,2.6vw,2.15rem);line-height:1.15;margin-bottom:12px;">Reciba su cotización exacta sin hacer filas.</h2>
-            <p style="color:var(--muted);">Configure su solicitud y envíela estructurada directamente a nuestra línea oficial (+57 314 780 2219).</p>
-            <ul class="solution-list">
-        <li>
-          <span class="check-dot" aria-hidden="true">✓</span>
-          <span><strong>Resuelto:</strong> Ingenieros estructurales y talleres metalmecánicos esperando horas por cotizaciones de corte y tonelaje</span>
-        </li>
-        <li>
-          <span class="check-dot" aria-hidden="true">✓</span>
-          <span><strong>Resuelto:</strong> Líneas telefónicas congestionadas en Guayabal para consultar calibres y disponibilidad de lámina</span>
-        </li>
-        <li>
-          <span class="check-dot" aria-hidden="true">✓</span>
-          <span><strong>Resuelto:</strong> Ausencia de cotizador B2B online para adjuntar despieces de tubería y perfiles IPE/HEA</span>
-        </li></ul>
-          </div>
-          <div class="quote-box">
-            <strong style="font-size:15px;">1. Seleccione tipo de solicitud</strong>
-            <div class="quote-options">
-        <label class="quote-option">
-          <input type="radio" name="service_tier" value="350000" data-label="Pedido Express Mostrador / Taller" >
-          <span class="opt-body">
-            <span class="opt-title">Pedido Express Mostrador / Taller</span>
-            <span class="opt-price">$350.000 COP ref.</span>
-          </span>
-        </label>
-        <label class="quote-option">
-          <input type="radio" name="service_tier" value="1800000" data-label="Suministro de Obra / Lista de Despiece" checked>
-          <span class="opt-body">
-            <span class="opt-title">Suministro de Obra / Lista de Despiece</span>
-            <span class="opt-price">$1.800.000 COP ref.</span>
-          </span>
-        </label>
-        <label class="quote-option">
-          <input type="radio" name="service_tier" value="4500000" data-label="Convenio Corporativo &amp; Volumen" >
-          <span class="opt-body">
-            <span class="opt-title">Convenio Corporativo &amp; Volumen</span>
-            <span class="opt-price">$4.500.000 COP ref.</span>
-          </span>
-        </label></div>
-            <label for="clientNote" style="display:block;font-size:12.5px;font-weight:600;margin-bottom:6px;">2. Detalle breve (producto, cita o cantidad)</label>
-            <input id="clientNote" class="field" type="text" placeholder="Ej: Cotización urgente para entrega esta semana...">
-            <div class="addi-box">
-              <span>Referencia en 3 cuotas sin interés (Addi / Sistecrédito):</span>
-              <strong id="addiInstallment">$283.333 COP/mes</strong>
-            </div>
-            <button id="sendWaBtn" type="button" class="btn-primary" style="width:100%;">Enviar Lista a Cotización Express →</button>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container footer-inner">
-      <span><strong>Acero &amp; Suministros Industriales Antioquia (Medellín)</strong> · Zona Industrial Guayabal, Medellín, Antioquia</span>
-      <span>Prototipo interactivo V3.0 diseñado por Estudio Ing. Juan Pablo Campo (UAO).</span>
+      <div class="hero-img"><img src="https://images.unsplash.com/photo-1530124566582-a618bc2615dc?auto=format&fit=crop&w=1500&q=85" alt="Acero &amp; Suministros Industriales Antioquia (Medellín)" fetchpriority="high"></div>
     </div>
-  </footer>
+  </div></section>
+
+  <section id="mesa" class="sec"><div class="wrap">
+    <h2 style="font-family:'Space Grotesk',sans-serif;font-size:1.8rem;margin-bottom:6px;">Mesa de Cotización Rápida (Selección Múltiple)</h2>
+    <p style="color:var(--muted);margin-bottom:22px;">Marque las líneas que necesita y envíe su orden estructurada al WhatsApp oficial (+57 314 780 2219).</p>
+    <div class="cart-grid">
+      <div>
+        <div class="sku-card"><div><span class="sku-code">IND-01 · Suministro</span><strong style="display:block;font-size:15px;">Línea Mayorista / Obra Gris</strong><span style="font-size:12.5px;color:var(--muted);">Presentación: Caja / Millar</span></div><button class="add-btn" data-item="IND-01 Línea Mayorista / Obra Gris">+ Añadir</button></div><div class="sku-card"><div><span class="sku-code">IND-02 · Metalmecánica</span><strong style="display:block;font-size:15px;">Fijaciones & Pernos Estructurales</strong><span style="font-size:12.5px;color:var(--muted);">Presentación: Grado 5 / 8 / Inox</span></div><button class="add-btn" data-item="IND-02 Fijaciones & Pernos Estructurales">+ Añadir</button></div><div class="sku-card"><div><span class="sku-code">IND-03 · Estructural</span><strong style="display:block;font-size:15px;">Perfilería, Aceros y Soldadura</strong><span style="font-size:12.5px;color:var(--muted);">Presentación: Tramo / Paquete</span></div><button class="add-btn" data-item="IND-03 Perfilería, Aceros y Soldadura">+ Añadir</button></div><div class="sku-card"><div><span class="sku-code">IND-04 · Corporativo</span><strong style="display:block;font-size:15px;">Pedido por Despiece / Excel de Obra</strong><span style="font-size:12.5px;color:var(--muted);">Presentación: Cotización Express</span></div><button class="add-btn" data-item="IND-04 Pedido por Despiece / Excel de Obra">+ Añadir</button></div>
+      </div>
+      <div class="cart-panel">
+        <strong style="font-family:'Space Grotesk',sans-serif;font-size:16px;">Resumen de Solicitud</strong>
+        <ul id="cartList" style="margin:12px 0;padding-left:18px;font-size:13.5px;color:var(--muted);"><li>Seleccione ítems a la izquierda...</li></ul>
+        <textarea id="specNote" rows="3" placeholder="Pegue aquí medidas, cantidades o referencia de obra..." style="width:100%;padding:10px;border:1px solid var(--border);border-radius:8px;font-family:inherit;font-size:13px;"></textarea>
+        <button id="sendCart" class="btn-wa">Enviar Lista por WhatsApp →</button>
+      </div>
+    </div>
+  </div></section>
+
+  <section class="sec" style="padding-top:0;"><div class="wrap map-row">
+    <div style="background:#fff;border:1px solid var(--border);border-radius:16px;padding:24px;">
+      <span class="mono-tag">// SEDE VERIFICADA</span>
+      <h3 style="font-family:'Space Grotesk',sans-serif;font-size:1.3rem;margin-bottom:10px;">Acero &amp; Suministros Industriales Antioquia (Medellín)</h3>
+      <p style="color:var(--muted);font-size:14px;margin-bottom:14px;">📍 Zona Industrial Guayabal, Medellín, Antioquia<br>📞 WhatsApp: +57 314 780 2219<br>☎️ PBX: (604) 322 4590</p>
+      <a href="https://www.google.com/maps/search/?api=1&query=Acero%20%26%20Suministros%20Industriales%20Antioquia%20%28Medell%C3%ADn%29%2C%20Zona%20Industrial%20Guayabal%2C%20Medell%C3%ADn%2C%20Antioquia" target="_blank" rel="noopener" style="display:inline-block;border:1px solid #111315;color:#111315;text-decoration:none;padding:10px 16px;border-radius:8px;font-weight:600;font-size:13px;">Ver en Google Maps ↗</a>
+    </div>
+    <div class="map-box"><iframe loading="lazy" src="https://maps.google.com/maps?q=Acero%20%26%20Suministros%20Industriales%20Antioquia%20%28Medell%C3%ADn%29%2C%20Zona%20Industrial%20Guayabal%2C%20Medell%C3%ADn%2C%20Antioquia&t=&z=15&ie=UTF8&iwloc=&output=embed" title="Mapa de Acero &amp; Suministros Industriales Antioquia (Medellín)"></iframe></div>
+  </div></section>
 
   <script>
-    const waDigits = "573147802219";
-    const bizName = "Acero & Suministros Industriales Antioquia (Medell\u00edn)";
-    const radios = document.querySelectorAll('input[name="service_tier"]');
-    const addiEl = document.getElementById('addiInstallment');
-    const noteEl = document.getElementById('clientNote');
-
-    function updateEstimate() {
-      const sel = document.querySelector('input[name="service_tier"]:checked');
-      const val = Number(sel ? sel.value : 850000);
-      const cuota = Math.round(val / 3);
-      addiEl.textContent = '$' + cuota.toLocaleString('es-CO') + ' COP/mes';
+    const selected = new Set();
+    const listEl = document.getElementById('cartList');
+    function renderCart() {
+      listEl.innerHTML = selected.size ? [...selected].map(i => `<li>${i}</li>`).join('') : '<li>Seleccione ítems a la izquierda...</li>';
     }
-    radios.forEach(r => r.addEventListener('change', updateEstimate));
-    updateEstimate();
-
-    document.getElementById('sendWaBtn').addEventListener('click', () => {
-      const sel = document.querySelector('input[name="service_tier"]:checked');
-      const tier = sel ? sel.dataset.label : 'Cotización';
-      const note = (noteEl.value || 'Quisiera recibir más información y disponibilidad.').trim();
-      const text = `Hola equipo de ${bizName}, vengo desde su cotizador web. Me interesa: ${tier}. Detalle: ${note}`;
-      window.open(`https://wa.me/${waDigits}?text=${encodeURIComponent(text)}`, '_blank', 'noopener');
+    document.querySelectorAll('.add-btn').forEach(btn => btn.addEventListener('click', () => {
+      const item = btn.dataset.item;
+      if (selected.has(item)) { selected.delete(item); btn.classList.remove('added'); btn.textContent = '+ Añadir'; }
+      else { selected.add(item); btn.classList.add('added'); btn.textContent = '✓ Añadido'; }
+      renderCart();
+    }));
+    document.getElementById('sendCart').addEventListener('click', () => {
+      const items = selected.size ? [...selected].join(', ') : 'Consulta general de catálogo';
+      const note = document.getElementById('specNote').value || 'Solicito disponibilidad y precio mayorista.';
+      const msg = `Hola Acero &amp; Suministros Industriales Antioquia (Medellín), solicito cotización técnica para: ${items}. Detalle: ${note}`;
+      window.open(`https://wa.me/573147802219?text=${encodeURIComponent(msg)}`, '_blank', 'noopener');
     });
   </script>
 </body>
